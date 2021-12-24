@@ -208,9 +208,6 @@ ORDER BY parent.`rt`",
 			foreach($devices as $device){
 				$this->dbcon->query("INSERT INTO `".TeraWurflConfig::$TABLE_PREFIX.'Index'."` (`deviceID`,`matcher`) VALUE (".$this->SQLPrep($device['id']).",".$this->SQLPrep($matcher).")");
 				// convert device root to tinyint format (0|1) for db
-				if(strlen($device['user_agent']) > 255){
-					$insert_errors[] = "Warning: user agent too long: \"".($device['id']).'"';
-				}
 				$insertcache[] = sprintf("(%s,%s,%s,%s,%s,%s)",
 					$this->SQLPrep($device['id']),
 					$this->SQLPrep($device['user_agent']),
