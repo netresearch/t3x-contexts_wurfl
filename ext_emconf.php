@@ -9,6 +9,7 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'Netresearch DTT GmbH',
     'author_email' => 'typo3@netresearch.de',
     'author_company' => 'Netresearch DTT GmbH',
+    'license' => 'AGPL-3.0-or-later',
     'state' => 'stable',
     'version' => '2.0.0',
     'constraints' => [
