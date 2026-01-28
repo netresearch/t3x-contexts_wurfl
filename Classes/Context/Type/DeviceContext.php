@@ -75,7 +75,7 @@ class DeviceContext extends AbstractContext
         // Check session cache first
         [$bUseSession, $bMatch] = $this->getMatchFromSession();
         if ($bUseSession) {
-            return $this->invert($bMatch);
+            return $this->invert((bool) $bMatch);
         }
 
         // Get configured device types

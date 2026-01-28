@@ -5,8 +5,8 @@ includes:
     - ../.Build/vendor/saschaegerer/phpstan-typo3/extension.neon
 
 parameters:
-    # Level 8: Strict boolean conditions and nullability checks
-    level: 8
+    # Level 10: Strictest type checking
+    level: 10
 
     paths:
         - ../Classes/
@@ -114,6 +114,12 @@ parameters:
         # Anonymous class constructor type mismatches (test mocks)
         -
             message: '#constructor expects .*, .* given#'
+            paths:
+                - ../Tests/*
+
+        # PHPUnit mock method chain return type (mixed from createMock)
+        -
+            message: '#^Cannot call method willReturn\(\) on mixed.$#'
             paths:
                 - ../Tests/*
 

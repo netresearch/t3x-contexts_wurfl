@@ -135,7 +135,7 @@ final class DeviceDetectionService
     /**
      * Extract a string value from an array, returning null if not found or empty.
      *
-     * @param array<string, mixed>|null $data The data array
+     * @param array<array-key, mixed>|null $data The data array
      * @param string $key The key to extract
      */
     private function extractString(?array $data, string $key): ?string
