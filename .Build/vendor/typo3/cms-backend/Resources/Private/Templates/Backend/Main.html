@@ -1,0 +1,59 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+
+<f:asset.module identifier="@typo3/backend/java-script-module-import-event-handler.js"/>
+<f:asset.module identifier="bootstrap"/>
+<f:asset.module identifier="@typo3/backend/module/router.js"/>
+<f:asset.module identifier="@typo3/backend/module-menu.js"/>
+<f:asset.module identifier="@typo3/backend/storage/module-state-storage.js"/>
+<f:asset.module identifier="@typo3/backend/toolbar.js"/>
+<f:asset.module identifier="@typo3/backend/notification.js"/>
+<f:asset.module identifier="@typo3/backend/modal.js"/>
+<f:asset.module identifier="@typo3/backend/info-window.js"/>
+<f:asset.module identifier="@typo3/backend/viewport/resizable-navigation.js"/>
+<f:asset.module identifier="@typo3/backend/context-menu.js"/>
+<f:asset.module identifier="@typo3/backend/global-event-handler.js"/>
+<f:asset.module identifier="@typo3/backend/action-dispatcher.js"/>
+<f:asset.module identifier="@typo3/backend/element/immediate-action-element.js"/>
+<f:asset.module identifier="@typo3/backend/toolbar/live-search.js"/>
+<f:asset.module identifier="@typo3/backend/live-search/element/backend-search.js"/>
+<f:asset.module identifier="@typo3/backend/drag-tooltip.js"/>
+
+<div class="scaffold{f:if(condition: '!{modulesCollapsed} && {modules}', then: ' scaffold-modulemenu-expanded')}{f:if(condition: '{isInWorkspace}', then: ' scaffold-in-workspace')} scaffold-content-navigation-expanded t3js-scaffold">
+    <div class="scaffold-header t3js-scaffold-header">
+        <f:render partial="Backend/Topbar" arguments="{_all}" />
+    </div>
+    <f:if condition="{hasModules}">
+        <div class="scaffold-modulemenu t3js-scaffold-modulemenu">
+            <f:render partial="Backend/ModuleMenu" arguments="{modules: modules, modulesInformation: modulesInformation}" />
+        </div>
+    </f:if>
+    <div class="scaffold-content t3js-scaffold-content {f:if(condition: '!{hasModules}', then: 'scaffold-no-modules')}">
+        <div class="scaffold-content-navigation t3js-scaffold-content-navigation"></div>
+        <typo3-backend-navigation-switcher
+            parent=".t3js-scaffold"
+            navigation=".t3js-scaffold-content-navigation"
+            minimum-width="300"
+            persistence-identifier="navigation.width"
+        ></typo3-backend-navigation-switcher>
+        <div class="scaffold-content-module t3js-scaffold-content-module">
+            <typo3-backend-module-router
+                module="{startupModule.0}"
+                endpoint="{startupModule.1}"
+                state-tracker="{stateTracker}"
+                sitename="{sitename}"
+                {f:if(condition: sitenameFirstInBackendTitle, then: 'sitename-first')}
+                entry-point="{entryPoint}"
+                install-tool-path="{installToolPath}"
+            ></typo3-backend-module-router>
+        </div>
+        <div class="scaffold-content-overlay t3js-scaffold-content-overlay"></div>
+    </div>
+</div>
+
+<typo3-backend-drag-tooltip></typo3-backend-drag-tooltip>
+<typo3-backend-context-menu></typo3-backend-context-menu>
+
+</html>

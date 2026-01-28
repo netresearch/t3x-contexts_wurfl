@@ -1,0 +1,48 @@
+<fieldset class="row">
+    <div class="col-lg-6">
+        <div class="mb-3">
+            <label for="recoveryCodes" class="form-label">
+                <span class="badge badge-primary"><f:translate key="LLL:EXT:core/Resources/Private/Language/locallang_mfa_provider.xlf:setup.step.1"/></span> <f:translate key="LLL:EXT:core/Resources/Private/Language/locallang_mfa_provider.xlf:setup.recoveryCodes.InputLabel"/>
+            </label>
+            <div class="form-field-item">
+                <span id="recoveryCodesHelp" class="text-body-secondary">
+                    <f:translate key="LLL:EXT:core/Resources/Private/Language/locallang_mfa_provider.xlf:setup.recoveryCodes.InputHelp"/>
+                </span>
+                <div class="form-control-wrap mt-1">
+                    <input type="hidden" id="recoveryCodes" value="{recoveryCodes}" name="recoveryCodes" />
+
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <pre><code>{recoveryCodes}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <f:be.link
+                route="mfa"
+                parameters="{action: 'setup', identifier: 'recovery-codes'}"
+                class="btn btn-default btn-sm"
+                title="{f:translate(key: 'LLL:EXT:core/Resources/Private/Language/locallang_mfa_provider.xlf:setup.recoveryCodes.reloadTitle')}"
+            >
+                <core:icon identifier="actions-refresh" />
+                <f:translate key="LLL:EXT:core/Resources/Private/Language/locallang_mfa_provider.xlf:setup.recoveryCodes.reloadLabel"/>
+            </f:be.link>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="mb-3">
+            <label for="name" class="form-label">
+                <span class="badge badge-primary"><f:translate key="LLL:EXT:core/Resources/Private/Language/locallang_mfa_provider.xlf:setup.step.2"/></span> <f:translate key="LLL:EXT:core/Resources/Private/Language/locallang_mfa_provider.xlf:setup.name.label"/>
+            </label>
+            <div class=form-field-item">
+            <span id="nameHelp" class="text-body-secondary">
+                <f:translate key="LLL:EXT:core/Resources/Private/Language/locallang_mfa_provider.xlf:setup.name.help"/>
+            </span>
+                <div class="form-control-wrap mt-1">
+                    <input type="text" id="name" name="name" value="" class="form-control"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" name="checksum" value="{checksum}"/>
+</fieldset>

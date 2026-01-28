@@ -87,9 +87,9 @@ parameters:
             paths:
                 - ../Tests/*
 
-        # Test file offset access
+        # Test file offset access (legitimate test data access patterns)
         -
-            message: '#Offset .* does not exist on array#'
+            message: '#Offset .* does not exist on array\{.*\}#'
             paths:
                 - ../Tests/*
 

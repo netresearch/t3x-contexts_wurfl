@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <type>array</type>
+                <el>
+                    <placeholder>
+                        <label>LLL:EXT:contexts/Resources/Private/Language/flexform.xlf:empty.placeholder</label>
+                        <config>
+                            <type>none</type>
+                        </config>
+                    </placeholder>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

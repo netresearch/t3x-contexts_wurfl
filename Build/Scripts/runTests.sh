@@ -136,15 +136,15 @@ case ${SUITE} in
         .Build/bin/phpstan analyse -c Build/phpstan.neon ${VERBOSE}
         echo ""
         echo -e "${GREEN}>>> Running PHP-CS-Fixer (check)${NC}"
-        .Build/bin/php-cs-fixer fix --dry-run --diff ${VERBOSE}
+        .Build/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php --dry-run --diff ${VERBOSE}
         ;;
     cgl)
         echo -e "${GREEN}>>> Running PHP-CS-Fixer (check)${NC}"
-        .Build/bin/php-cs-fixer fix --dry-run --diff ${VERBOSE}
+        .Build/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php --dry-run --diff ${VERBOSE}
         ;;
     cglfix)
         echo -e "${GREEN}>>> Running PHP-CS-Fixer (fix)${NC}"
-        .Build/bin/php-cs-fixer fix ${VERBOSE}
+        .Build/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php ${VERBOSE}
         ;;
     phpstan)
         echo -e "${GREEN}>>> Running PHPStan${NC}"
@@ -159,7 +159,7 @@ case ${SUITE} in
         echo ""
 
         echo -e "${GREEN}>>> 2/4 PHP-CS-Fixer${NC}"
-        .Build/bin/php-cs-fixer fix --dry-run --diff || true
+        .Build/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php --dry-run --diff || true
         echo ""
 
         echo -e "${GREEN}>>> 3/4 Unit Tests${NC}"

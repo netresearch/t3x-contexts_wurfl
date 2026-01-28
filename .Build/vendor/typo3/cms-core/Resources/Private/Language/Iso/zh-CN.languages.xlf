@@ -1,0 +1,1951 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="zh-CN" datatype="plaintext" original="EXT:core/Resources/Private/Language/countries.xlf" product-name="typo3/cms-core">
+    <body>
+      <trans-unit id="aa" approved="yes">
+        <source>Afar</source>
+        <target>阿法尔语</target>
+      </trans-unit>
+      <trans-unit id="ab" approved="yes">
+        <source>Abkhazian</source>
+        <target>阿布哈兹语</target>
+      </trans-unit>
+      <trans-unit id="ace" approved="yes">
+        <source>Achinese</source>
+        <target>亚齐语</target>
+      </trans-unit>
+      <trans-unit id="ach" approved="yes">
+        <source>Acoli</source>
+        <target>阿乔利语</target>
+      </trans-unit>
+      <trans-unit id="ada" approved="yes">
+        <source>Adangme</source>
+        <target>阿当梅语</target>
+      </trans-unit>
+      <trans-unit id="ady" approved="yes">
+        <source>Adyghe; Adygei</source>
+        <target>阿迪格语</target>
+      </trans-unit>
+      <trans-unit id="ae" approved="yes">
+        <source>Avestan</source>
+        <target>阿维斯陀语</target>
+      </trans-unit>
+      <trans-unit id="af" approved="yes">
+        <source>Afrikaans</source>
+        <target>南非荷兰语</target>
+      </trans-unit>
+      <trans-unit id="afa" approved="yes">
+        <source>Afro-Asiatic languages</source>
+        <target>亚非诸语言</target>
+      </trans-unit>
+      <trans-unit id="afh" approved="yes">
+        <source>Afrihili</source>
+        <target>阿弗里希利语</target>
+      </trans-unit>
+      <trans-unit id="ain" approved="yes">
+        <source>Ainu</source>
+        <target>阿依努语</target>
+      </trans-unit>
+      <trans-unit id="ak" approved="yes">
+        <source>Akan</source>
+        <target>阿坎语</target>
+      </trans-unit>
+      <trans-unit id="akk" approved="yes">
+        <source>Akkadian</source>
+        <target>阿卡德语</target>
+      </trans-unit>
+      <trans-unit id="ale" approved="yes">
+        <source>Aleut</source>
+        <target>阿留申语</target>
+      </trans-unit>
+      <trans-unit id="alg" approved="yes">
+        <source>Algonquian languages</source>
+        <target>阿尔冈昆诸语言</target>
+      </trans-unit>
+      <trans-unit id="alt" approved="yes">
+        <source>Southern Altai</source>
+        <target>南阿尔泰语</target>
+      </trans-unit>
+      <trans-unit id="am" approved="yes">
+        <source>Amharic</source>
+        <target>阿姆哈拉语</target>
+      </trans-unit>
+      <trans-unit id="an" approved="yes">
+        <source>Aragonese</source>
+        <target>阿拉贡语</target>
+      </trans-unit>
+      <trans-unit id="ang" approved="yes">
+        <source>English, Old (ca. 450-1100)</source>
+        <target>古英语 (约 450 - 1100)</target>
+      </trans-unit>
+      <trans-unit id="anp" approved="yes">
+        <source>Angika</source>
+        <target>安吉卡语</target>
+      </trans-unit>
+      <trans-unit id="apa" approved="yes">
+        <source>Apache languages</source>
+        <target>阿帕切诸语言</target>
+      </trans-unit>
+      <trans-unit id="ar" approved="yes">
+        <source>Arabic</source>
+        <target>阿拉伯语</target>
+      </trans-unit>
+      <trans-unit id="arc" approved="yes">
+        <source>Official Aramaic (700-300 BCE); Imperial Aramaic (700-300 BCE)</source>
+        <target>官方阿兰语 (公元前700-300年)</target>
+      </trans-unit>
+      <trans-unit id="arn" approved="yes">
+        <source>Mapudungun; Mapuche</source>
+        <target>阿劳坎语</target>
+      </trans-unit>
+      <trans-unit id="arp" approved="yes">
+        <source>Arapaho</source>
+        <target>阿拉帕霍语</target>
+      </trans-unit>
+      <trans-unit id="art" approved="yes">
+        <source>Artificial languages</source>
+        <target>人工语言</target>
+      </trans-unit>
+      <trans-unit id="arw" approved="yes">
+        <source>Arawak</source>
+        <target>阿拉瓦克语</target>
+      </trans-unit>
+      <trans-unit id="as" approved="yes">
+        <source>Assamese</source>
+        <target>阿萨姆语</target>
+      </trans-unit>
+      <trans-unit id="ast" approved="yes">
+        <source>Asturian; Bable; Leonese; Asturleonese</source>
+        <target>阿斯图里亚斯语</target>
+      </trans-unit>
+      <trans-unit id="ath" approved="yes">
+        <source>Athapascan languages</source>
+        <target>阿萨帕斯坎诸语言</target>
+      </trans-unit>
+      <trans-unit id="aus" approved="yes">
+        <source>Australian languages</source>
+        <target>澳大利亚诸语言</target>
+      </trans-unit>
+      <trans-unit id="av" approved="yes">
+        <source>Avaric</source>
+        <target>阿瓦尔语</target>
+      </trans-unit>
+      <trans-unit id="awa" approved="yes">
+        <source>Awadhi</source>
+        <target>阿瓦德语</target>
+      </trans-unit>
+      <trans-unit id="ay" approved="yes">
+        <source>Aymara</source>
+        <target>艾马拉语</target>
+      </trans-unit>
+      <trans-unit id="az" approved="yes">
+        <source>Azerbaijani</source>
+        <target>阿塞拜疆语</target>
+      </trans-unit>
+      <trans-unit id="ba" approved="yes">
+        <source>Bashkir</source>
+        <target>巴什基尔语</target>
+      </trans-unit>
+      <trans-unit id="bad" approved="yes">
+        <source>Banda languages</source>
+        <target>班达语</target>
+      </trans-unit>
+      <trans-unit id="bai" approved="yes">
+        <source>Bamileke languages</source>
+        <target>巴米累克诸语言</target>
+      </trans-unit>
+      <trans-unit id="bal" approved="yes">
+        <source>Baluchi</source>
+        <target>俾路支语</target>
+      </trans-unit>
+      <trans-unit id="ban" approved="yes">
+        <source>Balinese</source>
+        <target>巴厘语</target>
+      </trans-unit>
+      <trans-unit id="bas" approved="yes">
+        <source>Basa</source>
+        <target>巴萨语</target>
+      </trans-unit>
+      <trans-unit id="bat" approved="yes">
+        <source>Baltic languages</source>
+        <target>波罗的诸语言</target>
+      </trans-unit>
+      <trans-unit id="be" approved="yes">
+        <source>Belarusian</source>
+        <target>白俄罗斯语</target>
+      </trans-unit>
+      <trans-unit id="bej" approved="yes">
+        <source>Beja; Bedawiyet</source>
+        <target>贝贾语</target>
+      </trans-unit>
+      <trans-unit id="bem" approved="yes">
+        <source>Bemba</source>
+        <target>本巴语</target>
+      </trans-unit>
+      <trans-unit id="ber" approved="yes">
+        <source>Berber languages</source>
+        <target>柏柏尔语</target>
+      </trans-unit>
+      <trans-unit id="bg" approved="yes">
+        <source>Bulgarian</source>
+        <target>保加利亚语</target>
+      </trans-unit>
+      <trans-unit id="bho" approved="yes">
+        <source>Bhojpuri</source>
+        <target>博杰普里语</target>
+      </trans-unit>
+      <trans-unit id="bi" approved="yes">
+        <source>Bislama</source>
+        <target>比斯拉玛语</target>
+      </trans-unit>
+      <trans-unit id="bih" approved="yes">
+        <source>Bihari languages</source>
+        <target>比哈尔语</target>
+      </trans-unit>
+      <trans-unit id="bik" approved="yes">
+        <source>Bikol</source>
+        <target>比科尔语</target>
+      </trans-unit>
+      <trans-unit id="bin" approved="yes">
+        <source>Bini; Edo</source>
+        <target>比尼语</target>
+      </trans-unit>
+      <trans-unit id="bla" approved="yes">
+        <source>Siksika</source>
+        <target>西克西卡语</target>
+      </trans-unit>
+      <trans-unit id="bm" approved="yes">
+        <source>Bambara</source>
+        <target>班巴拉语</target>
+      </trans-unit>
+      <trans-unit id="bn" approved="yes">
+        <source>Bengali</source>
+        <target>孟加拉语</target>
+      </trans-unit>
+      <trans-unit id="bnt" approved="yes">
+        <source>Bantu languages</source>
+        <target>Bantu languages</target>
+      </trans-unit>
+      <trans-unit id="bo" approved="yes">
+        <source>Tibetan</source>
+        <target>藏语</target>
+      </trans-unit>
+      <trans-unit id="br" approved="yes">
+        <source>Breton</source>
+        <target>布里多尼语</target>
+      </trans-unit>
+      <trans-unit id="bra" approved="yes">
+        <source>Braj</source>
+        <target>布拉吉语</target>
+      </trans-unit>
+      <trans-unit id="bs" approved="yes">
+        <source>Bosnian</source>
+        <target>波斯尼亚语</target>
+      </trans-unit>
+      <trans-unit id="btk" approved="yes">
+        <source>Batak languages</source>
+        <target>巴塔克语 (印度尼西亚)</target>
+      </trans-unit>
+      <trans-unit id="bua" approved="yes">
+        <source>Buriat</source>
+        <target>布里亚特语</target>
+      </trans-unit>
+      <trans-unit id="bug" approved="yes">
+        <source>Buginese</source>
+        <target>布吉语</target>
+      </trans-unit>
+      <trans-unit id="byn" approved="yes">
+        <source>Blin; Bilin</source>
+        <target>比林语</target>
+      </trans-unit>
+      <trans-unit id="ca" approved="yes">
+        <source>Catalan; Valencian</source>
+        <target>加泰罗尼亚语</target>
+      </trans-unit>
+      <trans-unit id="cad" approved="yes">
+        <source>Caddo</source>
+        <target>卡多语</target>
+      </trans-unit>
+      <trans-unit id="cai" approved="yes">
+        <source>Central American Indian languages</source>
+        <target>中美洲印第安诸语言</target>
+      </trans-unit>
+      <trans-unit id="car" approved="yes">
+        <source>Galibi Carib</source>
+        <target>加勒比诸语言</target>
+      </trans-unit>
+      <trans-unit id="cau" approved="yes">
+        <source>Caucasian languages</source>
+        <target>高加索诸语言</target>
+      </trans-unit>
+      <trans-unit id="ce" approved="yes">
+        <source>Chechen</source>
+        <target>车臣语</target>
+      </trans-unit>
+      <trans-unit id="ceb" approved="yes">
+        <source>Cebuano</source>
+        <target>宿务语</target>
+      </trans-unit>
+      <trans-unit id="cel" approved="yes">
+        <source>Celtic languages</source>
+        <target>凯尔特诸语言</target>
+      </trans-unit>
+      <trans-unit id="ch" approved="yes">
+        <source>Chamorro</source>
+        <target>查莫罗语</target>
+      </trans-unit>
+      <trans-unit id="chb" approved="yes">
+        <source>Chibcha</source>
+        <target>奇布查语</target>
+      </trans-unit>
+      <trans-unit id="chg" approved="yes">
+        <source>Chagatai</source>
+        <target>查加台语</target>
+      </trans-unit>
+      <trans-unit id="chk" approved="yes">
+        <source>Chuukese</source>
+        <target>丘克语</target>
+      </trans-unit>
+      <trans-unit id="chm" approved="yes">
+        <source>Mari</source>
+        <target>马里语</target>
+      </trans-unit>
+      <trans-unit id="chn" approved="yes">
+        <source>Chinook jargon</source>
+        <target>奇努克混合语</target>
+      </trans-unit>
+      <trans-unit id="cho" approved="yes">
+        <source>Choctaw</source>
+        <target>乔克托语</target>
+      </trans-unit>
+      <trans-unit id="chp" approved="yes">
+        <source>Chipewyan; Dene Suline</source>
+        <target>奇佩维安语</target>
+      </trans-unit>
+      <trans-unit id="chr" approved="yes">
+        <source>Cherokee</source>
+        <target>切罗基语</target>
+      </trans-unit>
+      <trans-unit id="chy" approved="yes">
+        <source>Cheyenne</source>
+        <target>夏延语</target>
+      </trans-unit>
+      <trans-unit id="cmc" approved="yes">
+        <source>Chamic languages</source>
+        <target>占语诸语言</target>
+      </trans-unit>
+      <trans-unit id="cnr" approved="yes">
+        <source>Montenegrin</source>
+        <target>黑山语</target>
+      </trans-unit>
+      <trans-unit id="co" approved="yes">
+        <source>Corsican</source>
+        <target>科西嘉语</target>
+      </trans-unit>
+      <trans-unit id="cop" approved="yes">
+        <source>Coptic</source>
+        <target>科普特语</target>
+      </trans-unit>
+      <trans-unit id="cpe" approved="yes">
+        <source>Creoles and pidgins, English based</source>
+        <target>英语克里奥尔混合语</target>
+      </trans-unit>
+      <trans-unit id="cpf" approved="yes">
+        <source>Creoles and pidgins, French-based</source>
+        <target>法语克里奥尔混合语</target>
+      </trans-unit>
+      <trans-unit id="cpp" approved="yes">
+        <source>Creoles and pidgins, Portuguese-based</source>
+        <target>葡萄牙语克里奥尔混合语</target>
+      </trans-unit>
+      <trans-unit id="cr" approved="yes">
+        <source>Cree</source>
+        <target>克里语</target>
+      </trans-unit>
+      <trans-unit id="crh" approved="yes">
+        <source>Crimean Tatar; Crimean Turkish</source>
+        <target>克里米亚鞑靼语</target>
+      </trans-unit>
+      <trans-unit id="crp" approved="yes">
+        <source>Creoles and pidgins</source>
+        <target>克里奥尔混合语</target>
+      </trans-unit>
+      <trans-unit id="cs" approved="yes">
+        <source>Czech</source>
+        <target>捷克语</target>
+      </trans-unit>
+      <trans-unit id="csb" approved="yes">
+        <source>Kashubian</source>
+        <target>卡舒比语</target>
+      </trans-unit>
+      <trans-unit id="cu" approved="yes">
+        <source>Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic</source>
+        <target>古教会斯拉夫语</target>
+      </trans-unit>
+      <trans-unit id="cus" approved="yes">
+        <source>Cushitic languages</source>
+        <target>库施特诸语言</target>
+      </trans-unit>
+      <trans-unit id="cv" approved="yes">
+        <source>Chuvash</source>
+        <target>楚瓦什语</target>
+      </trans-unit>
+      <trans-unit id="cy" approved="yes">
+        <source>Welsh</source>
+        <target>威尔士语</target>
+      </trans-unit>
+      <trans-unit id="da" approved="yes">
+        <source>Danish</source>
+        <target>丹麦语</target>
+      </trans-unit>
+      <trans-unit id="dak" approved="yes">
+        <source>Dakota</source>
+        <target>达科他语</target>
+      </trans-unit>
+      <trans-unit id="dar" approved="yes">
+        <source>Dargwa</source>
+        <target>达尔格瓦语</target>
+      </trans-unit>
+      <trans-unit id="day" approved="yes">
+        <source>Land Dayak languages</source>
+        <target>达雅克语</target>
+      </trans-unit>
+      <trans-unit id="de" approved="yes">
+        <source>German</source>
+        <target>德语</target>
+      </trans-unit>
+      <trans-unit id="del" approved="yes">
+        <source>Delaware</source>
+        <target>特拉华语</target>
+      </trans-unit>
+      <trans-unit id="den" approved="yes">
+        <source>Slave (Athapascan)</source>
+        <target>史拉维语</target>
+      </trans-unit>
+      <trans-unit id="dgr" approved="yes">
+        <source>Tlicho; Dogrib</source>
+        <target>Tlicho; Dogrib</target>
+      </trans-unit>
+      <trans-unit id="din" approved="yes">
+        <source>Dinka</source>
+        <target>丁卡语</target>
+      </trans-unit>
+      <trans-unit id="doi" approved="yes">
+        <source>Dogri</source>
+        <target>多格拉语</target>
+      </trans-unit>
+      <trans-unit id="dra" approved="yes">
+        <source>Dravidian languages</source>
+        <target>达罗毗荼诸语言</target>
+      </trans-unit>
+      <trans-unit id="dsb" approved="yes">
+        <source>Lower Sorbian</source>
+        <target>低地文德语</target>
+      </trans-unit>
+      <trans-unit id="dua" approved="yes">
+        <source>Duala</source>
+        <target>杜亚拉语</target>
+      </trans-unit>
+      <trans-unit id="dum" approved="yes">
+        <source>Dutch, Middle (ca. 1050-1350)</source>
+        <target>中古荷兰语 (约 1050 - 1350)</target>
+      </trans-unit>
+      <trans-unit id="dv" approved="yes">
+        <source>Divehi; Dhivehi; Maldivian</source>
+        <target>迪维希语</target>
+      </trans-unit>
+      <trans-unit id="dyu" approved="yes">
+        <source>Dyula</source>
+        <target>迪尤拉语</target>
+      </trans-unit>
+      <trans-unit id="dz" approved="yes">
+        <source>Dzongkha</source>
+        <target>不丹语</target>
+      </trans-unit>
+      <trans-unit id="ee" approved="yes">
+        <source>Ewe</source>
+        <target>埃维语</target>
+      </trans-unit>
+      <trans-unit id="efi" approved="yes">
+        <source>Efik</source>
+        <target>埃菲克语</target>
+      </trans-unit>
+      <trans-unit id="egy" approved="yes">
+        <source>Egyptian (Ancient)</source>
+        <target>古埃及语</target>
+      </trans-unit>
+      <trans-unit id="eka" approved="yes">
+        <source>Ekajuk</source>
+        <target>埃克丘克语</target>
+      </trans-unit>
+      <trans-unit id="el" approved="yes">
+        <source>Greek, Modern (1453-)</source>
+        <target>现代希腊语</target>
+      </trans-unit>
+      <trans-unit id="elx" approved="yes">
+        <source>Elamite</source>
+        <target>埃兰语</target>
+      </trans-unit>
+      <trans-unit id="en" approved="yes">
+        <source>English</source>
+        <target>英语</target>
+      </trans-unit>
+      <trans-unit id="enm" approved="yes">
+        <source>English, Middle (1100-1500)</source>
+        <target>中古英语 (1100 - 1500)</target>
+      </trans-unit>
+      <trans-unit id="eo" approved="yes">
+        <source>Esperanto</source>
+        <target>世界语</target>
+      </trans-unit>
+      <trans-unit id="es" approved="yes">
+        <source>Spanish; Castilian</source>
+        <target>西班牙语</target>
+      </trans-unit>
+      <trans-unit id="et" approved="yes">
+        <source>Estonian</source>
+        <target>爱沙尼亚语</target>
+      </trans-unit>
+      <trans-unit id="eu" approved="yes">
+        <source>Basque</source>
+        <target>巴斯克语</target>
+      </trans-unit>
+      <trans-unit id="ewo" approved="yes">
+        <source>Ewondo</source>
+        <target>埃翁多语</target>
+      </trans-unit>
+      <trans-unit id="fa" approved="yes">
+        <source>Persian</source>
+        <target>波斯语</target>
+      </trans-unit>
+      <trans-unit id="fan" approved="yes">
+        <source>Fang</source>
+        <target>芳语</target>
+      </trans-unit>
+      <trans-unit id="fat" approved="yes">
+        <source>Fanti</source>
+        <target>芳蒂语</target>
+      </trans-unit>
+      <trans-unit id="ff" approved="yes">
+        <source>Fulah</source>
+        <target>富拉语</target>
+      </trans-unit>
+      <trans-unit id="fi" approved="yes">
+        <source>Finnish</source>
+        <target>芬兰语</target>
+      </trans-unit>
+      <trans-unit id="fil" approved="yes">
+        <source>Filipino; Pilipino</source>
+        <target>菲律宾语</target>
+      </trans-unit>
+      <trans-unit id="fiu" approved="yes">
+        <source>Finno-Ugrian languages</source>
+        <target>芬兰-乌戈尔诸语言</target>
+      </trans-unit>
+      <trans-unit id="fj" approved="yes">
+        <source>Fijian</source>
+        <target>斐济语</target>
+      </trans-unit>
+      <trans-unit id="fo" approved="yes">
+        <source>Faroese</source>
+        <target>法罗语</target>
+      </trans-unit>
+      <trans-unit id="fon" approved="yes">
+        <source>Fon</source>
+        <target>丰语</target>
+      </trans-unit>
+      <trans-unit id="fr" approved="yes">
+        <source>French</source>
+        <target>法语</target>
+      </trans-unit>
+      <trans-unit id="frm" approved="yes">
+        <source>French, Middle (ca. 1400-1600)</source>
+        <target>中古法语 (约 1400 - 1600)</target>
+      </trans-unit>
+      <trans-unit id="fro" approved="yes">
+        <source>French, Old (842-ca. 1400)</source>
+        <target>古法语 (842 - 约 1400)</target>
+      </trans-unit>
+      <trans-unit id="frr" approved="yes">
+        <source>Northern Frisian</source>
+        <target>北弗里西亚语</target>
+      </trans-unit>
+      <trans-unit id="frs" approved="yes">
+        <source>Eastern Frisian</source>
+        <target>东弗里西亚语</target>
+      </trans-unit>
+      <trans-unit id="fur" approved="yes">
+        <source>Friulian</source>
+        <target>弗留利语</target>
+      </trans-unit>
+      <trans-unit id="fy" approved="yes">
+        <source>Western Frisian</source>
+        <target>弗里西亚语</target>
+      </trans-unit>
+      <trans-unit id="ga" approved="yes">
+        <source>Irish</source>
+        <target>爱尔兰语</target>
+      </trans-unit>
+      <trans-unit id="gaa" approved="yes">
+        <source>Ga</source>
+        <target>加语</target>
+      </trans-unit>
+      <trans-unit id="gay" approved="yes">
+        <source>Gayo</source>
+        <target>卡约语</target>
+      </trans-unit>
+      <trans-unit id="gba" approved="yes">
+        <source>Gbaya</source>
+        <target>巴亚语</target>
+      </trans-unit>
+      <trans-unit id="gd" approved="yes">
+        <source>Gaelic; Scottish Gaelic</source>
+        <target>苏格兰盖尔语</target>
+      </trans-unit>
+      <trans-unit id="gem" approved="yes">
+        <source>Germanic languages</source>
+        <target>日尔曼诸语言</target>
+      </trans-unit>
+      <trans-unit id="gez" approved="yes">
+        <source>Geez</source>
+        <target>吉兹语</target>
+      </trans-unit>
+      <trans-unit id="gil" approved="yes">
+        <source>Gilbertese</source>
+        <target>吉伯特语</target>
+      </trans-unit>
+      <trans-unit id="gl" approved="yes">
+        <source>Galician</source>
+        <target>加利西亚语</target>
+      </trans-unit>
+      <trans-unit id="gmh" approved="yes">
+        <source>German, Middle High (ca. 1050-1500)</source>
+        <target>中古高地德语 (约 1050 - 1500)</target>
+      </trans-unit>
+      <trans-unit id="gn" approved="yes">
+        <source>Guarani</source>
+        <target>瓜拉尼语</target>
+      </trans-unit>
+      <trans-unit id="goh" approved="yes">
+        <source>German, Old High (ca. 750-1050)</source>
+        <target>古高地德语 (约 750 - 1050)</target>
+      </trans-unit>
+      <trans-unit id="gon" approved="yes">
+        <source>Gondi</source>
+        <target>贡德语</target>
+      </trans-unit>
+      <trans-unit id="gor" approved="yes">
+        <source>Gorontalo</source>
+        <target>哥伦打洛语</target>
+      </trans-unit>
+      <trans-unit id="got" approved="yes">
+        <source>Gothic</source>
+        <target>哥特语</target>
+      </trans-unit>
+      <trans-unit id="grb" approved="yes">
+        <source>Grebo</source>
+        <target>格列博语</target>
+      </trans-unit>
+      <trans-unit id="grc" approved="yes">
+        <source>Greek, Ancient (to 1453)</source>
+        <target>古希腊语 (- 1453)</target>
+      </trans-unit>
+      <trans-unit id="gsw" approved="yes">
+        <source>Swiss German; Alemannic; Alsatian</source>
+        <target>阿勒曼尼语</target>
+      </trans-unit>
+      <trans-unit id="gu" approved="yes">
+        <source>Gujarati</source>
+        <target>古吉拉特语</target>
+      </trans-unit>
+      <trans-unit id="gv" approved="yes">
+        <source>Manx</source>
+        <target>马恩岛语</target>
+      </trans-unit>
+      <trans-unit id="gwi" approved="yes">
+        <source>Gwich'in</source>
+        <target>库臣语</target>
+      </trans-unit>
+      <trans-unit id="ha" approved="yes">
+        <source>Hausa</source>
+        <target>豪萨语</target>
+      </trans-unit>
+      <trans-unit id="hai" approved="yes">
+        <source>Haida</source>
+        <target>海达语</target>
+      </trans-unit>
+      <trans-unit id="haw" approved="yes">
+        <source>Hawaiian</source>
+        <target>夏威夷语</target>
+      </trans-unit>
+      <trans-unit id="he" approved="yes">
+        <source>Hebrew</source>
+        <target>希伯来语</target>
+      </trans-unit>
+      <trans-unit id="hi" approved="yes">
+        <source>Hindi</source>
+        <target>印地语</target>
+      </trans-unit>
+      <trans-unit id="hil" approved="yes">
+        <source>Hiligaynon</source>
+        <target>希利盖农语</target>
+      </trans-unit>
+      <trans-unit id="him" approved="yes">
+        <source>Himachali languages; Western Pahari languages</source>
+        <target>喜马偕尔语</target>
+      </trans-unit>
+      <trans-unit id="hit" approved="yes">
+        <source>Hittite</source>
+        <target>赫梯语</target>
+      </trans-unit>
+      <trans-unit id="hmn" approved="yes">
+        <source>Hmong; Mong</source>
+        <target>苗语</target>
+      </trans-unit>
+      <trans-unit id="ho" approved="yes">
+        <source>Hiri Motu</source>
+        <target>希里莫图语</target>
+      </trans-unit>
+      <trans-unit id="hr" approved="yes">
+        <source>Croatian</source>
+        <target>克罗地亚语</target>
+      </trans-unit>
+      <trans-unit id="hsb" approved="yes">
+        <source>Upper Sorbian</source>
+        <target>上索布语</target>
+      </trans-unit>
+      <trans-unit id="ht" approved="yes">
+        <source>Haitian; Haitian Creole</source>
+        <target>海地克里奥尔语</target>
+      </trans-unit>
+      <trans-unit id="hu" approved="yes">
+        <source>Hungarian</source>
+        <target>匈牙利语</target>
+      </trans-unit>
+      <trans-unit id="hup" approved="yes">
+        <source>Hupa</source>
+        <target>胡帕语</target>
+      </trans-unit>
+      <trans-unit id="hy" approved="yes">
+        <source>Armenian</source>
+        <target>亚美尼亚语</target>
+      </trans-unit>
+      <trans-unit id="hz" approved="yes">
+        <source>Herero</source>
+        <target>赫雷罗语</target>
+      </trans-unit>
+      <trans-unit id="ia" approved="yes">
+        <source>Interlingua (International Auxiliary Language Association)</source>
+        <target>拉丁国际语</target>
+      </trans-unit>
+      <trans-unit id="iba" approved="yes">
+        <source>Iban</source>
+        <target>伊班语</target>
+      </trans-unit>
+      <trans-unit id="id" approved="yes">
+        <source>Indonesian</source>
+        <target>印尼语</target>
+      </trans-unit>
+      <trans-unit id="ie" approved="yes">
+        <source>Interlingue; Occidental</source>
+        <target>国际语E</target>
+      </trans-unit>
+      <trans-unit id="ig" approved="yes">
+        <source>Igbo</source>
+        <target>伊博语</target>
+      </trans-unit>
+      <trans-unit id="ii" approved="yes">
+        <source>Sichuan Yi; Nuosu</source>
+        <target>四川彝语</target>
+      </trans-unit>
+      <trans-unit id="ijo" approved="yes">
+        <source>Ijo languages</source>
+        <target>伊乔语</target>
+      </trans-unit>
+      <trans-unit id="ik" approved="yes">
+        <source>Inupiaq</source>
+        <target>依努庇克语</target>
+      </trans-unit>
+      <trans-unit id="ilo" approved="yes">
+        <source>Iloko</source>
+        <target>伊洛卡诺语</target>
+      </trans-unit>
+      <trans-unit id="inc" approved="yes">
+        <source>Indic languages</source>
+        <target>印度诸语言</target>
+      </trans-unit>
+      <trans-unit id="ine" approved="yes">
+        <source>Indo-European languages</source>
+        <target>印欧诸语言</target>
+      </trans-unit>
+      <trans-unit id="inh" approved="yes">
+        <source>Ingush</source>
+        <target>印古什语</target>
+      </trans-unit>
+      <trans-unit id="io" approved="yes">
+        <source>Ido</source>
+        <target>伊多语</target>
+      </trans-unit>
+      <trans-unit id="ira" approved="yes">
+        <source>Iranian languages</source>
+        <target>伊朗诸语言</target>
+      </trans-unit>
+      <trans-unit id="iro" approved="yes">
+        <source>Iroquoian languages</source>
+        <target>易洛魁语</target>
+      </trans-unit>
+      <trans-unit id="is" approved="yes">
+        <source>Icelandic</source>
+        <target>冰岛语</target>
+      </trans-unit>
+      <trans-unit id="it" approved="yes">
+        <source>Italian</source>
+        <target>意大利语</target>
+      </trans-unit>
+      <trans-unit id="iu" approved="yes">
+        <source>Inuktitut</source>
+        <target>伊努伊特语</target>
+      </trans-unit>
+      <trans-unit id="ja" approved="yes">
+        <source>Japanese</source>
+        <target>日语</target>
+      </trans-unit>
+      <trans-unit id="jbo" approved="yes">
+        <source>Lojban</source>
+        <target>逻辑语</target>
+      </trans-unit>
+      <trans-unit id="jpr" approved="yes">
+        <source>Judeo-Persian</source>
+        <target>犹太-波斯语</target>
+      </trans-unit>
+      <trans-unit id="jrb" approved="yes">
+        <source>Judeo-Arabic</source>
+        <target>犹太-阿拉伯语</target>
+      </trans-unit>
+      <trans-unit id="jv" approved="yes">
+        <source>Javanese</source>
+        <target>爪哇语</target>
+      </trans-unit>
+      <trans-unit id="ka" approved="yes">
+        <source>Georgian</source>
+        <target>格鲁吉亚语</target>
+      </trans-unit>
+      <trans-unit id="kaa" approved="yes">
+        <source>Kara-Kalpak</source>
+        <target>卡拉卡尔帕克语</target>
+      </trans-unit>
+      <trans-unit id="kab" approved="yes">
+        <source>Kabyle</source>
+        <target>卡拜尔语</target>
+      </trans-unit>
+      <trans-unit id="kac" approved="yes">
+        <source>Kachin; Jingpho</source>
+        <target>克钦语</target>
+      </trans-unit>
+      <trans-unit id="kam" approved="yes">
+        <source>Kamba</source>
+        <target>坎巴语</target>
+      </trans-unit>
+      <trans-unit id="kar" approved="yes">
+        <source>Karen languages</source>
+        <target>克伦语</target>
+      </trans-unit>
+      <trans-unit id="kaw" approved="yes">
+        <source>Kawi</source>
+        <target>卡威语</target>
+      </trans-unit>
+      <trans-unit id="kbd" approved="yes">
+        <source>Kabardian</source>
+        <target>卡巴尔德语</target>
+      </trans-unit>
+      <trans-unit id="kg" approved="yes">
+        <source>Kongo</source>
+        <target>刚果语</target>
+      </trans-unit>
+      <trans-unit id="kha" approved="yes">
+        <source>Khasi</source>
+        <target>卡西语</target>
+      </trans-unit>
+      <trans-unit id="khi" approved="yes">
+        <source>Khoisan languages</source>
+        <target>科伊桑诸语言</target>
+      </trans-unit>
+      <trans-unit id="kho" approved="yes">
+        <source>Khotanese; Sakan</source>
+        <target>和阗语</target>
+      </trans-unit>
+      <trans-unit id="ki" approved="yes">
+        <source>Kikuyu; Gikuyu</source>
+        <target>基库尤语</target>
+      </trans-unit>
+      <trans-unit id="kj" approved="yes">
+        <source>Kuanyama; Kwanyama</source>
+        <target>宽亚玛语</target>
+      </trans-unit>
+      <trans-unit id="kk" approved="yes">
+        <source>Kazakh</source>
+        <target>哈萨克语</target>
+      </trans-unit>
+      <trans-unit id="kl" approved="yes">
+        <source>Kalaallisut; Greenlandic</source>
+        <target>格陵兰语</target>
+      </trans-unit>
+      <trans-unit id="km" approved="yes">
+        <source>Central Khmer</source>
+        <target>高棉语</target>
+      </trans-unit>
+      <trans-unit id="kmb" approved="yes">
+        <source>Kimbundu</source>
+        <target>金本杜语</target>
+      </trans-unit>
+      <trans-unit id="kn" approved="yes">
+        <source>Kannada</source>
+        <target>卡纳达语</target>
+      </trans-unit>
+      <trans-unit id="ko" approved="yes">
+        <source>Korean</source>
+        <target>朝鲜语</target>
+      </trans-unit>
+      <trans-unit id="kok" approved="yes">
+        <source>Konkani</source>
+        <target>孔卡尼语</target>
+      </trans-unit>
+      <trans-unit id="kos" approved="yes">
+        <source>Kosraean</source>
+        <target>科斯拉伊语</target>
+      </trans-unit>
+      <trans-unit id="kpe" approved="yes">
+        <source>Kpelle</source>
+        <target>克佩勒语</target>
+      </trans-unit>
+      <trans-unit id="kr" approved="yes">
+        <source>Kanuri</source>
+        <target>卡努里语</target>
+      </trans-unit>
+      <trans-unit id="krc" approved="yes">
+        <source>Karachay-Balkar</source>
+        <target>卡拉恰伊-巴尔卡尔语</target>
+      </trans-unit>
+      <trans-unit id="krl" approved="yes">
+        <source>Karelian</source>
+        <target>卡累利阿语</target>
+      </trans-unit>
+      <trans-unit id="kro" approved="yes">
+        <source>Kru languages</source>
+        <target>克鲁语</target>
+      </trans-unit>
+      <trans-unit id="kru" approved="yes">
+        <source>Kurukh</source>
+        <target>库卢克语</target>
+      </trans-unit>
+      <trans-unit id="ks" approved="yes">
+        <source>Kashmiri</source>
+        <target>克什米尔语</target>
+      </trans-unit>
+      <trans-unit id="ku" approved="yes">
+        <source>Kurdish</source>
+        <target>库尔德语</target>
+      </trans-unit>
+      <trans-unit id="kum" approved="yes">
+        <source>Kumyk</source>
+        <target>库梅克语</target>
+      </trans-unit>
+      <trans-unit id="kut" approved="yes">
+        <source>Kutenai</source>
+        <target>库特内语</target>
+      </trans-unit>
+      <trans-unit id="kv" approved="yes">
+        <source>Komi</source>
+        <target>科米语</target>
+      </trans-unit>
+      <trans-unit id="kw" approved="yes">
+        <source>Cornish</source>
+        <target>康沃尔语</target>
+      </trans-unit>
+      <trans-unit id="ky" approved="yes">
+        <source>Kirghiz; Kyrgyz</source>
+        <target>吉尔吉斯语</target>
+      </trans-unit>
+      <trans-unit id="la" approved="yes">
+        <source>Latin</source>
+        <target>拉丁语</target>
+      </trans-unit>
+      <trans-unit id="lad" approved="yes">
+        <source>Ladino</source>
+        <target>拉迪诺语</target>
+      </trans-unit>
+      <trans-unit id="lah" approved="yes">
+        <source>Lahnda</source>
+        <target>拉亨达语</target>
+      </trans-unit>
+      <trans-unit id="lam" approved="yes">
+        <source>Lamba</source>
+        <target>兰巴语</target>
+      </trans-unit>
+      <trans-unit id="lb" approved="yes">
+        <source>Luxembourgish; Letzeburgesch</source>
+        <target>卢森堡语</target>
+      </trans-unit>
+      <trans-unit id="lez" approved="yes">
+        <source>Lezghian</source>
+        <target>列兹金语</target>
+      </trans-unit>
+      <trans-unit id="lg" approved="yes">
+        <source>Ganda</source>
+        <target>干达语</target>
+      </trans-unit>
+      <trans-unit id="li" approved="yes">
+        <source>Limburgan; Limburger; Limburgish</source>
+        <target>林堡语</target>
+      </trans-unit>
+      <trans-unit id="ln" approved="yes">
+        <source>Lingala</source>
+        <target>林加拉语</target>
+      </trans-unit>
+      <trans-unit id="lo" approved="yes">
+        <source>Lao</source>
+        <target>老挝语</target>
+      </trans-unit>
+      <trans-unit id="lol" approved="yes">
+        <source>Mongo</source>
+        <target>芒戈语</target>
+      </trans-unit>
+      <trans-unit id="loz" approved="yes">
+        <source>Lozi</source>
+        <target>洛齐语</target>
+      </trans-unit>
+      <trans-unit id="lt" approved="yes">
+        <source>Lithuanian</source>
+        <target>立陶宛语</target>
+      </trans-unit>
+      <trans-unit id="lu" approved="yes">
+        <source>Luba-Katanga</source>
+        <target>卢巴-加丹加语</target>
+      </trans-unit>
+      <trans-unit id="lua" approved="yes">
+        <source>Luba-Lulua</source>
+        <target>卢巴-卢拉语</target>
+      </trans-unit>
+      <trans-unit id="lui" approved="yes">
+        <source>Luiseno</source>
+        <target>卢伊塞诺语</target>
+      </trans-unit>
+      <trans-unit id="lun" approved="yes">
+        <source>Lunda</source>
+        <target>隆达语</target>
+      </trans-unit>
+      <trans-unit id="luo" approved="yes">
+        <source>Luo (Kenya and Tanzania)</source>
+        <target>卢奥语 (肯尼亚和坦桑尼亚)</target>
+      </trans-unit>
+      <trans-unit id="lus" approved="yes">
+        <source>Lushai</source>
+        <target>卢萨语</target>
+      </trans-unit>
+      <trans-unit id="lv" approved="yes">
+        <source>Latvian</source>
+        <target>拉脱维亚语</target>
+      </trans-unit>
+      <trans-unit id="mad" approved="yes">
+        <source>Madurese</source>
+        <target>马都拉语</target>
+      </trans-unit>
+      <trans-unit id="mag" approved="yes">
+        <source>Magahi</source>
+        <target>马加赫语</target>
+      </trans-unit>
+      <trans-unit id="mai" approved="yes">
+        <source>Maithili</source>
+        <target>米德勒语</target>
+      </trans-unit>
+      <trans-unit id="mak" approved="yes">
+        <source>Makasar</source>
+        <target>望加锡语</target>
+      </trans-unit>
+      <trans-unit id="man" approved="yes">
+        <source>Mandingo</source>
+        <target>曼丁哥语</target>
+      </trans-unit>
+      <trans-unit id="map" approved="yes">
+        <source>Austronesian languages</source>
+        <target>澳斯特罗尼西亚诸语言</target>
+      </trans-unit>
+      <trans-unit id="mas" approved="yes">
+        <source>Masai</source>
+        <target>马萨伊语</target>
+      </trans-unit>
+      <trans-unit id="mdf" approved="yes">
+        <source>Moksha</source>
+        <target>莫克沙语</target>
+      </trans-unit>
+      <trans-unit id="mdr" approved="yes">
+        <source>Mandar</source>
+        <target>曼达语</target>
+      </trans-unit>
+      <trans-unit id="men" approved="yes">
+        <source>Mende</source>
+        <target>门德语</target>
+      </trans-unit>
+      <trans-unit id="mg" approved="yes">
+        <source>Malagasy</source>
+        <target>马达加斯加语</target>
+      </trans-unit>
+      <trans-unit id="mga" approved="yes">
+        <source>Irish, Middle (900-1200)</source>
+        <target>中古爱尔兰语 (900 - 1200)</target>
+      </trans-unit>
+      <trans-unit id="mh" approved="yes">
+        <source>Marshallese</source>
+        <target>马绍尔语</target>
+      </trans-unit>
+      <trans-unit id="mi" approved="yes">
+        <source>Maori</source>
+        <target>毛利语</target>
+      </trans-unit>
+      <trans-unit id="mic" approved="yes">
+        <source>Mi'kmaq; Micmac</source>
+        <target>米克马克语</target>
+      </trans-unit>
+      <trans-unit id="min" approved="yes">
+        <source>Minangkabau</source>
+        <target>米南卡保语</target>
+      </trans-unit>
+      <trans-unit id="mis" approved="yes">
+        <source>Uncoded languages</source>
+        <target>未编码语言</target>
+      </trans-unit>
+      <trans-unit id="mk" approved="yes">
+        <source>Macedonian</source>
+        <target>马其顿语</target>
+      </trans-unit>
+      <trans-unit id="mkh" approved="yes">
+        <source>Mon-Khmer languages</source>
+        <target>孟-高棉诸语言</target>
+      </trans-unit>
+      <trans-unit id="ml" approved="yes">
+        <source>Malayalam</source>
+        <target>马拉雅拉姆语</target>
+      </trans-unit>
+      <trans-unit id="mn" approved="yes">
+        <source>Mongolian</source>
+        <target>蒙古语</target>
+      </trans-unit>
+      <trans-unit id="mnc" approved="yes">
+        <source>Manchu</source>
+        <target>满语</target>
+      </trans-unit>
+      <trans-unit id="mni" approved="yes">
+        <source>Manipuri</source>
+        <target>曼尼普尔语</target>
+      </trans-unit>
+      <trans-unit id="mno" approved="yes">
+        <source>Manobo languages</source>
+        <target>马诺博诸语言</target>
+      </trans-unit>
+      <trans-unit id="moh" approved="yes">
+        <source>Mohawk</source>
+        <target>莫霍克语</target>
+      </trans-unit>
+      <trans-unit id="mos" approved="yes">
+        <source>Mossi</source>
+        <target>莫西语</target>
+      </trans-unit>
+      <trans-unit id="mr" approved="yes">
+        <source>Marathi</source>
+        <target>马拉提语</target>
+      </trans-unit>
+      <trans-unit id="ms" approved="yes">
+        <source>Malay</source>
+        <target>马来语</target>
+      </trans-unit>
+      <trans-unit id="mt" approved="yes">
+        <source>Maltese</source>
+        <target>马耳他语</target>
+      </trans-unit>
+      <trans-unit id="mul" approved="yes">
+        <source>Multiple languages</source>
+        <target>多语种</target>
+      </trans-unit>
+      <trans-unit id="mun" approved="yes">
+        <source>Munda languages</source>
+        <target>蒙达诸语言</target>
+      </trans-unit>
+      <trans-unit id="mus" approved="yes">
+        <source>Creek</source>
+        <target>克里克语</target>
+      </trans-unit>
+      <trans-unit id="mwl" approved="yes">
+        <source>Mirandese</source>
+        <target>米兰德斯语</target>
+      </trans-unit>
+      <trans-unit id="mwr" approved="yes">
+        <source>Marwari</source>
+        <target>马尔瓦利语</target>
+      </trans-unit>
+      <trans-unit id="my" approved="yes">
+        <source>Burmese</source>
+        <target>缅甸语</target>
+      </trans-unit>
+      <trans-unit id="myn" approved="yes">
+        <source>Mayan languages</source>
+        <target>玛雅诸语言</target>
+      </trans-unit>
+      <trans-unit id="myv" approved="yes">
+        <source>Erzya</source>
+        <target>厄尔兹亚语</target>
+      </trans-unit>
+      <trans-unit id="na" approved="yes">
+        <source>Nauru</source>
+        <target>瑙鲁语</target>
+      </trans-unit>
+      <trans-unit id="nah" approved="yes">
+        <source>Nahuatl languages</source>
+        <target>纳瓦特尔语</target>
+      </trans-unit>
+      <trans-unit id="nai" approved="yes">
+        <source>North American Indian languages</source>
+        <target>北美洲土著诸语言</target>
+      </trans-unit>
+      <trans-unit id="nap" approved="yes">
+        <source>Neapolitan</source>
+        <target>那不勒斯语</target>
+      </trans-unit>
+      <trans-unit id="nb" approved="yes">
+        <source>Norwegian Bokmål</source>
+        <target>Norwegian Bokmål</target>
+      </trans-unit>
+      <trans-unit id="nd" approved="yes">
+        <source>North Ndebele</source>
+        <target>North Ndebele</target>
+      </trans-unit>
+      <trans-unit id="nds" approved="yes">
+        <source>Low German; Low Saxon; German, Low; Saxon, Low</source>
+        <target>低地撒克逊语</target>
+      </trans-unit>
+      <trans-unit id="ne" approved="yes">
+        <source>Nepali</source>
+        <target>尼泊尔语</target>
+      </trans-unit>
+      <trans-unit id="new" approved="yes">
+        <source>Nepal Bhasa; Newar; Newari</source>
+        <target>Nepal Bhasa; Newar; Newari</target>
+      </trans-unit>
+      <trans-unit id="ng" approved="yes">
+        <source>Ndonga</source>
+        <target>恩敦加语</target>
+      </trans-unit>
+      <trans-unit id="nia" approved="yes">
+        <source>Nias</source>
+        <target>尼亚斯语</target>
+      </trans-unit>
+      <trans-unit id="nic" approved="yes">
+        <source>Niger-Kordofanian languages</source>
+        <target>尼日尔-科尔多凡诸语言</target>
+      </trans-unit>
+      <trans-unit id="niu" approved="yes">
+        <source>Niuean</source>
+        <target>纽埃语</target>
+      </trans-unit>
+      <trans-unit id="nl" approved="yes">
+        <source>Dutch; Flemish</source>
+        <target>荷兰语</target>
+      </trans-unit>
+      <trans-unit id="nn" approved="yes">
+        <source>Norwegian Nynorsk</source>
+        <target>Norwegian Nynorsk</target>
+      </trans-unit>
+      <trans-unit id="no" approved="yes">
+        <source>Norwegian</source>
+        <target>书面挪威语</target>
+      </trans-unit>
+      <trans-unit id="nog" approved="yes">
+        <source>Nogai</source>
+        <target>诺盖语</target>
+      </trans-unit>
+      <trans-unit id="non" approved="yes">
+        <source>Norse, Old</source>
+        <target>古诺斯语</target>
+      </trans-unit>
+      <trans-unit id="nqo" approved="yes">
+        <source>N'Ko</source>
+        <target>N'Ko</target>
+      </trans-unit>
+      <trans-unit id="nr" approved="yes">
+        <source>South Ndebele</source>
+        <target>South Ndebele</target>
+      </trans-unit>
+      <trans-unit id="nso" approved="yes">
+        <source>Pedi; Sepedi; Northern Sotho</source>
+        <target>北索托语</target>
+      </trans-unit>
+      <trans-unit id="nub" approved="yes">
+        <source>Nubian languages</source>
+        <target>努比亚语诸语言</target>
+      </trans-unit>
+      <trans-unit id="nv" approved="yes">
+        <source>Navajo; Navaho</source>
+        <target>纳瓦霍语</target>
+      </trans-unit>
+      <trans-unit id="nwc" approved="yes">
+        <source>Classical Newari; Old Newari; Classical Nepal Bhasa</source>
+        <target>尼瓦尔语</target>
+      </trans-unit>
+      <trans-unit id="ny" approved="yes">
+        <source>Chichewa; Chewa; Nyanja</source>
+        <target>尼扬贾语</target>
+      </trans-unit>
+      <trans-unit id="nym" approved="yes">
+        <source>Nyamwezi</source>
+        <target>尼扬韦齐语</target>
+      </trans-unit>
+      <trans-unit id="nyn" approved="yes">
+        <source>Nyankole</source>
+        <target>尼扬科勒语</target>
+      </trans-unit>
+      <trans-unit id="nyo" approved="yes">
+        <source>Nyoro</source>
+        <target>尼奥罗语</target>
+      </trans-unit>
+      <trans-unit id="nzi" approved="yes">
+        <source>Nzima</source>
+        <target>恩济马语</target>
+      </trans-unit>
+      <trans-unit id="oc" approved="yes">
+        <source>Occitan (post 1500)</source>
+        <target>Occitan (post 1500)</target>
+      </trans-unit>
+      <trans-unit id="oj" approved="yes">
+        <source>Ojibwa</source>
+        <target>奥杰布瓦语</target>
+      </trans-unit>
+      <trans-unit id="om" approved="yes">
+        <source>Oromo</source>
+        <target>奥洛莫语</target>
+      </trans-unit>
+      <trans-unit id="or" approved="yes">
+        <source>Oriya</source>
+        <target>奥利亚语</target>
+      </trans-unit>
+      <trans-unit id="os" approved="yes">
+        <source>Ossetian; Ossetic</source>
+        <target>奥塞梯语</target>
+      </trans-unit>
+      <trans-unit id="osa" approved="yes">
+        <source>Osage</source>
+        <target>奥萨格语</target>
+      </trans-unit>
+      <trans-unit id="ota" approved="yes">
+        <source>Turkish, Ottoman (1500-1928)</source>
+        <target>古奥斯曼土耳其语</target>
+      </trans-unit>
+      <trans-unit id="oto" approved="yes">
+        <source>Otomian languages</source>
+        <target>奥托米诸语言</target>
+      </trans-unit>
+      <trans-unit id="pa" approved="yes">
+        <source>Panjabi; Punjabi</source>
+        <target>旁遮普语</target>
+      </trans-unit>
+      <trans-unit id="paa" approved="yes">
+        <source>Papuan languages</source>
+        <target>巴布亚诸语言</target>
+      </trans-unit>
+      <trans-unit id="pag" approved="yes">
+        <source>Pangasinan</source>
+        <target>邦阿西楠语</target>
+      </trans-unit>
+      <trans-unit id="pal" approved="yes">
+        <source>Pahlavi</source>
+        <target>钵罗钵语</target>
+      </trans-unit>
+      <trans-unit id="pam" approved="yes">
+        <source>Pampanga; Kapampangan</source>
+        <target>邦板牙语</target>
+      </trans-unit>
+      <trans-unit id="pap" approved="yes">
+        <source>Papiamento</source>
+        <target>帕皮阿门托语</target>
+      </trans-unit>
+      <trans-unit id="pau" approved="yes">
+        <source>Palauan</source>
+        <target>帕劳语</target>
+      </trans-unit>
+      <trans-unit id="peo" approved="yes">
+        <source>Persian, Old (ca. 600-400 B.C.)</source>
+        <target>古波斯语 (约前 600 - 400)</target>
+      </trans-unit>
+      <trans-unit id="phi" approved="yes">
+        <source>Philippine languages</source>
+        <target>菲律宾诸语言</target>
+      </trans-unit>
+      <trans-unit id="phn" approved="yes">
+        <source>Phoenician</source>
+        <target>腓尼基语</target>
+      </trans-unit>
+      <trans-unit id="pi" approved="yes">
+        <source>Pali</source>
+        <target>巴利语</target>
+      </trans-unit>
+      <trans-unit id="pl" approved="yes">
+        <source>Polish</source>
+        <target>波兰语</target>
+      </trans-unit>
+      <trans-unit id="pon" approved="yes">
+        <source>Pohnpeian</source>
+        <target>波纳佩语</target>
+      </trans-unit>
+      <trans-unit id="pra" approved="yes">
+        <source>Prakrit languages</source>
+        <target>普拉克里特诸语言</target>
+      </trans-unit>
+      <trans-unit id="pro" approved="yes">
+        <source>Provençal, Old (to 1500); Occitan, Old (to 1500)</source>
+        <target>Provençal, Old (to 1500); Occitan, Old (to 1500)</target>
+      </trans-unit>
+      <trans-unit id="ps" approved="yes">
+        <source>Pushto; Pashto</source>
+        <target>普什图语</target>
+      </trans-unit>
+      <trans-unit id="pt" approved="yes">
+        <source>Portuguese</source>
+        <target>葡萄牙语</target>
+      </trans-unit>
+      <trans-unit id="qaa-qtz" approved="yes">
+        <source>Reserved for local use</source>
+        <target>保留作内部使用</target>
+      </trans-unit>
+      <trans-unit id="qu" approved="yes">
+        <source>Quechua</source>
+        <target>凯楚亚语</target>
+      </trans-unit>
+      <trans-unit id="raj" approved="yes">
+        <source>Rajasthani</source>
+        <target>拉贾斯坦语</target>
+      </trans-unit>
+      <trans-unit id="rap" approved="yes">
+        <source>Rapanui</source>
+        <target>拉帕努伊语</target>
+      </trans-unit>
+      <trans-unit id="rar" approved="yes">
+        <source>Rarotongan; Cook Islands Maori</source>
+        <target>拉罗汤加语</target>
+      </trans-unit>
+      <trans-unit id="rm" approved="yes">
+        <source>Romansh</source>
+        <target>利托-罗曼语</target>
+      </trans-unit>
+      <trans-unit id="rn" approved="yes">
+        <source>Rundi</source>
+        <target>基隆迪语</target>
+      </trans-unit>
+      <trans-unit id="ro" approved="yes">
+        <source>Romanian; Moldavian; Moldovan</source>
+        <target>罗马尼亚语</target>
+      </trans-unit>
+      <trans-unit id="roa" approved="yes">
+        <source>Romance languages</source>
+        <target>罗曼诸语言</target>
+      </trans-unit>
+      <trans-unit id="rom" approved="yes">
+        <source>Romany</source>
+        <target>吉普赛语</target>
+      </trans-unit>
+      <trans-unit id="ru" approved="yes">
+        <source>Russian</source>
+        <target>俄语</target>
+      </trans-unit>
+      <trans-unit id="rup" approved="yes">
+        <source>Aromanian; Arumanian; Macedo-Romanian</source>
+        <target>阿罗马尼亚语</target>
+      </trans-unit>
+      <trans-unit id="rw" approved="yes">
+        <source>Kinyarwanda</source>
+        <target>基尼阿万达语</target>
+      </trans-unit>
+      <trans-unit id="sa" approved="yes">
+        <source>Sanskrit</source>
+        <target>梵语</target>
+      </trans-unit>
+      <trans-unit id="sad" approved="yes">
+        <source>Sandawe</source>
+        <target>桑达韦语</target>
+      </trans-unit>
+      <trans-unit id="sah" approved="yes">
+        <source>Yakut</source>
+        <target>雅库特语</target>
+      </trans-unit>
+      <trans-unit id="sai" approved="yes">
+        <source>South American Indian languages</source>
+        <target>South American Indian languages</target>
+      </trans-unit>
+      <trans-unit id="sal" approved="yes">
+        <source>Salishan languages</source>
+        <target>萨利什诸语言</target>
+      </trans-unit>
+      <trans-unit id="sam" approved="yes">
+        <source>Samaritan Aramaic</source>
+        <target>萨马利亚阿拉米语</target>
+      </trans-unit>
+      <trans-unit id="sas" approved="yes">
+        <source>Sasak</source>
+        <target>萨萨克语</target>
+      </trans-unit>
+      <trans-unit id="sat" approved="yes">
+        <source>Santali</source>
+        <target>桑塔利语</target>
+      </trans-unit>
+      <trans-unit id="sc" approved="yes">
+        <source>Sardinian</source>
+        <target>撒丁语</target>
+      </trans-unit>
+      <trans-unit id="scn" approved="yes">
+        <source>Sicilian</source>
+        <target>西西里语</target>
+      </trans-unit>
+      <trans-unit id="sco" approved="yes">
+        <source>Scots</source>
+        <target>苏格兰语</target>
+      </trans-unit>
+      <trans-unit id="sd" approved="yes">
+        <source>Sindhi</source>
+        <target>信德语</target>
+      </trans-unit>
+      <trans-unit id="se" approved="yes">
+        <source>Northern Sami</source>
+        <target>北萨莫斯语</target>
+      </trans-unit>
+      <trans-unit id="sel" approved="yes">
+        <source>Selkup</source>
+        <target>塞尔库普语</target>
+      </trans-unit>
+      <trans-unit id="sem" approved="yes">
+        <source>Semitic languages</source>
+        <target>闪语诸语言</target>
+      </trans-unit>
+      <trans-unit id="sg" approved="yes">
+        <source>Sango</source>
+        <target>桑戈语</target>
+      </trans-unit>
+      <trans-unit id="sga" approved="yes">
+        <source>Irish, Old (to 900)</source>
+        <target>古爱尔兰语 (- 900)</target>
+      </trans-unit>
+      <trans-unit id="sgn" approved="yes">
+        <source>Sign Languages</source>
+        <target>手语</target>
+      </trans-unit>
+      <trans-unit id="shn" approved="yes">
+        <source>Shan</source>
+        <target>掸语</target>
+      </trans-unit>
+      <trans-unit id="si" approved="yes">
+        <source>Sinhala; Sinhalese</source>
+        <target>僧加罗语</target>
+      </trans-unit>
+      <trans-unit id="sid" approved="yes">
+        <source>Sidamo</source>
+        <target>锡达莫语</target>
+      </trans-unit>
+      <trans-unit id="sio" approved="yes">
+        <source>Siouan languages</source>
+        <target>苏语诸语言</target>
+      </trans-unit>
+      <trans-unit id="sit" approved="yes">
+        <source>Sino-Tibetan languages</source>
+        <target>汉藏诸语言</target>
+      </trans-unit>
+      <trans-unit id="sk" approved="yes">
+        <source>Slovak</source>
+        <target>斯洛伐克语</target>
+      </trans-unit>
+      <trans-unit id="sl" approved="yes">
+        <source>Slovenian</source>
+        <target>斯洛文尼亚语</target>
+      </trans-unit>
+      <trans-unit id="sla" approved="yes">
+        <source>Slavic languages</source>
+        <target>斯拉夫诸语言</target>
+      </trans-unit>
+      <trans-unit id="sm" approved="yes">
+        <source>Samoan</source>
+        <target>萨摩亚语</target>
+      </trans-unit>
+      <trans-unit id="sma" approved="yes">
+        <source>Southern Sami</source>
+        <target>南萨莫斯语</target>
+      </trans-unit>
+      <trans-unit id="smi" approved="yes">
+        <source>Sami languages</source>
+        <target>萨莫斯诸语言</target>
+      </trans-unit>
+      <trans-unit id="smj" approved="yes">
+        <source>Lule Sami</source>
+        <target>律勒欧萨莫斯语</target>
+      </trans-unit>
+      <trans-unit id="smn" approved="yes">
+        <source>Inari Sami</source>
+        <target>伊纳里萨莫斯语</target>
+      </trans-unit>
+      <trans-unit id="sms" approved="yes">
+        <source>Skolt Sami</source>
+        <target>斯高特萨莫斯语</target>
+      </trans-unit>
+      <trans-unit id="sn" approved="yes">
+        <source>Shona</source>
+        <target>绍纳语</target>
+      </trans-unit>
+      <trans-unit id="snk" approved="yes">
+        <source>Soninke</source>
+        <target>索宁克语</target>
+      </trans-unit>
+      <trans-unit id="so" approved="yes">
+        <source>Somali</source>
+        <target>索马里语</target>
+      </trans-unit>
+      <trans-unit id="sog" approved="yes">
+        <source>Sogdian</source>
+        <target>粟特语</target>
+      </trans-unit>
+      <trans-unit id="son" approved="yes">
+        <source>Songhai languages</source>
+        <target>桑海语</target>
+      </trans-unit>
+      <trans-unit id="sq" approved="yes">
+        <source>Albanian</source>
+        <target>阿尔巴尼亚语</target>
+      </trans-unit>
+      <trans-unit id="sr" approved="yes">
+        <source>Serbian</source>
+        <target>塞尔维亚语</target>
+      </trans-unit>
+      <trans-unit id="srn" approved="yes">
+        <source>Sranan Tongo</source>
+        <target>苏里南汤加语</target>
+      </trans-unit>
+      <trans-unit id="srr" approved="yes">
+        <source>Serer</source>
+        <target>塞雷尔语</target>
+      </trans-unit>
+      <trans-unit id="ss" approved="yes">
+        <source>Swati</source>
+        <target>斯瓦特语</target>
+      </trans-unit>
+      <trans-unit id="ssa" approved="yes">
+        <source>Nilo-Saharan languages</source>
+        <target>尼罗-撒哈拉诸语言</target>
+      </trans-unit>
+      <trans-unit id="st" approved="yes">
+        <source>Sotho, Southern</source>
+        <target>南索托语</target>
+      </trans-unit>
+      <trans-unit id="su" approved="yes">
+        <source>Sundanese</source>
+        <target>巽他语</target>
+      </trans-unit>
+      <trans-unit id="suk" approved="yes">
+        <source>Sukuma</source>
+        <target>苏库马语</target>
+      </trans-unit>
+      <trans-unit id="sus" approved="yes">
+        <source>Susu</source>
+        <target>苏苏语</target>
+      </trans-unit>
+      <trans-unit id="sux" approved="yes">
+        <source>Sumerian</source>
+        <target>苏美尔语</target>
+      </trans-unit>
+      <trans-unit id="sv" approved="yes">
+        <source>Swedish</source>
+        <target>瑞典语</target>
+      </trans-unit>
+      <trans-unit id="sw" approved="yes">
+        <source>Swahili</source>
+        <target>斯瓦希里语</target>
+      </trans-unit>
+      <trans-unit id="syc" approved="yes">
+        <source>Classical Syriac</source>
+        <target>古叙利亚语</target>
+      </trans-unit>
+      <trans-unit id="syr" approved="yes">
+        <source>Syriac</source>
+        <target>叙利亚语</target>
+      </trans-unit>
+      <trans-unit id="ta" approved="yes">
+        <source>Tamil</source>
+        <target>泰米尔语</target>
+      </trans-unit>
+      <trans-unit id="tai" approved="yes">
+        <source>Tai languages</source>
+        <target>傣语诸语言</target>
+      </trans-unit>
+      <trans-unit id="te" approved="yes">
+        <source>Telugu</source>
+        <target>泰卢固语</target>
+      </trans-unit>
+      <trans-unit id="tem" approved="yes">
+        <source>Timne</source>
+        <target>滕内语</target>
+      </trans-unit>
+      <trans-unit id="ter" approved="yes">
+        <source>Tereno</source>
+        <target>特列纳语</target>
+      </trans-unit>
+      <trans-unit id="tet" approved="yes">
+        <source>Tetum</source>
+        <target>德顿语</target>
+      </trans-unit>
+      <trans-unit id="tg" approved="yes">
+        <source>Tajik</source>
+        <target>塔吉克语</target>
+      </trans-unit>
+      <trans-unit id="th" approved="yes">
+        <source>Thai</source>
+        <target>泰语</target>
+      </trans-unit>
+      <trans-unit id="ti" approved="yes">
+        <source>Tigrinya</source>
+        <target>提格里尼亚语</target>
+      </trans-unit>
+      <trans-unit id="tig" approved="yes">
+        <source>Tigre</source>
+        <target>提格雷语</target>
+      </trans-unit>
+      <trans-unit id="tiv" approved="yes">
+        <source>Tiv</source>
+        <target>蒂夫语</target>
+      </trans-unit>
+      <trans-unit id="tk" approved="yes">
+        <source>Turkmen</source>
+        <target>土库曼语</target>
+      </trans-unit>
+      <trans-unit id="tkl" approved="yes">
+        <source>Tokelau</source>
+        <target>托克劳语</target>
+      </trans-unit>
+      <trans-unit id="tl" approved="yes">
+        <source>Tagalog</source>
+        <target>塔加洛语</target>
+      </trans-unit>
+      <trans-unit id="tlh" approved="yes">
+        <source>Klingon; tlhIngan-Hol</source>
+        <target>克林贡语</target>
+      </trans-unit>
+      <trans-unit id="tli" approved="yes">
+        <source>Tlingit</source>
+        <target>特林吉特语</target>
+      </trans-unit>
+      <trans-unit id="tmh" approved="yes">
+        <source>Tamashek</source>
+        <target>塔马奇克语</target>
+      </trans-unit>
+      <trans-unit id="tn" approved="yes">
+        <source>Tswana</source>
+        <target>塞茨瓦纳语</target>
+      </trans-unit>
+      <trans-unit id="to" approved="yes">
+        <source>Tonga (Tonga Islands)</source>
+        <target>汤加语 (汤加岛)</target>
+      </trans-unit>
+      <trans-unit id="tog" approved="yes">
+        <source>Tonga (Nyasa)</source>
+        <target>汤加语 (尼亚萨)</target>
+      </trans-unit>
+      <trans-unit id="tpi" approved="yes">
+        <source>Tok Pisin</source>
+        <target>托克皮辛语</target>
+      </trans-unit>
+      <trans-unit id="tr" approved="yes">
+        <source>Turkish</source>
+        <target>土耳其语</target>
+      </trans-unit>
+      <trans-unit id="ts" approved="yes">
+        <source>Tsonga</source>
+        <target>宗加语</target>
+      </trans-unit>
+      <trans-unit id="tsi" approved="yes">
+        <source>Tsimshian</source>
+        <target>钦西安语</target>
+      </trans-unit>
+      <trans-unit id="tt" approved="yes">
+        <source>Tatar</source>
+        <target>塔塔尔语</target>
+      </trans-unit>
+      <trans-unit id="tum" approved="yes">
+        <source>Tumbuka</source>
+        <target>奇图姆布卡语</target>
+      </trans-unit>
+      <trans-unit id="tup" approved="yes">
+        <source>Tupi languages</source>
+        <target>图皮语诸语言</target>
+      </trans-unit>
+      <trans-unit id="tut" approved="yes">
+        <source>Altaic languages</source>
+        <target>阿尔泰诸语言</target>
+      </trans-unit>
+      <trans-unit id="tvl" approved="yes">
+        <source>Tuvalu</source>
+        <target>图瓦卢语</target>
+      </trans-unit>
+      <trans-unit id="tw" approved="yes">
+        <source>Twi</source>
+        <target>特威语</target>
+      </trans-unit>
+      <trans-unit id="ty" approved="yes">
+        <source>Tahitian</source>
+        <target>塔希提语</target>
+      </trans-unit>
+      <trans-unit id="tyv" approved="yes">
+        <source>Tuvinian</source>
+        <target>图瓦语</target>
+      </trans-unit>
+      <trans-unit id="udm" approved="yes">
+        <source>Udmurt</source>
+        <target>乌德穆尔特语</target>
+      </trans-unit>
+      <trans-unit id="ug" approved="yes">
+        <source>Uighur; Uyghur</source>
+        <target>维吾尔语</target>
+      </trans-unit>
+      <trans-unit id="uga" approved="yes">
+        <source>Ugaritic</source>
+        <target>乌加里特语</target>
+      </trans-unit>
+      <trans-unit id="uk" approved="yes">
+        <source>Ukrainian</source>
+        <target>乌克兰语</target>
+      </trans-unit>
+      <trans-unit id="umb" approved="yes">
+        <source>Umbundu</source>
+        <target>翁本杜语</target>
+      </trans-unit>
+      <trans-unit id="und" approved="yes">
+        <source>Undetermined</source>
+        <target>未确定的语种</target>
+      </trans-unit>
+      <trans-unit id="ur" approved="yes">
+        <source>Urdu</source>
+        <target>乌尔都语</target>
+      </trans-unit>
+      <trans-unit id="uz" approved="yes">
+        <source>Uzbek</source>
+        <target>乌兹别克语</target>
+      </trans-unit>
+      <trans-unit id="vai" approved="yes">
+        <source>Vai</source>
+        <target>瓦伊语</target>
+      </trans-unit>
+      <trans-unit id="ve" approved="yes">
+        <source>Venda</source>
+        <target>文达语</target>
+      </trans-unit>
+      <trans-unit id="vi" approved="yes">
+        <source>Vietnamese</source>
+        <target>越南语</target>
+      </trans-unit>
+      <trans-unit id="vo" approved="yes">
+        <source>Volapük</source>
+        <target>沃拉普克语</target>
+      </trans-unit>
+      <trans-unit id="vot" approved="yes">
+        <source>Votic</source>
+        <target>沃提克语</target>
+      </trans-unit>
+      <trans-unit id="wa" approved="yes">
+        <source>Walloon</source>
+        <target>沃伦语</target>
+      </trans-unit>
+      <trans-unit id="wak" approved="yes">
+        <source>Wakashan languages</source>
+        <target>瓦卡什诸语言</target>
+      </trans-unit>
+      <trans-unit id="war" approved="yes">
+        <source>Waray</source>
+        <target>瓦赖语</target>
+      </trans-unit>
+      <trans-unit id="was" approved="yes">
+        <source>Washo</source>
+        <target>瓦肖语</target>
+      </trans-unit>
+      <trans-unit id="wen" approved="yes">
+        <source>Sorbian languages</source>
+        <target>索布诸语言</target>
+      </trans-unit>
+      <trans-unit id="wo" approved="yes">
+        <source>Wolof</source>
+        <target>沃洛夫语</target>
+      </trans-unit>
+      <trans-unit id="xal" approved="yes">
+        <source>Kalmyk; Oirat</source>
+        <target>卡尔梅克语</target>
+      </trans-unit>
+      <trans-unit id="xh" approved="yes">
+        <source>Xhosa</source>
+        <target>科萨语</target>
+      </trans-unit>
+      <trans-unit id="yao" approved="yes">
+        <source>Yao</source>
+        <target>瑶语</target>
+      </trans-unit>
+      <trans-unit id="yap" approved="yes">
+        <source>Yapese</source>
+        <target>雅浦语</target>
+      </trans-unit>
+      <trans-unit id="yi" approved="yes">
+        <source>Yiddish</source>
+        <target>依地语</target>
+      </trans-unit>
+      <trans-unit id="yo" approved="yes">
+        <source>Yoruba</source>
+        <target>约鲁巴语</target>
+      </trans-unit>
+      <trans-unit id="ypk" approved="yes">
+        <source>Yupik languages</source>
+        <target>尤皮克诸语言</target>
+      </trans-unit>
+      <trans-unit id="za" approved="yes">
+        <source>Zhuang; Chuang</source>
+        <target>壮语</target>
+      </trans-unit>
+      <trans-unit id="zap" approved="yes">
+        <source>Zapotec</source>
+        <target>萨波特克语</target>
+      </trans-unit>
+      <trans-unit id="zbl" approved="yes">
+        <source>Blissymbols; Blissymbolics; Bliss</source>
+        <target>布利斯符号</target>
+      </trans-unit>
+      <trans-unit id="zen" approved="yes">
+        <source>Zenaga</source>
+        <target>哲纳加语</target>
+      </trans-unit>
+      <trans-unit id="zgh" approved="yes">
+        <source>Standard Moroccan Tamazight</source>
+        <target>标准摩洛哥塔马塞特语</target>
+      </trans-unit>
+      <trans-unit id="zh" approved="yes">
+        <source>Chinese</source>
+        <target>汉语</target>
+      </trans-unit>
+      <trans-unit id="znd" approved="yes">
+        <source>Zande languages</source>
+        <target>赞德语</target>
+      </trans-unit>
+      <trans-unit id="zu" approved="yes">
+        <source>Zulu</source>
+        <target>祖鲁语</target>
+      </trans-unit>
+      <trans-unit id="zun" approved="yes">
+        <source>Zuni</source>
+        <target>祖尼语</target>
+      </trans-unit>
+      <trans-unit id="zxx" approved="yes">
+        <source>No linguistic content; Not applicable</source>
+        <target>无语言内容</target>
+      </trans-unit>
+      <trans-unit id="zza" approved="yes">
+        <source>Zaza; Dimili; Dimli; Kirdki; Kirmanjki; Zazaki</source>
+        <target>扎扎其语</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

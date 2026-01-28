@@ -1,0 +1,67 @@
+{
+	"name": "typo3/cms-backend",
+	"type": "typo3-cms-framework",
+	"description": "TYPO3 CMS backend",
+	"homepage": "https://typo3.org",
+	"license": ["GPL-2.0-or-later"],
+	"authors": [{
+		"name": "TYPO3 Core Team",
+		"email": "typo3cms@typo3.org",
+		"role": "Developer"
+	}],
+	"support": {
+		"chat": "https://typo3.org/help",
+		"docs": "https://docs.typo3.org",
+		"issues": "https://forge.typo3.org",
+		"source": "https://github.com/typo3/typo3"
+	},
+	"config": {
+		"sort-packages": true
+	},
+	"require": {
+		"ext-intl": "*",
+		"ext-libxml": "*",
+		"psr/event-dispatcher": "^1.0",
+		"typo3/cms-core": "13.4.24"
+	},
+	"suggest": {
+		"typo3/cms-install": "To generate url to install tool in environment toolbar"
+	},
+	"conflict": {
+		"typo3/cms": "*"
+	},
+	"replace": {
+		"typo3/cms-about": "self.version",
+		"typo3/cms-context-help": "self.version",
+		"typo3/cms-cshmanual": "self.version",
+		"typo3/cms-func-wizards": "self.version",
+		"typo3/cms-recordlist": "self.version",
+		"typo3/cms-t3editor": "self.version",
+		"typo3/cms-wizard-crpages": "self.version",
+		"typo3/cms-wizard-sortpages": "self.version"
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-main": "13.4.x-dev"
+		},
+		"typo3/cms": {
+			"Package": {
+				"serviceProvider": "TYPO3\\CMS\\Backend\\ServiceProvider",
+				"protected": true,
+				"partOfFactoryDefault": true,
+				"partOfMinimalUsableSystem": true
+			},
+			"extension-key": "backend"
+		},
+		"typo3/class-alias-loader": {
+			"class-alias-maps": [
+				"Migrations/Code/ClassAliasMap.php"
+			]
+		}
+	},
+	"autoload": {
+		"psr-4": {
+			"TYPO3\\CMS\\Backend\\": "Classes/"
+		}
+	}
+}

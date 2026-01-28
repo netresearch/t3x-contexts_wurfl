@@ -1,0 +1,13 @@
+/*
+ * This file is part of the TYPO3 CMS project.
+ *
+ * It is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License, either version 2
+ * of the License, or any later version.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE.txt file that was distributed with this source code.
+ *
+ * The TYPO3 project - inspiring people to share!
+ */
+import u from"@typo3/core/document-service.js";import r from"@typo3/backend/icons.js";import d from"@typo3/core/event/regular-event.js";import{selector as m}from"@typo3/core/literals.js";class l{static{this.instance=null}constructor(){this.preventDoubleClick=!1,this.preSubmitCallbacks=[],console.warn("The module `@typo3/backend/document-save-actions.js` has been deprecated and will be removed in TYPO3 v14. Please consider migrating to `@typo3/backend/form/submit-interceptor.js` instead."),u.ready().then(()=>{this.initializeSaveHandling()})}static getInstance(){return l.instance===null&&(l.instance=new l),l.instance}static registerEvents(){l.getInstance()}addPreSubmitCallback(t){if(typeof t!="function")throw"callback must be a function.";this.preSubmitCallbacks.push(t)}initializeSaveHandling(){const t=document.querySelector(".t3js-module-docheader");if(t===null)return;const e=["button[form]",'button[name^="_save"]','a[data-name^="_save"]','button[name="CMD"][value^="save"]','a[data-name="CMD"][data-value^="save"]'].join(",");new d("click",(s,n)=>{if(this.preventDoubleClick)return;const c=this.getAttachedForm(n);if(c!==null){for(const o of this.preSubmitCallbacks)if(!o(s)){s.preventDefault();return}this.preventDoubleClick=!0,this.attachSaveFieldToForm(c,n),c.addEventListener("submit",()=>{const o=n.closest(".t3js-splitbutton");let a;o!==null?(a=o.firstElementChild,o.querySelectorAll("button").forEach(i=>{i.disabled=!0})):(a=n,a instanceof HTMLAnchorElement?a.classList.add("disabled"):a.disabled=!0),r.getIcon("spinner-circle",r.sizes.small).then(i=>{a.replaceChild(document.createRange().createContextualFragment(i),n.querySelector(".t3js-icon"))}).catch(()=>{})},{once:!0})}}).delegateTo(t,e)}getAttachedForm(t){let e;return t instanceof HTMLAnchorElement?e=document.querySelector(m`#${t.dataset.form}`):e=t.form,e||(e=t.closest("form")),e}attachSaveFieldToForm(t,e){const s=t.name+"_save_field";let n=document.getElementById(s);n===null&&(n=document.createElement("input"),n.id=s,n.type="hidden",t.append(n)),n.name=e instanceof HTMLAnchorElement?e.dataset.name:e.name,n.value=e instanceof HTMLAnchorElement?e.dataset.value:e.value}}export{l as default};

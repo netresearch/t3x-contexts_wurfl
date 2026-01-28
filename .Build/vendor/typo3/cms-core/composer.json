@@ -1,0 +1,130 @@
+{
+	"name": "typo3/cms-core",
+	"type": "typo3-cms-framework",
+	"description": "TYPO3 CMS Core",
+	"homepage": "https://typo3.org",
+	"license": ["GPL-2.0-or-later"],
+	"authors": [{
+		"name": "TYPO3 Core Team",
+		"email": "typo3cms@typo3.org",
+		"role": "Developer"
+	}],
+	"support": {
+		"chat": "https://typo3.org/help",
+		"docs": "https://docs.typo3.org",
+		"issues": "https://forge.typo3.org",
+		"source": "https://github.com/typo3/typo3"
+	},
+	"config": {
+		"sort-packages": true
+	},
+	"require": {
+		"php": "^8.2",
+		"ext-PDO": "*",
+		"ext-dom": "*",
+		"ext-intl": "*",
+		"ext-json": "*",
+		"ext-libxml": "*",
+		"ext-mbstring": "*",
+		"ext-pcre": "*",
+		"ext-session": "*",
+		"ext-tokenizer": "*",
+		"ext-xml": "*",
+		"composer-runtime-api": "^2.1",
+		"bacon/bacon-qr-code": "^3.0",
+		"christian-riesen/base32": "^1.6",
+		"doctrine/annotations": "^2.0.2",
+		"doctrine/dbal": "~4.3.3",
+		"doctrine/event-manager": "^2.0.1",
+		"doctrine/lexer": "^3.0.1",
+		"egulias/email-validator": "^4.0",
+		"enshrined/svg-sanitize": "~0.22",
+		"firebase/php-jwt": "^6.10.2",
+		"guzzlehttp/guzzle": "^7.9.2",
+		"guzzlehttp/psr7": "^2.7.0",
+		"lolli42/finediff": "^1.1.1",
+		"masterminds/html5": "^2.10.0",
+		"psr/container": "^2.0",
+		"psr/event-dispatcher": "^1.0",
+		"psr/http-client": "^1.0.3",
+		"psr/http-factory": "^1.1.0",
+		"psr/http-message": "^1.1 || ^2.0",
+		"psr/http-server-handler": "^1.0",
+		"psr/http-server-middleware": "^1.0",
+		"psr/log": "^3.0.1",
+		"symfony/config": "^7.2",
+		"symfony/console": "^7.2",
+		"symfony/dependency-injection": "^7.2",
+		"symfony/doctrine-messenger": "^7.2",
+		"symfony/event-dispatcher-contracts": "^3.1",
+		"symfony/expression-language": "^7.2",
+		"symfony/filesystem": "^7.2",
+		"symfony/finder": "^7.2",
+		"symfony/http-foundation": "^7.2",
+		"symfony/mailer": "^7.2",
+		"symfony/messenger": "^7.2",
+		"symfony/mime": "^7.2",
+		"symfony/options-resolver": "^7.2",
+		"symfony/polyfill-php83": "^1.31",
+		"symfony/process": "^7.2",
+		"symfony/rate-limiter": "^7.2",
+		"symfony/routing": "^7.2",
+		"symfony/uid": "^7.2",
+		"symfony/yaml": "^7.2",
+		"typo3/class-alias-loader": "^1.2",
+		"typo3/cms-cli": "^3.1.1",
+		"typo3/cms-composer-installers": "^5.0.2",
+		"typo3/html-sanitizer": "^2.2.0",
+		"typo3fluid/fluid": "^4.5.0"
+	},
+	"suggest": {
+		"ext-apcu": "Needed when non-default APCU based cache backends are used",
+		"ext-exif": "Used to extract exif metadata 'Orientation' of uploaded images",
+		"ext-fileinfo": "Used for proper file type detection in the file abstraction layer",
+		"ext-gd": "GDlib/Freetype is required for building images with text (GIFBUILDER) and can also be used to scale images",
+		"ext-mysqli": "",
+		"ext-openssl": "OpenSSL is required for sending SMTP mails over an encrypted channel endpoint",
+		"ext-zip": "",
+		"ext-zlib": "TYPO3 uses zlib for amongst others output compression and un/packing t3x extension files"
+	},
+	"conflict": {
+		"hoa/core": "*",
+		"typo3/cms": "*"
+	},
+	"replace": {
+		"typo3/cms-lang": "self.version",
+		"typo3/cms-saltedpasswords": "self.version",
+		"typo3/cms-sv": "self.version"
+	},
+	"provide": {
+		"psr/http-factory-implementation": "1.0",
+		"psr/http-message-implementation": "1.0"
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-main": "13.4.x-dev"
+		},
+		"typo3/cms": {
+			"Package": {
+				"serviceProvider": "TYPO3\\CMS\\Core\\ServiceProvider",
+				"protected": true,
+				"partOfFactoryDefault": true,
+				"partOfMinimalUsableSystem": true
+			},
+			"extension-key": "core"
+		},
+		"typo3/class-alias-loader": {
+			"class-alias-maps": [
+				"Migrations/Code/ClassAliasMap.php"
+			]
+		}
+	},
+	"autoload": {
+		"psr-4": {
+			"TYPO3\\CMS\\Core\\": "Classes/"
+		},
+		"files": [
+			"Resources/PHP/GlobalDebugFunctions.php"
+		]
+	}
+}
