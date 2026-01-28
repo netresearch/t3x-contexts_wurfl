@@ -38,12 +38,29 @@
                 <source>Enabled</source>
             </trans-unit>
 
+            <!-- Browser Context FlexForm labels -->
+            <trans-unit id="flexform.browser.field_browsers">
+                <source>Browser names</source>
+            </trans-unit>
+            <trans-unit id="flexform.browser.field_browsers.description">
+                <source>Comma-separated list of browser names to match. Common browsers: Chrome, Firefox, Safari, Microsoft Edge, Opera, Internet Explorer, Mobile Safari, Chrome Mobile, Samsung Browser</source>
+            </trans-unit>
+            <trans-unit id="flexform.browser.field_browsers.placeholder">
+                <source>Chrome, Firefox, Safari</source>
+            </trans-unit>
+
             <!-- Context type titles -->
             <trans-unit id="context.device.title">
                 <source>Device Type</source>
             </trans-unit>
             <trans-unit id="context.device.description">
                 <source>Matches based on the visitor's device type (mobile, tablet, desktop, bot)</source>
+            </trans-unit>
+            <trans-unit id="context.browser.title">
+                <source>Browser</source>
+            </trans-unit>
+            <trans-unit id="context.browser.description">
+                <source>Matches based on the visitor's browser (Chrome, Firefox, Safari, etc.)</source>
             </trans-unit>
         </body>
     </file>

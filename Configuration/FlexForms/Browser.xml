@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <type>array</type>
+                <el>
+                    <field_browsers>
+                        <label>LLL:EXT:contexts_wurfl/Resources/Private/Language/locallang.xlf:flexform.browser.field_browsers</label>
+                        <description>LLL:EXT:contexts_wurfl/Resources/Private/Language/locallang.xlf:flexform.browser.field_browsers.description</description>
+                        <config>
+                            <type>text</type>
+                            <cols>40</cols>
+                            <rows>3</rows>
+                            <placeholder>LLL:EXT:contexts_wurfl/Resources/Private/Language/locallang.xlf:flexform.browser.field_browsers.placeholder</placeholder>
+                        </config>
+                    </field_browsers>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>
