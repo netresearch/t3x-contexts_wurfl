@@ -1,48 +1,23 @@
 <?php
 
-/***************************************************************
- * Extension Manager/Repository config file for ext "contexts_wurfl".
- *
- * Auto generated 07-03-2014 14:46
- *
- * Manual updates:
- * Only the data in the array - everything else is removed by next
- * writing. "version" and "dependencies" must not be touched!
- ***************************************************************/
+declare(strict_types=1);
 
-$EM_CONF[$_EXTKEY] = array(
-	'title' => 'Multi-channel contexts: WURFL mobile data provider',
-	'description' => 'Mobile device detection for multi-channel contexts',
-	'category' => 'misc',
-	'author' => 'Christian Weiske, Marian Pollzien, Rico Sonntag',
-	'author_email' => 'typo3.org@netresearch.de',
-	'shy' => '',
-	'dependencies' => 'contexts',
-	'conflicts' => '',
-	'priority' => '',
-	'module' => '',
-	'state' => 'alpha',
-	'internal' => '',
-	'uploadfolder' => 0,
-	'createDirs' => 'typo3temp/contexts_wurfl/',
-	'modify_tables' => '',
-	'clearCacheOnLoad' => 1,
-	'lockType' => '',
-	'author_company' => 'Netresearch GmbH & Co.KG',
-	'version' => '0.4.3',
-	'constraints' => array(
-		'depends' => array(
-			'typo3' => '4.5.0-6.2.99',
-			'contexts' => '0.4.0-',
-		),
-		'conflicts' => array(
-		),
-		'suggests' => array(
-		),
-	),
-	'_md5_values_when_last_written' => 'a:139:{s:9:"ChangeLog";s:4:"70b4";s:16:"ext_autoload.php";s:4:"2734";s:21:"ext_conf_template.txt";s:4:"6452";s:16:"ext_contexts.php";s:4:"cd4a";s:12:"ext_icon.gif";s:4:"4d22";s:17:"ext_localconf.php";s:4:"f7ee";s:14:"ext_tables.php";s:4:"3dc4";s:10:"README.rst";s:4:"5741";s:12:"Settings.yml";s:4:"5a91";s:19:"Classes/Backend.php";s:4:"4460";s:21:"Classes/Api/Wurfl.php";s:4:"8aba";s:28:"Classes/Api/Model/Import.php";s:4:"9484";s:39:"Classes/Backend/Modules/Admin/clear.gif";s:4:"cc11";s:38:"Classes/Backend/Modules/Admin/conf.php";s:4:"3245";s:39:"Classes/Backend/Modules/Admin/index.php";s:4:"09e5";s:47:"Classes/Backend/Modules/Admin/locallang_mod.xlf";s:4:"3c07";s:40:"Classes/Backend/Modules/Admin/Module.php";s:4:"3194";s:44:"Classes/Backend/Modules/Admin/moduleicon.gif";s:4:"4d22";s:30:"Classes/Context/Type/Wurfl.php";s:4:"8eb2";s:29:"Classes/Service/ImportCli.php";s:4:"a709";s:30:"Classes/Service/ImportTask.php";s:4:"a13b";s:32:"Configuration/flexform/Wurfl.xml";s:4:"7c1c";s:41:"Library/wurfl-dbapi-1.4.4.0/CHANGELOG.txt";s:4:"f708";s:43:"Library/wurfl-dbapi-1.4.4.0/check_wurfl.php";s:4:"a307";s:39:"Library/wurfl-dbapi-1.4.4.0/COPYING.txt";s:4:"0865";s:38:"Library/wurfl-dbapi-1.4.4.0/README.txt";s:4:"ccc5";s:41:"Library/wurfl-dbapi-1.4.4.0/TeraWurfl.php";s:4:"0fee";s:47:"Library/wurfl-dbapi-1.4.4.0/TeraWurflConfig.php";s:4:"4128";s:55:"Library/wurfl-dbapi-1.4.4.0/TeraWurflConfig.php.example";s:4:"41c1";s:51:"Library/wurfl-dbapi-1.4.4.0/TeraWurflWebservice.php";s:4:"40a8";s:42:"Library/wurfl-dbapi-1.4.4.0/test_usage.php";s:4:"166a";s:55:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatcherFactory.php";s:4:"df32";s:46:"Library/wurfl-dbapi-1.4.4.0/UserAgentUtils.php";s:4:"19bf";s:42:"Library/wurfl-dbapi-1.4.4.0/webservice.php";s:4:"c61f";s:46:"Library/wurfl-dbapi-1.4.4.0/WurflConstants.php";s:4:"ba68";s:44:"Library/wurfl-dbapi-1.4.4.0/WurflSupport.php";s:4:"9e74";s:68:"Library/wurfl-dbapi-1.4.4.0/DatabaseConnectors/TeraWurflDatabase.php";s:4:"040d";s:76:"Library/wurfl-dbapi-1.4.4.0/DatabaseConnectors/TeraWurflDatabase_MongoDB.php";s:4:"9efb";s:78:"Library/wurfl-dbapi-1.4.4.0/DatabaseConnectors/TeraWurflDatabase_MSSQL2005.php";s:4:"f751";s:75:"Library/wurfl-dbapi-1.4.4.0/DatabaseConnectors/TeraWurflDatabase_MySQL4.php";s:4:"63b0";s:75:"Library/wurfl-dbapi-1.4.4.0/DatabaseConnectors/TeraWurflDatabase_MySQL5.php";s:4:"53f0";s:81:"Library/wurfl-dbapi-1.4.4.0/DatabaseConnectors/TeraWurflDatabase_MySQL5_Debug.php";s:4:"5669";s:85:"Library/wurfl-dbapi-1.4.4.0/DatabaseConnectors/TeraWurflDatabase_MySQL5_NestedSet.php";s:4:"5755";s:72:"Library/wurfl-dbapi-1.4.4.0/DatabaseConnectors/TeraWurflDatabase_PDO.php";s:4:"3e4d";s:82:"Library/wurfl-dbapi-1.4.4.0/DatabaseConnectors/TeraWurflDatabase_PDO_NestedSet.php";s:4:"8275";s:74:"Library/wurfl-dbapi-1.4.4.0/DatabaseConnectors/TeraWurflMySQLNestedSet.php";s:4:"c869";s:72:"Library/wurfl-dbapi-1.4.4.0/DatabaseConnectors/TeraWurflPDONestedSet.php";s:4:"09d4";s:80:"Library/wurfl-dbapi-1.4.4.0/HttpHeaderNormalizers/GenericUserAgentNormalizer.php";s:4:"dded";s:75:"Library/wurfl-dbapi-1.4.4.0/HttpHeaderNormalizers/IHttpHeaderNormalizer.php";s:4:"c12c";s:71:"Library/wurfl-dbapi-1.4.4.0/TeraWurflExceptions/TeraWurflExceptions.php";s:4:"6029";s:73:"Library/wurfl-dbapi-1.4.4.0/TeraWurflHttpRequest/TeraWurflHttpRequest.php";s:4:"9729";s:79:"Library/wurfl-dbapi-1.4.4.0/TeraWurflHttpRequest/TeraWurflHttpRequestHeader.php";s:4:"b510";s:71:"Library/wurfl-dbapi-1.4.4.0/TeraWurflHttpRequest/TeraWurflUserAgent.php";s:4:"82b7";s:78:"Library/wurfl-dbapi-1.4.4.0/TeraWurflHttpRequest/TeraWurflUserAgentProfile.php";s:4:"1762";s:75:"Library/wurfl-dbapi-1.4.4.0/TeraWurflRemoteClient/TeraWurflRemoteClient.php";s:4:"3f44";s:82:"Library/wurfl-dbapi-1.4.4.0/TeraWurflRemoteClient/examples/actionscript/example.as";s:4:"b07e";s:83:"Library/wurfl-dbapi-1.4.4.0/TeraWurflRemoteClient/examples/actionscript/example.fla";s:4:"a115";s:83:"Library/wurfl-dbapi-1.4.4.0/TeraWurflRemoteClient/examples/actionscript/example.swf";s:4:"90ff";s:82:"Library/wurfl-dbapi-1.4.4.0/TeraWurflRemoteClient/examples/javascript/example.html";s:4:"beec";s:94:"Library/wurfl-dbapi-1.4.4.0/TeraWurflRemoteClient/examples/javascript/TeraWurflRemoteClient.js";s:4:"2478";s:74:"Library/wurfl-dbapi-1.4.4.0/TeraWurflRemoteClient/examples/perl/example.pl";s:4:"897b";s:74:"Library/wurfl-dbapi-1.4.4.0/TeraWurflRemoteClient/examples/php/example.php";s:4:"ab94";s:76:"Library/wurfl-dbapi-1.4.4.0/TeraWurflRemoteClient/examples/python/example.py";s:4:"8366";s:59:"Library/wurfl-dbapi-1.4.4.0/TeraWurflUtils/TeraWurflCLI.php";s:4:"669d";s:67:"Library/wurfl-dbapi-1.4.4.0/TeraWurflUtils/TeraWurflDeviceImage.php";s:4:"9796";s:62:"Library/wurfl-dbapi-1.4.4.0/TeraWurflUtils/TeraWurflLoader.php";s:4:"fd26";s:63:"Library/wurfl-dbapi-1.4.4.0/TeraWurflUtils/TeraWurflUpdater.php";s:4:"4d46";s:70:"Library/wurfl-dbapi-1.4.4.0/TeraWurflXMLParsers/TeraWurflXMLParser.php";s:4:"4fc2";s:80:"Library/wurfl-dbapi-1.4.4.0/TeraWurflXMLParsers/TeraWurflXMLParser_SimpleXML.php";s:4:"c278";s:80:"Library/wurfl-dbapi-1.4.4.0/TeraWurflXMLParsers/TeraWurflXMLParser_XMLReader.php";s:4:"4c07";s:73:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/AlcatelUserAgentMatcher.php";s:4:"cb4b";s:73:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/AndroidUserAgentMatcher.php";s:4:"d873";s:71:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/AppleUserAgentMatcher.php";s:4:"3597";s:70:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/BenQUserAgentMatcher.php";s:4:"0fbc";s:76:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/BlackBerryUserAgentMatcher.php";s:4:"261c";s:69:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/BotUserAgentMatcher.php";s:4:"5489";s:74:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/CatchAllUserAgentMatcher.php";s:4:"71c3";s:72:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/ChromeUserAgentMatcher.php";s:4:"7868";s:72:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/DoCoMoUserAgentMatcher.php";s:4:"e48e";s:73:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/FirefoxUserAgentMatcher.php";s:4:"e47e";s:73:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/GrundigUserAgentMatcher.php";s:4:"d471";s:72:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/HTCMacUserAgentMatcher.php";s:4:"f863";s:69:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/HTCUserAgentMatcher.php";s:4:"c81f";s:76:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/JavaMidletUserAgentMatcher.php";s:4:"21f1";s:70:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/KddiUserAgentMatcher.php";s:4:"accf";s:72:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/KindleUserAgentMatcher.php";s:4:"b2a6";s:75:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/KonquerorUserAgentMatcher.php";s:4:"4f9c";s:73:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/KyoceraUserAgentMatcher.php";s:4:"a076";s:73:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/LGUPLUSUserAgentMatcher.php";s:4:"fbd9";s:68:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/LGUserAgentMatcher.php";s:4:"0069";s:71:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/MaemoUserAgentMatcher.php";s:4:"068f";s:76:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/MitsubishiUserAgentMatcher.php";s:4:"d2c8";s:74:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/MotorolaUserAgentMatcher.php";s:4:"0332";s:70:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/MSIEUserAgentMatcher.php";s:4:"fa99";s:69:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/NecUserAgentMatcher.php";s:4:"31d3";s:74:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/NintendoUserAgentMatcher.php";s:4:"494b";s:81:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/NokiaOviBrowserUserAgentMatcher.php";s:4:"1a0c";s:71:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/NokiaUserAgentMatcher.php";s:4:"1527";s:75:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/OperaMiniUserAgentMatcher.php";s:4:"c6e3";s:71:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/OperaUserAgentMatcher.php";s:4:"2f63";s:75:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/PanasonicUserAgentMatcher.php";s:4:"89e9";s:73:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/PantechUserAgentMatcher.php";s:4:"dd7c";s:73:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/PhilipsUserAgentMatcher.php";s:4:"13a7";s:75:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/PortalmmmUserAgentMatcher.php";s:4:"d24d";s:70:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/QtekUserAgentMatcher.php";s:4:"66f2";s:72:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/ReksioUserAgentMatcher.php";s:4:"9722";s:72:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/SafariUserAgentMatcher.php";s:4:"62f6";s:71:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/SagemUserAgentMatcher.php";s:4:"f58e";s:73:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/SamsungUserAgentMatcher.php";s:4:"1b18";s:71:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/SanyoUserAgentMatcher.php";s:4:"d70e";s:71:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/SharpUserAgentMatcher.php";s:4:"ef11";s:73:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/SiemensUserAgentMatcher.php";s:4:"5147";s:79:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/SimpleDesktopUserAgentMatcher.php";s:4:"5c3e";s:73:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/SmartTVUserAgentMatcher.php";s:4:"6570";s:78:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/SonyEricssonUserAgentMatcher.php";s:4:"74f6";s:69:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/SPVUserAgentMatcher.php";s:4:"778a";s:73:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/ToshibaUserAgentMatcher.php";s:4:"380b";s:66:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/UserAgentMatcher.php";s:4:"14fa";s:74:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/VodafoneUserAgentMatcher.php";s:4:"8f9a";s:71:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/WebOSUserAgentMatcher.php";s:4:"ac7f";s:85:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/WindowsPhoneDesktopUserAgentMatcher.php";s:4:"9cfb";s:78:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/WindowsPhoneUserAgentMatcher.php";s:4:"84ce";s:75:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/WindowsRTUserAgentMatcher.php";s:4:"f79d";s:70:"Library/wurfl-dbapi-1.4.4.0/UserAgentMatchers/XboxUserAgentMatcher.php";s:4:"93f8";s:52:"Library/wurfl-dbapi-1.4.4.0/admin/cmd_line_admin.php";s:4:"7c7c";s:51:"Library/wurfl-dbapi-1.4.4.0/admin/generatePatch.php";s:4:"caed";s:43:"Library/wurfl-dbapi-1.4.4.0/admin/index.php";s:4:"c43b";s:45:"Library/wurfl-dbapi-1.4.4.0/admin/install.php";s:4:"d7fd";s:45:"Library/wurfl-dbapi-1.4.4.0/admin/mockup.html";s:4:"38b5";s:43:"Library/wurfl-dbapi-1.4.4.0/admin/stats.php";s:4:"5c34";s:43:"Library/wurfl-dbapi-1.4.4.0/admin/style.css";s:4:"49ee";s:46:"Library/wurfl-dbapi-1.4.4.0/admin/triangle.gif";s:4:"e5ca";s:46:"Library/wurfl-dbapi-1.4.4.0/admin/updatedb.php";s:4:"a3d1";s:66:"Library/wurfl-dbapi-1.4.4.0/admin/cache_browser/browse_classic.php";s:4:"916a";s:69:"Library/wurfl-dbapi-1.4.4.0/admin/cache_browser/show_capabilities.php";s:4:"5e4d";s:49:"Library/wurfl-dbapi-1.4.4.0/test/Introspector.php";s:4:"e931";s:45:"Resources/Private/Language/locallang_flex.xlf";s:4:"6d25";s:44:"Resources/Private/Language/locallang_mod.xlf";s:4:"a33e";s:31:"Scripts/CommandLineLauncher.php";s:4:"94dc";}',
-	'suggests' => array(
-	),
-);
-
-?>
+$EM_CONF[$_EXTKEY] = [
+    'title' => 'Contexts: Device Detection',
+    'description' => 'Device detection context types (device type, OS, browser) for the contexts extension. Uses Matomo DeviceDetector for user-agent parsing - by Netresearch.',
+    'category' => 'misc',
+    'author' => 'Netresearch DTT GmbH',
+    'author_email' => 'typo3@netresearch.de',
+    'author_company' => 'Netresearch DTT GmbH',
+    'state' => 'stable',
+    'version' => '2.0.0',
+    'constraints' => [
+        'depends' => [
+            'typo3' => '12.4.0-13.4.99',
+            'php' => '8.2.0-8.5.99',
+            'contexts' => '4.0.0-4.99.99',
+        ],
+        'conflicts' => [],
+        'suggests' => [],
+    ],
+];

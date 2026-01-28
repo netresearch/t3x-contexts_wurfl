@@ -1,70 +1,73 @@
 {
-  "name": "netresearch/contexts_wurfl",
-  "type": "typo3-cms-extension",
-  "description": "Multi-channel contexts: WURFL mobile data provider (Mobile device detection for multi-channel contexts)",
-  "keywords": [
-    "TYPO3",
-    "extension",
-    "contexts_geolocation",
-    "contexts"
-  ],
-  "homepage": "https://www.netresearch.de",
-  "support": {
-    "issues": "https://github.com/netresearch/t3x-contexts_wurfl/issues"
-  },
-  "authors": [
-    {
-      "name": "Andre Hähnel, Christian Opitz, Christian Weiske, Marian Pollzien, Rico Sonntag",
-      "email": "typo3.org@netresearch.de",
-      "role": "Developer",
-      "homepage": "https://www.netresearch.de"
-    }
-  ],
-  "license": "GPL-2.0+",
-  "require": {
-    "netresearch/contexts": "^0.4"
-  },
-  "require-dev": {
-    "namelesscoder/typo3-repository-client": "^1.2",
-    "mikey179/vfsStream": "^1.4",
-    "phpunit/phpunit": "^4.7 || ^5.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "Netresearch\\ContextsWurfl\\": "Classes"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Netresearch\\ContextsWurfl\\Tests\\": "Tests",
-      "TYPO3\\CMS\\Core\\Tests\\": ".Build/vendor/typo3/cms/typo3/sysext/core/Tests/",
-      "TYPO3\\CMS\\Fluid\\Tests\\": ".Build/vendor/typo3/cms/typo3/sysext/fluid/Tests/"
-    }
-  },
-  "replace": {
-    "contexts_wurfl": "self.version",
-    "typo3-ter/contexts_wurfl": "self.version"
-  },
-  "config": {
-    "vendor-dir": ".Build/vendor",
-    "bin-dir": ".Build/bin",
-    "preferred-install": {
-      "typo3/cms": "source"
-    }
-  },
-  "scripts": {
-    "post-autoload-dump": [
-      "mkdir -p .Build/Web/typo3conf/ext/",
-      "[ -L .Build/Web/typo3conf/ext/contexts_wurfl ] || ln -snvf ../../../../. .Build/Web/typo3conf/ext/contexts_wurfl"
-    ]
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "0.4.x-dev"
+    "name": "netresearch/contexts-wurfl",
+    "type": "typo3-cms-extension",
+    "description": "Device detection context types for the contexts extension - match content by device type, OS, browser - by Netresearch",
+    "license": "AGPL-3.0-or-later",
+    "homepage": "https://github.com/netresearch/t3x-contexts_wurfl",
+    "support": {
+        "issues": "https://github.com/netresearch/t3x-contexts_wurfl/issues",
+        "source": "https://github.com/netresearch/t3x-contexts_wurfl"
     },
-    "typo3/cms": {
-      "cms-package-dir": "{$vendor-dir}/typo3/cms",
-      "web-dir": ".Build/Web"
+    "authors": [
+        {
+            "name": "Netresearch DTT GmbH",
+            "email": "typo3@netresearch.de",
+            "homepage": "https://www.netresearch.de/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "matomo/device-detector": "^6.0",
+        "netresearch/contexts": "^4.0",
+        "typo3/cms-backend": "^12.4 || ^13.4",
+        "typo3/cms-core": "^12.4 || ^13.4",
+        "typo3/cms-extbase": "^12.4 || ^13.4",
+        "typo3/cms-frontend": "^12.4 || ^13.4"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.64",
+        "phpstan/phpstan": "^1.10 || ^2.0",
+        "phpstan/phpstan-deprecation-rules": "^1.2 || ^2.0",
+        "phpstan/phpstan-phpunit": "^1.4 || ^2.0",
+        "phpstan/phpstan-strict-rules": "^1.6 || ^2.0",
+        "phpunit/phpunit": "^10.5 || ^11.0 || ^12.0",
+        "saschaegerer/phpstan-typo3": "^1.9 || ^2.0",
+        "typo3/testing-framework": "^8.2 || ^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Netresearch\\ContextsDevice\\": "Classes/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Netresearch\\ContextsDevice\\Tests\\": "Tests/"
+        }
+    },
+    "replace": {
+        "typo3-ter/contexts-wurfl": "self.version"
+    },
+    "config": {
+        "allow-plugins": {
+            "typo3/class-alias-loader": true,
+            "typo3/cms-composer-installers": true
+        },
+        "bin-dir": ".Build/bin",
+        "sort-packages": true,
+        "vendor-dir": ".Build/vendor"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "contexts_wurfl"
+        }
+    },
+    "scripts": {
+        "analyze": ".Build/bin/phpstan analyse -c Build/phpstan.neon",
+        "lint": ".Build/bin/php-cs-fixer fix --dry-run --diff",
+        "lint:fix": ".Build/bin/php-cs-fixer fix",
+        "test:coverage": "XDEBUG_MODE=coverage .Build/bin/phpunit -c Build/phpunit/UnitTests.xml --coverage-html .Build/coverage",
+        "test:functional": ".Build/bin/phpunit -c Build/phpunit/FunctionalTests.xml",
+        "test:unit": ".Build/bin/phpunit -c Build/phpunit/UnitTests.xml"
     }
-  }
 }
