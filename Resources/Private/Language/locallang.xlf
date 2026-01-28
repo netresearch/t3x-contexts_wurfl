@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="messages" product-name="contexts_wurfl">
+        <header/>
+        <body>
+            <!-- Device Context FlexForm labels -->
+            <trans-unit id="flexform.device.field_is_mobile">
+                <source>Mobile devices</source>
+            </trans-unit>
+            <trans-unit id="flexform.device.field_is_mobile.description">
+                <source>Match all mobile devices (phones and tablets)</source>
+            </trans-unit>
+            <trans-unit id="flexform.device.field_is_phone">
+                <source>Phones</source>
+            </trans-unit>
+            <trans-unit id="flexform.device.field_is_phone.description">
+                <source>Match phones specifically (mobile devices that are not tablets)</source>
+            </trans-unit>
+            <trans-unit id="flexform.device.field_is_tablet">
+                <source>Tablets</source>
+            </trans-unit>
+            <trans-unit id="flexform.device.field_is_tablet.description">
+                <source>Match tablets specifically</source>
+            </trans-unit>
+            <trans-unit id="flexform.device.field_is_desktop">
+                <source>Desktop/Laptop</source>
+            </trans-unit>
+            <trans-unit id="flexform.device.field_is_desktop.description">
+                <source>Match desktop and laptop computers</source>
+            </trans-unit>
+            <trans-unit id="flexform.device.field_is_bot">
+                <source>Bots/Crawlers</source>
+            </trans-unit>
+            <trans-unit id="flexform.device.field_is_bot.description">
+                <source>Match search engine bots and web crawlers</source>
+            </trans-unit>
+            <trans-unit id="flexform.device.enabled">
+                <source>Enabled</source>
+            </trans-unit>
+
+            <!-- Context type titles -->
+            <trans-unit id="context.device.title">
+                <source>Device Type</source>
+            </trans-unit>
+            <trans-unit id="context.device.description">
+                <source>Matches based on the visitor's device type (mobile, tablet, desktop, bot)</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <type>array</type>
+                <el>
+                    <field_is_mobile>
+                        <label>LLL:EXT:contexts_wurfl/Resources/Private/Language/locallang.xlf:flexform.device.field_is_mobile</label>
+                        <description>LLL:EXT:contexts_wurfl/Resources/Private/Language/locallang.xlf:flexform.device.field_is_mobile.description</description>
+                        <config>
+                            <type>check</type>
+                            <renderType>checkboxToggle</renderType>
+                            <items type="array">
+                                <numIndex index="0" type="array">
+                                    <label>LLL:EXT:contexts_wurfl/Resources/Private/Language/locallang.xlf:flexform.device.enabled</label>
+                                </numIndex>
+                            </items>
+                        </config>
+                    </field_is_mobile>
+                    <field_is_phone>
+                        <label>LLL:EXT:contexts_wurfl/Resources/Private/Language/locallang.xlf:flexform.device.field_is_phone</label>
+                        <description>LLL:EXT:contexts_wurfl/Resources/Private/Language/locallang.xlf:flexform.device.field_is_phone.description</description>
+                        <config>
+                            <type>check</type>
+                            <renderType>checkboxToggle</renderType>
+                            <items type="array">
+                                <numIndex index="0" type="array">
+                                    <label>LLL:EXT:contexts_wurfl/Resources/Private/Language/locallang.xlf:flexform.device.enabled</label>
+                                </numIndex>
+                            </items>
+                        </config>
+                    </field_is_phone>
+                    <field_is_tablet>
+                        <label>LLL:EXT:contexts_wurfl/Resources/Private/Language/locallang.xlf:flexform.device.field_is_tablet</label>
+                        <description>LLL:EXT:contexts_wurfl/Resources/Private/Language/locallang.xlf:flexform.device.field_is_tablet.description</description>
+                        <config>
+                            <type>check</type>
+                            <renderType>checkboxToggle</renderType>
+                            <items type="array">
+                                <numIndex index="0" type="array">
+                                    <label>LLL:EXT:contexts_wurfl/Resources/Private/Language/locallang.xlf:flexform.device.enabled</label>
+                                </numIndex>
+                            </items>
+                        </config>
+                    </field_is_tablet>
+                    <field_is_desktop>
+                        <label>LLL:EXT:contexts_wurfl/Resources/Private/Language/locallang.xlf:flexform.device.field_is_desktop</label>
+                        <description>LLL:EXT:contexts_wurfl/Resources/Private/Language/locallang.xlf:flexform.device.field_is_desktop.description</description>
+                        <config>
+                            <type>check</type>
+                            <renderType>checkboxToggle</renderType>
+                            <items type="array">
+                                <numIndex index="0" type="array">
+                                    <label>LLL:EXT:contexts_wurfl/Resources/Private/Language/locallang.xlf:flexform.device.enabled</label>
+                                </numIndex>
+                            </items>
+                        </config>
+                    </field_is_desktop>
+                    <field_is_bot>
+                        <label>LLL:EXT:contexts_wurfl/Resources/Private/Language/locallang.xlf:flexform.device.field_is_bot</label>
+                        <description>LLL:EXT:contexts_wurfl/Resources/Private/Language/locallang.xlf:flexform.device.field_is_bot.description</description>
+                        <config>
+                            <type>check</type>
+                            <renderType>checkboxToggle</renderType>
+                            <items type="array">
+                                <numIndex index="0" type="array">
+                                    <label>LLL:EXT:contexts_wurfl/Resources/Private/Language/locallang.xlf:flexform.device.enabled</label>
+                                </numIndex>
+                            </items>
+                        </config>
+                    </field_is_bot>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>
