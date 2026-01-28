@@ -138,7 +138,7 @@ class BrowserContext extends AbstractContext
         $browsers = explode(',', $browsersConfig);
         $browsers = array_map('trim', $browsers);
         $browsers = array_map('strtolower', $browsers);
-        $browsers = array_filter($browsers, static fn(string $browser): bool => $browser !== '');
+        $browsers = array_filter($browsers, static fn (string $browser): bool => $browser !== '');
 
         return array_values($browsers);
     }

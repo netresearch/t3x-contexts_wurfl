@@ -13,7 +13,6 @@ namespace Netresearch\ContextsDevice\Tests\Unit\Context\Type;
 
 use DeviceDetector\DeviceDetector;
 use Netresearch\ContextsDevice\Context\Type\DeviceContext;
-use Netresearch\ContextsDevice\Dto\DeviceInfo;
 use Netresearch\ContextsDevice\Service\DeviceDetectionService;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\DataProvider;

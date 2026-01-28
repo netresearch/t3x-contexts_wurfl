@@ -37,7 +37,8 @@ final class DeviceDetectionService
 
     public function __construct(
         private readonly DeviceDetector $deviceDetector,
-    ) {}
+    ) {
+    }
 
     /**
      * Detect device information from the current TYPO3 request.
