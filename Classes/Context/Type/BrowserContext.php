@@ -15,6 +15,7 @@ use Netresearch\Contexts\Context\AbstractContext;
 use Netresearch\ContextsDevice\Dto\DeviceInfo;
 use Netresearch\ContextsDevice\Service\DeviceDetectionService;
 use Psr\Http\Message\ServerRequestInterface;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**
  * Context type that matches based on browser name.
@@ -38,7 +39,7 @@ use Psr\Http\Message\ServerRequestInterface;
  */
 class BrowserContext extends AbstractContext
 {
-    protected DeviceDetectionService $deviceDetectionService;
+    protected ?DeviceDetectionService $deviceDetectionService = null;
 
     /**
      * @param array<string, mixed> $arRow Database context row
@@ -47,9 +48,19 @@ class BrowserContext extends AbstractContext
     {
         parent::__construct($arRow);
 
-        if ($deviceDetectionService !== null) {
-            $this->deviceDetectionService = $deviceDetectionService;
+        $this->deviceDetectionService = $deviceDetectionService;
+    }
+
+    /**
+     * Get the device detection service, with lazy initialization fallback.
+     */
+    protected function getDeviceDetectionService(): DeviceDetectionService
+    {
+        if ($this->deviceDetectionService === null) {
+            $this->deviceDetectionService = GeneralUtility::makeInstance(DeviceDetectionService::class);
         }
+
+        return $this->deviceDetectionService;
     }
 
     /**
@@ -108,7 +119,7 @@ class BrowserContext extends AbstractContext
             return null;
         }
 
-        return $this->deviceDetectionService->detectFromRequest($request);
+        return $this->getDeviceDetectionService()->detectFromRequest($request);
     }
 
     /**
