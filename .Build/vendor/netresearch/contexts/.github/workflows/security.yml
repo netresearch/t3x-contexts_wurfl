@@ -19,10 +19,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v6.0.2
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
       - name: Setup PHP
-        uses: shivammathur/setup-php@v2
+        uses: shivammathur/setup-php@db91e1a0e48e84637d325a7ee4d2677e146ceec4 # v2.36.0
         with:
           php-version: '8.3'
           tools: composer:v2
@@ -33,12 +33,13 @@ jobs:
 
       - name: Check for known vulnerabilities
         run: |
-          # Fail the build on high/critical vulnerabilities
+          # Fail the build on any security vulnerabilities
           AUDIT_OUTPUT=$(composer audit --format=json 2>/dev/null || echo '{"advisories":[]}')
           VULN_COUNT=$(echo "$AUDIT_OUTPUT" | jq '.advisories | length // 0')
           if [ "$VULN_COUNT" -gt 0 ]; then
-            echo "::warning::Found $VULN_COUNT security advisories in dependencies"
+            echo "::error::Found $VULN_COUNT security advisories in dependencies"
             echo "$AUDIT_OUTPUT" | jq '.advisories'
+            exit 1
           else
             echo "No known vulnerabilities found"
           fi
@@ -51,10 +52,10 @@ jobs:
       actions: read
 
     steps:
-      - uses: actions/checkout@v6.0.2
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
       - name: Setup PHP
-        uses: shivammathur/setup-php@v2
+        uses: shivammathur/setup-php@db91e1a0e48e84637d325a7ee4d2677e146ceec4 # v2.36.0
         with:
           php-version: '8.3'
           tools: composer:v2
@@ -72,7 +73,7 @@ jobs:
         run: composer CycloneDX:make-sbom --output-file=sbom.json --spec-version=1.5
 
       - name: Upload SBOM as artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
         with:
           name: sbom-cyclonedx
           path: sbom.json
@@ -80,7 +81,7 @@ jobs:
 
       - name: Submit SBOM to Dependency Graph
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        uses: advanced-security/spdx-dependency-submission-action@v0.1.2
+        uses: advanced-security/spdx-dependency-submission-action@f957edbb35161c1f9e33f61026fc86a671c58cae # v0.1.2
         continue-on-error: true
         with:
           filePath: sbom.json
