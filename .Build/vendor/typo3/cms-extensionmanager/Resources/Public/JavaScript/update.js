@@ -1,0 +1,13 @@
+/*
+ * This file is part of the TYPO3 CMS project.
+ *
+ * It is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License, either version 2
+ * of the License, or any later version.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE.txt file that was distributed with this source code.
+ *
+ * The TYPO3 project - inspiring people to share!
+ */
+import c from"nprogress";import d from"@typo3/backend/notification.js";import p from"@typo3/core/ajax/ajax-request.js";import m from"@typo3/core/event/regular-event.js";var e;(function(n){n.extensionTable="#terTable",n.terUpdateAction=".update-from-ter",n.pagination=".pagination-wrap",n.splashscreen=".splash-receivedata",n.terTableWrapper="#terTableWrapper .table"})(e||(e={}));class u{initializeEvents(){const a=document.querySelector(e.terUpdateAction);a!==null&&(new m("submit",o=>{o.preventDefault(),this.updateFromTer(o.target.action,!0)}).bindTo(a),this.updateFromTer(a.action,!1))}updateFromTer(a,o){o&&(a=a+"&forceUpdateCheck=1"),document.querySelector(e.terUpdateAction)?.classList.add("extensionmanager-is-hidden");const r=document.querySelector(e.extensionTable);r&&(r.style.display="none"),document.querySelector(e.splashscreen)?.classList.add("extensionmanager-is-shown"),document.querySelector(e.terTableWrapper)?.classList.add("extensionmanager-is-loading"),document.querySelector(e.pagination)?.classList.add("extensionmanager-is-loading");let i=!1;c.start(),new p(a).post({}).then(async t=>{const s=await t.resolve();s.errorMessage.length&&d.error(TYPO3.lang["extensionList.updateFromTerFlashMessage.title"],s.errorMessage,10);const l=document.querySelector(e.terUpdateAction+" .extension-list-last-updated");l.innerText=s.timeSinceLastUpdate,l.setAttribute("title",TYPO3.lang["extensionList.updateFromTer.lastUpdate.timeOfLastUpdate"]+s.lastUpdateTime),s.updated&&(i=!0,window.location.replace(window.location.href))},async t=>{const s=t.response.statusText+"("+t.response.status+"): "+await t.response.text();d.warning(TYPO3.lang["extensionList.updateFromTerFlashMessage.title"],s,10)}).finally(()=>{if(c.done(),!i){document.querySelector(e.splashscreen)?.classList.remove("extensionmanager-is-shown"),document.querySelector(e.terTableWrapper)?.classList.remove("extensionmanager-is-loading"),document.querySelector(e.pagination)?.classList.remove("extensionmanager-is-loading"),document.querySelector(e.terUpdateAction)?.classList.remove("extensionmanager-is-hidden");const t=document.querySelector(e.extensionTable);t&&(t.style.display="block")}})}}export{u as default};

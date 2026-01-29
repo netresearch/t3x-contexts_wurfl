@@ -1,0 +1,51 @@
+{
+    "name": "typo3fluid/fluid",
+    "description": "The TYPO3 Fluid template rendering engine",
+    "homepage": "https://github.com/TYPO3/Fluid",
+    "support": {
+        "docs": "https://docs.typo3.org/other/typo3fluid/fluid/main/en-us/",
+        "issues": "https://github.com/TYPO3/Fluid/issues",
+        "source": "https://github.com/TYPO3/Fluid"
+    },
+    "license": ["LGPL-3.0-or-later"],
+    "require": {
+        "php": "^8.2",
+        "ext-mbstring": "*"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "require-dev": {
+        "ext-json": "*",
+        "ext-simplexml": "*",
+        "friendsofphp/php-cs-fixer": "^3.59.3",
+        "phpstan/phpstan": "^2.1.17",
+        "phpstan/phpstan-phpunit": "^2.0.6",
+        "phpunit/phpunit": "^11.5.22 || ^12.2.1",
+        "psr/container": "^2.0",
+        "t3docs/fluid-documentation-generator": "^4.3"
+    },
+    "suggest": {
+        "ext-json": "PHP JSON is needed when using JSONVariableProvider: A relatively rare use case",
+        "ext-simplexml": "SimpleXML is required for the XSD schema generator"
+    },
+    "autoload": {
+        "psr-4": {
+            "TYPO3Fluid\\Fluid\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TYPO3Fluid\\FluidExamples\\": "examples/src/",
+            "TYPO3Fluid\\Fluid\\Tests\\": "tests/"
+        }
+    },
+    "bin": [
+        "bin/fluid"
+    ],
+    "extra": {
+        "branch-alias": {
+            "dev-main": "4.x-dev"
+        }
+    }
+}

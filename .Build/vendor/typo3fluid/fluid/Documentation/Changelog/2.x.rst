@@ -1,0 +1,146 @@
+.. include:: /Includes.rst.txt
+
+.. _changelog-2.x:
+
+=============
+Changelog 2.x
+=============
+
+2.15
+----
+
+* Deprecation: First parameter of method :php:`TYPO3Fluid\Fluid\View\TemplatePaths->__construct()`
+  is deprecated. The Constructor will be removed with Fluid v5.
+* Deprecation: Method :php:`TYPO3Fluid\Fluid\View\TemplatePaths->fillFromConfigurationArray()`
+  has been marked as deprecated. It will log a deprecation level error message when called in
+  Fluid v4.
+* Deprecation: Method :php:`TYPO3Fluid\Fluid\View\TemplatePaths->fillDefaultsByPackageName()`
+  has been marked as deprecated. It will log a deprecation level error message when called in
+  Fluid v4.
+* Deprecation: Method :php:`TYPO3Fluid\Fluid\View\TemplatePaths->ensureAbsolutePaths()`
+  has been marked as deprecated. It will log a deprecation level error message when called in
+  Fluid v4.
+* Deprecation: Method :php:`TYPO3Fluid\Fluid\View\TemplatePaths->extractPathArrays()`
+  has been marked as deprecated. It will log a deprecation level error message when called in
+  Fluid v4.
+* Deprecation: Method :php:`TYPO3Fluid\Fluid\View\TemplatePaths->getPackagePath()`
+  has been marked as deprecated. It will log a deprecation level error message when called in
+  Fluid v4.
+* Deprecation: Method :php:`TYPO3Fluid\Fluid\View\TemplatePaths->toArray()`
+  has been marked as deprecated. It will log a deprecation level error message when called in
+  Fluid v4.
+* Deprecation: Constant :php:`TYPO3Fluid\Fluid\View\TemplatePaths::DEFAULT_TEMPLATES_DIRECTORY`
+  has been marked as deprecated and will be removed in Fluid v5.
+* Deprecation: Constant :php:`TYPO3Fluid\Fluid\View\TemplatePaths::DEFAULT_LAYOUTS_DIRECTORY`
+  has been marked as deprecated and will be removed in Fluid v5.
+* Deprecation: Constant :php:`TYPO3Fluid\Fluid\View\TemplatePaths::DEFAULT_PARTIALS_DIRECTORY`
+  has been marked as deprecated and will be removed in Fluid v5.
+* Deprecation: Trait :php:`TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic`
+  has been marked as deprecated. It will log a deprecation level error message when called in
+  Fluid v4. It will be removed in Fluid v5.
+* Deprecation: Trait :php:`TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithContentArgumentAndRenderStatic`
+  has been marked as deprecated. It will log a deprecation level error message when called in
+  Fluid v4. It will be removed in Fluid v5.
+* Deprecation: Static method :php:`renderStatic()` on ViewHelpers that don't use :php:`TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic`
+  or :php:`TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithContentArgumentAndRenderStatic`
+  have been marked as deprecated. They will log a deprecation level error message when called in
+  Fluid v4. `renderStatic()` will no longer be called in Fluid v5.
+* Deprecation: Variable names `true`, `false` and `null` will log a deprecation level error message because these
+  identifiers will become a Fluid language feature with v4.
+
+
+2.14
+----
+
+* Deprecation: Method :php:`TYPO3Fluid\Fluid\View\AbstractTemplateView::initializeRenderingContext()`
+  has been marked as deprecated. It will be removed in Fluid v4.
+  Migration path is to call the rendering context directly via
+  :php:`TYPO3Fluid\Fluid\View\AbstractTemplateView::getRenderingContext()->getViewHelperVariableContainer()->setView()`
+* Deprecation: Method :php:`TYPO3Fluid\Fluid\View\AbstractTemplateView::setCache()`
+  has been marked as deprecated. It will be removed in Fluid v4.
+  Migration path is to call the rendering context directly via
+  :php:`TYPO3Fluid\Fluid\View\AbstractTemplateView::getRenderingContext()->setCache()`
+* Deprecation: Method :php:`TYPO3Fluid\Fluid\View\AbstractTemplateView::getTemplatePaths()`
+  has been marked as deprecated. It will be removed in Fluid v4.
+  Migration path is to call the rendering context directly via
+  :php:`TYPO3Fluid\Fluid\View\AbstractTemplateView::getRenderingContext()->getTemplatePaths()`
+* Deprecation: Method :php:`TYPO3Fluid\Fluid\View\AbstractTemplateView::getViewHelperResolver()`
+  has been marked as deprecated. It will be removed in Fluid v4.
+  Migration path is to call the rendering context directly via
+  :php:`TYPO3Fluid\Fluid\View\AbstractTemplateView::getRenderingContext()->getViewHelperResolver()`
+* Deprecation: Method :php:`TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper->overrideArgument()`
+  has been marked as deprecated. It will log a deprecation level error message when called in
+  Fluid v4. It will be removed in Fluid v5.
+  :php:`TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper->registerArgument()` now no longer throws
+  an exception if an argument is already defined, so calls to
+  :php:`TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper->overrideArgument()`
+  can be replaced with :php:`TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper->registerArgument()`.
+
+
+2.12
+----
+
+* Deprecation: Method :php:`TYPO3Fluid\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper->registerUniversalTagAttributes()`
+  has been marked as deprecated. It will log a deprecation level error message when called in
+  Fluid v4. It will be removed in Fluid v5.
+  Arbitrary tags are automatically added by :php:`AbstractTagBasedViewHelper`, single ViewHelpers
+  find such arguments in :php:`$this->additionalArguments` when the call to :php:`registerUniversalTagAttributes()`
+  is removed.
+* Deprecation: Method :php:`TYPO3Fluid\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper->registerTagAttribute()`
+  has been marked as deprecated. It will log a deprecation level error message when called in
+  Fluid v4. It will be removed in Fluid v5.
+  Arbitrary tags are automatically added by :php:`AbstractTagBasedViewHelper`, single ViewHelpers
+  find such arguments in :php:`$this->additionalArguments` when the call to :php:`registerUniversalTagAttributes()`
+  is removed. Alternatively, arguments registered using :php:`registerArgument()` can be found in
+  :php:`$this->arguments`.
+* Deprecation: Test abstracts :php:`TYPO3Fluid\Fluid\Tests\BaseTestCase` and
+  :php:`TYPO3Fluid\Fluid\Tests\UnitTestCase` have been marked as deprecated and
+  will be removed in Fluid v4. Extend :php:`PHPUnit\Framework\TestCase` directly.
+
+2.9
+---
+
+* Deprecation: Class :php:`TYPO3Fluid\Fluid\Core\Compiler\ViewHelperCompiler` has
+  been obsoleted and marked as deprecated. It will be removed in Fluid v4.
+* Deprecation: Exception :php:`TYPO3Fluid\Fluid\Core\Compiler\StopCompilingChildrenException`
+  has been obsoleted and marked as deprecated. It will be removed in Fluid v4.
+* Deprecation: Trait :php:`TYPO3Fluid\Fluid\Core\ViewHelper\Traits\ParserRuntimeOnly`
+  has been obsoleted by inlining the code to consumers and marked as deprecated.
+  It will be removed in Fluid v4.
+
+2.8
+---
+
+* Deprecation: Method :php:`TYPO3Fluid\Fluid\Core\Parser\SyntaxTree\ObjectAccessorNode->getAccessors()`
+  is unused and has been marked as deprecated. It will be removed in Fluid v4.
+* Deprecation: Unused public constant :php:`TYPO3Fluid\Fluid\Core\Compiler\TemplateCompiler::SHOULD_GENERATE_VIEWHELPER_INVOCATION`
+  has been marked as deprecated and will be removed in Fluid v4.
+* Deprecation: Unused public constant :php:`TYPO3Fluid\Fluid\Core\Variables\StandardVariableProvider::ACCESSOR_ARRAY`
+  has been marked as deprecated and will be removed in Fluid v4.
+* Deprecation: Unused public constant :php:`TYPO3Fluid\Fluid\Core\Variables\StandardVariableProvider::ACCESSOR_GETTER`
+  has been marked as deprecated and will be removed in Fluid v4.
+* Deprecation: Unused public constant :php:`TYPO3Fluid\Fluid\Core\Variables\StandardVariableProvider::ACCESSOR_ASSERTER`
+  has been marked as deprecated and will be removed in Fluid v4.
+* Deprecation: Unused public constant :php:`TYPO3Fluid\Fluid\Core\Variables\StandardVariableProvider::ACCESSOR_PUBLICPROPERTY`
+  has been marked as deprecated and will be removed in Fluid v4.
+* Deprecation: Unused public static property :php:`TYPO3Fluid\Fluid\Core\Parser\Patterns::$SCAN_PATTERN_ESCAPINGMODIFIER`
+  has been marked as deprecated and will be removed in Fluid v4.
+
+2.6
+---
+
+* Deprecation: Method :php:`TYPO3Fluid\Fluid\Core\ViewHelper\AbstractConditionViewHelper->evaluateCondition()`
+  has been marked as deprecated. It will be removed in Fluid v4. Use :php:`verdict()` instead.
+
+2.5
+---
+
+* Deprecation: Interface :php:`TYPO3Fluid\Fluid\Core\Parser\SyntaxTree\Expression\ParseTimeEvaluatedExpressionNodeInterface`
+  is unused and has been marked as deprecated. It will be removed in Fluid v4.
+
+2.4
+---
+
+* Deprecation: Class :php:`TYPO3Fluid\Fluid\Core\Variables\VariableExtractor`
+  is unused and has been marked as deprecated. It will be removed in Fluid v4.
+  Use :php:`StandardVariableProvider` instead.

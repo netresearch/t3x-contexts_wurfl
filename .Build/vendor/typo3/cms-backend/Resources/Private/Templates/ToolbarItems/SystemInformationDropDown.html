@@ -1,0 +1,76 @@
+<html xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers" data-namespace-typo3-fluid="true">
+<span data-systeminformation-data
+    data-systeminformation-data-count="{count}"
+    data-systeminformation-data-severitybadgeclass="{severityBadgeClass}"
+></span>
+
+<p class="dropdown-headline"><f:translate key="LLL:EXT:backend/Resources/Private/Language/locallang_toolbar.xlf:toolbarItems.sysinfo"/></p>
+<p class="dropdown-item-text">
+    <f:translate key="LLL:EXT:backend/Resources/Private/Language/locallang_toolbar.xlf:toolbarItems.sysinfo.intro.text"/>
+    <a href="#" data-moduleroute-identifier="tools_toolsenvironment">
+        <f:translate key="LLL:EXT:backend/Resources/Private/Language/locallang_toolbar.xlf:toolbarItems.sysinfo.intro.link"/>
+    </a>
+</p>
+
+<f:if condition="{systemInformation}">
+    <table class="dropdown-table">
+        <caption class="hidden">System overview</caption>
+        <f:for each="{systemInformation}" as="info">
+            <tr>
+                <th data-type="title" scope="row">
+                    <f:if condition="{info.iconIdentifier}">
+                        <f:then>
+                            <core:icon identifier="{info.iconIdentifier}" size="small" alternativeMarkupIdentifier="inline" />
+                        </f:then>
+                        <f:else if="{info.icon}" >{info.icon -> f:format.raw()}</f:else>
+                        <f:else>
+                            <core:icon identifier="empty-empty" size="small" alternativeMarkupIdentifier="inline" />
+                        </f:else>
+                    </f:if>
+                    <f:translate key="{info.title}" default="{info.title}"/>
+                    <f:if condition="{info.titleAddition}"> ({info.titleAddition -> f:format.htmlspecialchars()})</f:if>
+                </th>
+                <td data-type="value">
+                    {info.value}
+                </td>
+            </tr>
+        </f:for>
+    </table>
+</f:if>
+
+<hr class="dropdown-divider" aria-hidden="true">
+
+<f:if condition="{messages -> f:count()} > 0">
+    <f:then>
+        <f:for each="{messages}" as="message">
+            <div class="dropdown-row"
+                data-systeminformation-message-module="{message.module}"
+                data-systeminformation-message-params="{message.params}"
+                data-systeminformation-message-count="{message.count}"
+                data-systeminformation-message-status="{message.status}"
+            >
+                <div>
+                    <span class="text-{message.status}">
+                        <core:icon identifier="actions-exclamation-circle-alt" />
+                    </span>
+                </div>
+                <div>
+                    <f:format.raw>{message.text}</f:format.raw>
+                </div>
+            </div>
+        </f:for>
+    </f:then>
+    <f:else>
+        <div class="dropdown-row">
+            <div>
+                <span class="text-success">
+                    <core:icon identifier="actions-check-circle-alt" />
+                </span>
+            </div>
+            <div>
+                <f:format.nl2br><f:translate key="LLL:EXT:backend/Resources/Private/Language/locallang_toolbar.xlf:toolbarItems.sysinfo.allgood" /></f:format.nl2br>
+            </div>
+        </div>
+    </f:else>
+</f:if>
+</html>

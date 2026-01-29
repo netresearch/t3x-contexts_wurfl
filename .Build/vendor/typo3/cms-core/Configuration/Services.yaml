@@ -1,0 +1,220 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  TYPO3\CMS\Core\:
+    resource: '../Classes/*'
+
+  TYPO3\CMS\Core\Command\ExtensionListCommand:
+    tags:
+      - name: 'console.command'
+        command: 'extension:list'
+        description: 'Shows the list of extensions available to the system'
+        schedulable: false
+
+  TYPO3\CMS\Core\Command\SendEmailCommand:
+    tags:
+      - name: 'console.command'
+        command: 'mailer:spool:send'
+        description: 'Sends emails from the spool'
+      - name: 'console.command'
+        command: 'swiftmailer:spool:send'
+        alias: true
+        schedulable: false
+
+  TYPO3\CMS\Core\Command\SiteListCommand:
+    tags:
+      - name: 'console.command'
+        command: 'site:list'
+        description: 'Shows the list of sites available to the system'
+        schedulable: false
+
+  TYPO3\CMS\Core\Command\SiteShowCommand:
+    tags:
+      - name: 'console.command'
+        command: 'site:show'
+        description: 'Shows the configuration of the specified site'
+        schedulable: false
+
+  TYPO3\CMS\Core\Command\SiteSetsListCommand:
+    tags:
+      - name: 'console.command'
+        command: 'site:sets:list'
+        description: 'Shows the list of available site sets'
+        schedulable: false
+
+  TYPO3\CMS\Core\Command\SetupExtensionsCommand:
+    tags:
+      - name: 'console.command'
+        description: 'Set up extensions'
+        command: 'extension:setup'
+        schedulable: false
+
+  TYPO3\CMS\Core\Package\UnitTestPackageManager:
+    autoconfigure: false
+
+  TYPO3\CMS\Core\Http\MiddlewareDispatcher:
+    autoconfigure: false
+
+  TYPO3\CMS\Core\Authentication\Mfa\Provider\TotpProvider:
+    tags:
+      - name: mfa.provider
+        identifier: 'totp'
+        title: 'LLL:EXT:core/Resources/Private/Language/locallang_mfa_provider.xlf:totp.title'
+        description: 'LLL:EXT:core/Resources/Private/Language/locallang_mfa_provider.xlf:totp.description'
+        setupInstructions: 'LLL:EXT:core/Resources/Private/Language/locallang_mfa_provider.xlf:totp.setupInstructions'
+        icon: 'actions-qrcode'
+        defaultProviderAllowed: true
+        before: 'recovery-codes'
+
+  TYPO3\CMS\Core\Authentication\Mfa\Provider\RecoveryCodesProvider:
+    tags:
+      - name: mfa.provider
+        identifier: 'recovery-codes'
+        title: 'LLL:EXT:core/Resources/Private/Language/locallang_mfa_provider.xlf:recoveryCodes.title'
+        description: 'LLL:EXT:core/Resources/Private/Language/locallang_mfa_provider.xlf:recoveryCodes.description'
+        setupInstructions: 'LLL:EXT:core/Resources/Private/Language/locallang_mfa_provider.xlf:recoveryCodes.setupInstructions'
+        icon: 'content-text-columns'
+        defaultProviderAllowed: false
+        after: 'totp'
+
+  # Soft Reference Parsers
+  TYPO3\CMS\Core\DataHandling\SoftReference\SubstituteSoftReferenceParser:
+    tags:
+      - name: softreference.parser
+        parserKey: substitute
+
+  TYPO3\CMS\Core\DataHandling\SoftReference\TypolinkSoftReferenceParser:
+    tags:
+      - name: softreference.parser
+        parserKey: typolink
+
+  TYPO3\CMS\Core\DataHandling\SoftReference\TypolinkTagSoftReferenceParser:
+    tags:
+      - name: softreference.parser
+        parserKey: typolink_tag
+
+  TYPO3\CMS\Core\DataHandling\SoftReference\ExtensionPathSoftReferenceParser:
+    tags:
+      - name: softreference.parser
+        parserKey: ext_fileref
+
+  TYPO3\CMS\Core\DataHandling\SoftReference\EmailSoftReferenceParser:
+    tags:
+      - name: softreference.parser
+        parserKey: email
+
+  TYPO3\CMS\Core\DataHandling\SoftReference\UrlSoftReferenceParser:
+    tags:
+      - name: softreference.parser
+        parserKey: url
+
+  # @todo use Autoconfigure attribute in v13/v14
+  TYPO3\CMS\Core\Resource\Service\ResourceConsistencyService:
+    public: true
+    shared: true
+
+  # Core caches, cache.core, cache.assets and cache.runtime are injected as
+  # early entries in TYPO3\CMS\Core\Core\Bootstrap and therefore omitted here
+  cache.hash:
+    class: TYPO3\CMS\Core\Cache\Frontend\FrontendInterface
+    factory: ['@TYPO3\CMS\Core\Cache\CacheManager', 'getCache']
+    arguments: ['hash']
+
+  cache.pages:
+    class: TYPO3\CMS\Core\Cache\Frontend\FrontendInterface
+    factory: ['@TYPO3\CMS\Core\Cache\CacheManager', 'getCache']
+    arguments: ['pages']
+
+  cache.rootline:
+    class: TYPO3\CMS\Core\Cache\Frontend\FrontendInterface
+    factory: ['@TYPO3\CMS\Core\Cache\CacheManager', 'getCache']
+    arguments: ['rootline']
+
+  cache.l10n:
+    class: TYPO3\CMS\Core\Cache\Frontend\FrontendInterface
+    factory: ['@TYPO3\CMS\Core\Cache\CacheManager', 'getCache']
+    arguments: ['l10n']
+
+  cache.typoscript:
+    class: TYPO3\CMS\Core\Cache\Frontend\PhpFrontend
+    factory: ['@TYPO3\CMS\Core\Cache\CacheManager', 'getCache']
+    arguments: ['typoscript']
+
+  ## messenger
+
+  Symfony\Component\Messenger\Middleware\SendMessageMiddleware:
+    tags:
+      # TODO: Autoconfigure MiddlewareInterface?
+      - { name: 'messenger.middleware' }
+
+  Symfony\Component\Messenger\Middleware\HandleMessageMiddleware:
+    tags:
+      - name: 'messenger.middleware'
+        after: 'Symfony\Component\Messenger\Middleware\SendMessageMiddleware'
+
+  messenger.bus.default:
+    class: Symfony\Component\Messenger\MessageBusInterface
+    factory: [ '@TYPO3\CMS\Core\Messenger\BusFactory', 'createBus' ]
+
+  Symfony\Component\Messenger\MessageBusInterface:
+    alias: messenger.bus.default
+
+  Symfony\Component\Messenger\Handler\HandlersLocatorInterface:
+    factory: [ '@TYPO3\CMS\Core\Messenger\HandlersLocatorFactory', 'createHandlersLocator' ]
+
+  Symfony\Component\Messenger\Transport\Sender\SendersLocatorInterface:
+    alias: TYPO3\CMS\Core\Messenger\TransportLocator
+
+  Symfony\Component\Messenger\Transport\Serialization\PhpSerializer:
+
+  Symfony\Component\Messenger\Transport\Serialization\SerializerInterface:
+    alias: Symfony\Component\Messenger\Transport\Serialization\PhpSerializer
+
+  TYPO3\CMS\Core\Command\ConsumeMessagesCommand:
+    arguments:
+      $messageBus: '@messenger.bus.default'
+      $receiverLocator: !tagged_locator { tag: 'messenger.receiver', index_by: 'identifier' }
+      $rateLimiterLocator: !tagged_locator { tag: 'messenger.rate_limiter', index_by: 'identifier' }
+
+  TYPO3\CMS\Core\Messenger\EventListener\StopWorkerOnTimeLimitListener:
+    arguments:
+      # 1 hour
+      $timeLimitInSeconds: 3600
+
+  Symfony\Component\Messenger\Transport\Sync\SyncTransport:
+    tags:
+      - name: 'messenger.sender'
+        identifier: 'default'
+
+  Symfony\Component\Messenger\Bridge\Doctrine\Transport\DoctrineTransport:
+    factory: [ '@TYPO3\CMS\Core\Messenger\DoctrineTransportFactory', 'createTransport' ]
+    arguments:
+      $options:
+        queue_name: 'default'
+    tags:
+      - name: 'messenger.sender'
+        identifier: 'doctrine'
+      - name: 'messenger.receiver'
+        identifier: 'doctrine'
+
+  # Interface implementations
+  Psr\Container\ContainerInterface:
+    alias: service_container
+    public: true
+  Psr\Http\Client\ClientInterface:
+    alias: GuzzleHttp\Client
+    public: true
+  GuzzleHttp\ClientInterface:
+    alias: GuzzleHttp\Client
+    public: true
+
+  # External dependencies
+
+  GuzzleHttp\Client:
+    factory: ['@TYPO3\CMS\Core\Http\Client\GuzzleClientFactory', 'getClient']
+  Masterminds\HTML5:
+    public: true
+    factory: ['TYPO3\CMS\Core\DependencyInjection\CommonFactory', 'createHtml5Parser']

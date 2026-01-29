@@ -1,8 +1,0 @@
-# *****************************************************
-# Extension configuration for contexts_wurfl
-#
-# Author: Rico Sonntag <rico.sonntag@netresearch.de>
-# *****************************************************
-
-# cat=basic/links/; type=string; label=URL to download wurfl.xml or compressed version of it (zip)
-remoteRepository = http://sourceforge.net/projects/wurfl/files/WURFL/2.3.3/wurfl-2.3.3.zip/download

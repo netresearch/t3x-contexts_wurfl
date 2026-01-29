@@ -1,0 +1,85 @@
+<html
+    xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers"
+    xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+<f:asset.module identifier="@typo3/backend/switch-user.js"/>
+<f:asset.module identifier="@typo3/backend/color-scheme-switch.js"/>
+<p class="dropdown-headline">{f:translate(key: 'LLL:EXT:core/Resources/Private/Language/locallang_core.xlf:labels.user')}</p>
+<f:if condition="{modules}">
+    <ul class="dropdown-list">
+        <f:for each="{modules}" as="module">
+            <li>
+                <a
+                    href="{f:if(condition: module.path, then: '{f:be.uri(route: module.identifier)}', else: '#')}"
+                    title="{f:translate(key: module.description, default: module.description)}"
+                    class="dropdown-item"
+                    role="menuitem"
+                    data-moduleroute-identifier="{module.identifier}"
+                >
+                    <span class="dropdown-item-columns">
+                        <span class="dropdown-item-column dropdown-item-column-icon" aria-hidden="true">
+                            <core:icon identifier="{module.iconIdentifier}" size="small" alternativeMarkupIdentifier="inline"/>
+                        </span>
+                        <span class="dropdown-item-column dropdown-item-column-title">
+                            <f:translate key="{module.title}">{module.title}</f:translate>
+                        </span>
+                    </span>
+                </a>
+            </li>
+        </f:for>
+    </ul>
+</f:if>
+<f:if condition="{f:count(subject: recentUsers)} > 0">
+    <hr class="dropdown-divider" aria-hidden="true">
+    <p class="dropdown-header"><f:translate key="LLL:EXT:backend/Resources/Private/Language/locallang_toolbar.xlf:toolbarItems.user.recentlySwitchedUsers" /></p>
+    <ul class="modulemenu-group-container">
+        <f:for each="{recentUsers}" as="user">
+            <li>
+                <typo3-backend-switch-user
+                    class="dropdown-item"
+                    mode="switch"
+                    targetUser="{user.uid}"
+                    title="{f:translate(key: 'LLL:EXT:backend/Resources/Private/Language/locallang_toolbar.xlf:toolbarItems.user.recentlySwitchedUsers.su.tooltip', arguments: '{0: user.username}')}"
+                >
+                    <span class="dropdown-item-columns">
+                        <span class="dropdown-item-column dropdown-item-column-icon" aria-hidden="true">
+                            <be:avatar backendUser="{user.uid}" size="16" />
+                        </span>
+                        <span class="dropdown-item-column dropdown-item-column-title">
+                                {f:if(condition: user.realName, then: user.realName, else: user.username)}
+                        </span>
+                    </span>
+                </typo3-backend-switch-user>
+            </li>
+        </f:for>
+    </ul>
+</f:if>
+<f:if condition="{colorSchemeSwitchEnabled}">
+    <hr class="dropdown-divider" aria-hidden="true">
+    <typo3-backend-color-scheme-switch
+        togglelabel="{f:translate(key: 'LLL:EXT:backend/Resources/Private/Language/locallang.xlf:toggleColorScheme')}"
+        disabledlabel="{f:translate(key: 'LLL:EXT:backend/Resources/Private/Language/locallang.xlf:colorSchemeToggleDisabled')}"
+        colorschemes="{colorSchemes -> f:format.json()}" activeColorScheme="{activeColorScheme}"
+    ></typo3-backend-color-scheme-switch>
+</f:if>
+<hr class="dropdown-divider" aria-hidden="true">
+<f:if condition="{switchUserMode}">
+    <f:then>
+        <div class="dropdown-item-text">
+            <typo3-backend-switch-user class="btn btn-sm btn-default" mode="exit">
+                <core:icon identifier="actions-logout" size="small" alternativeMarkupIdentifier="inline"/>
+                <f:translate key="LLL:EXT:backend/Resources/Private/Language/locallang_toolbar.xlf:toolbarItems.user.btn.exitSwitchUser" />
+            </typo3-backend-switch-user>
+        </div>
+    </f:then>
+    <f:else>
+        <div class="dropdown-item-text">
+            <f:be.link route="logout" class="btn btn-sm btn-default" target="_top">
+                <core:icon identifier="actions-logout" size="small" alternativeMarkupIdentifier="inline"/>
+                <f:translate key="LLL:EXT:backend/Resources/Private/Language/locallang_toolbar.xlf:toolbarItems.user.btn.logout" />
+            </f:be.link>
+        </div>
+    </f:else>
+</f:if>
+</html>
