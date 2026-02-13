@@ -51,18 +51,6 @@ class DeviceContext extends AbstractContext
     }
 
     /**
-     * Get the device detection service, with lazy initialization fallback.
-     */
-    protected function getDeviceDetectionService(): DeviceDetectionService
-    {
-        if ($this->deviceDetectionService === null) {
-            $this->deviceDetectionService = GeneralUtility::makeInstance(DeviceDetectionService::class);
-        }
-
-        return $this->deviceDetectionService;
-    }
-
-    /**
      * Check if the context matches the current request.
      *
      * Matches if ANY of the configured device types matches the detected device.
@@ -108,6 +96,18 @@ class DeviceContext extends AbstractContext
         );
 
         return $this->storeInSession($this->invert($bMatch));
+    }
+
+    /**
+     * Get the device detection service, with lazy initialization fallback.
+     */
+    protected function getDeviceDetectionService(): DeviceDetectionService
+    {
+        if ($this->deviceDetectionService === null) {
+            $this->deviceDetectionService = GeneralUtility::makeInstance(DeviceDetectionService::class);
+        }
+
+        return $this->deviceDetectionService;
     }
 
     /**
@@ -172,10 +172,6 @@ class DeviceContext extends AbstractContext
         }
 
         // Check bot
-        if ($matchBot && $deviceInfo->isBot) {
-            return true;
-        }
-
-        return false;
+        return $matchBot && $deviceInfo->isBot;
     }
 }

@@ -24,13 +24,105 @@ use Psr\Http\Message\ServerRequestInterface;
 final class DeviceContextTest extends TestCase
 {
     private const CHROME_DESKTOP_UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
+
     private const IPHONE_UA = 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Mobile/15E148 Safari/604.1';
+
     private const IPAD_UA = 'Mozilla/5.0 (iPad; CPU OS 17_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Mobile/15E148 Safari/604.1';
+
     private const GOOGLEBOT_UA = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)';
 
     protected function tearDown(): void
     {
         unset($GLOBALS['TYPO3_REQUEST']);
+    }
+
+    /**
+     * @return iterable<string, array{string, bool, bool, bool, bool, bool, bool}>
+     */
+    public static function deviceTypeMatchDataProvider(): iterable
+    {
+        // Desktop user agent scenarios
+        yield 'desktop matches desktop' => [
+            self::CHROME_DESKTOP_UA,
+            false, false, false, true, false,
+            true,
+        ];
+        yield 'desktop matches mobile+desktop' => [
+            self::CHROME_DESKTOP_UA,
+            true, false, false, true, false,
+            true,
+        ];
+        yield 'desktop does not match mobile only' => [
+            self::CHROME_DESKTOP_UA,
+            true, false, false, false, false,
+            false,
+        ];
+        yield 'desktop does not match bot only' => [
+            self::CHROME_DESKTOP_UA,
+            false, false, false, false, true,
+            false,
+        ];
+
+        // Phone user agent scenarios
+        yield 'phone matches mobile' => [
+            self::IPHONE_UA,
+            true, false, false, false, false,
+            true,
+        ];
+        yield 'phone matches phone' => [
+            self::IPHONE_UA,
+            false, true, false, false, false,
+            true,
+        ];
+        yield 'phone does not match tablet only' => [
+            self::IPHONE_UA,
+            false, false, true, false, false,
+            false,
+        ];
+        yield 'phone does not match desktop only' => [
+            self::IPHONE_UA,
+            false, false, false, true, false,
+            false,
+        ];
+
+        // Tablet user agent scenarios
+        yield 'tablet matches mobile' => [
+            self::IPAD_UA,
+            true, false, false, false, false,
+            true,
+        ];
+        yield 'tablet matches tablet' => [
+            self::IPAD_UA,
+            false, false, true, false, false,
+            true,
+        ];
+        yield 'tablet does not match phone only' => [
+            self::IPAD_UA,
+            false, true, false, false, false,
+            false,
+        ];
+        yield 'tablet does not match desktop only' => [
+            self::IPAD_UA,
+            false, false, false, true, false,
+            false,
+        ];
+
+        // Bot user agent scenarios
+        yield 'bot matches bot' => [
+            self::GOOGLEBOT_UA,
+            false, false, false, false, true,
+            true,
+        ];
+        yield 'bot does not match desktop only' => [
+            self::GOOGLEBOT_UA,
+            false, false, false, true, false,
+            false,
+        ];
+        yield 'bot does not match mobile only' => [
+            self::GOOGLEBOT_UA,
+            true, false, false, false, false,
+            false,
+        ];
     }
 
     #[Test]
@@ -262,95 +354,6 @@ final class DeviceContextTest extends TestCase
         self::assertSame($expectedMatch, $context->match());
     }
 
-    /**
-     * @return iterable<string, array{string, bool, bool, bool, bool, bool, bool}>
-     */
-    public static function deviceTypeMatchDataProvider(): iterable
-    {
-        // Desktop user agent scenarios
-        yield 'desktop matches desktop' => [
-            self::CHROME_DESKTOP_UA,
-            false, false, false, true, false,
-            true,
-        ];
-        yield 'desktop matches mobile+desktop' => [
-            self::CHROME_DESKTOP_UA,
-            true, false, false, true, false,
-            true,
-        ];
-        yield 'desktop does not match mobile only' => [
-            self::CHROME_DESKTOP_UA,
-            true, false, false, false, false,
-            false,
-        ];
-        yield 'desktop does not match bot only' => [
-            self::CHROME_DESKTOP_UA,
-            false, false, false, false, true,
-            false,
-        ];
-
-        // Phone user agent scenarios
-        yield 'phone matches mobile' => [
-            self::IPHONE_UA,
-            true, false, false, false, false,
-            true,
-        ];
-        yield 'phone matches phone' => [
-            self::IPHONE_UA,
-            false, true, false, false, false,
-            true,
-        ];
-        yield 'phone does not match tablet only' => [
-            self::IPHONE_UA,
-            false, false, true, false, false,
-            false,
-        ];
-        yield 'phone does not match desktop only' => [
-            self::IPHONE_UA,
-            false, false, false, true, false,
-            false,
-        ];
-
-        // Tablet user agent scenarios
-        yield 'tablet matches mobile' => [
-            self::IPAD_UA,
-            true, false, false, false, false,
-            true,
-        ];
-        yield 'tablet matches tablet' => [
-            self::IPAD_UA,
-            false, false, true, false, false,
-            true,
-        ];
-        yield 'tablet does not match phone only' => [
-            self::IPAD_UA,
-            false, true, false, false, false,
-            false,
-        ];
-        yield 'tablet does not match desktop only' => [
-            self::IPAD_UA,
-            false, false, false, true, false,
-            false,
-        ];
-
-        // Bot user agent scenarios
-        yield 'bot matches bot' => [
-            self::GOOGLEBOT_UA,
-            false, false, false, false, true,
-            true,
-        ];
-        yield 'bot does not match desktop only' => [
-            self::GOOGLEBOT_UA,
-            false, false, false, true, false,
-            false,
-        ];
-        yield 'bot does not match mobile only' => [
-            self::GOOGLEBOT_UA,
-            true, false, false, false, false,
-            false,
-        ];
-    }
-
     #[Test]
     public function matchReturnsFalseWhenEmptyUserAgent(): void
     {
@@ -442,10 +445,15 @@ final class DeviceContextTest extends TestCase
             $invert,
         ) extends DeviceContext {
             private bool $testIsMobile;
+
             private bool $testIsPhone;
+
             private bool $testIsTablet;
+
             private bool $testIsDesktop;
+
             private bool $testIsBot;
+
             private bool $testInvert;
 
             public function __construct(
