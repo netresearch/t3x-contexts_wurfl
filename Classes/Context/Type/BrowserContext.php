@@ -52,18 +52,6 @@ class BrowserContext extends AbstractContext
     }
 
     /**
-     * Get the device detection service, with lazy initialization fallback.
-     */
-    protected function getDeviceDetectionService(): DeviceDetectionService
-    {
-        if ($this->deviceDetectionService === null) {
-            $this->deviceDetectionService = GeneralUtility::makeInstance(DeviceDetectionService::class);
-        }
-
-        return $this->deviceDetectionService;
-    }
-
-    /**
      * Check if the context matches the current request.
      *
      * Matches if the detected browser is in the configured list of browsers.
@@ -101,6 +89,18 @@ class BrowserContext extends AbstractContext
     }
 
     /**
+     * Get the device detection service, with lazy initialization fallback.
+     */
+    protected function getDeviceDetectionService(): DeviceDetectionService
+    {
+        if ($this->deviceDetectionService === null) {
+            $this->deviceDetectionService = GeneralUtility::makeInstance(DeviceDetectionService::class);
+        }
+
+        return $this->deviceDetectionService;
+    }
+
+    /**
      * Get the current HTTP request.
      */
     protected function getRequest(): ?ServerRequestInterface
@@ -135,12 +135,12 @@ class BrowserContext extends AbstractContext
             return [];
         }
 
-        $browsers = explode(',', $browsersConfig);
-        $browsers = array_map('trim', $browsers);
-        $browsers = array_map('strtolower', $browsers);
-        $browsers = array_filter($browsers, static fn (string $browser): bool => $browser !== '');
+        $browsers = \explode(',', $browsersConfig);
+        $browsers = \array_map('trim', $browsers);
+        $browsers = \array_map('strtolower', $browsers);
+        $browsers = \array_filter($browsers, static fn(string $browser): bool => $browser !== '');
 
-        return array_values($browsers);
+        return \array_values($browsers);
     }
 
     /**
@@ -158,6 +158,6 @@ class BrowserContext extends AbstractContext
 
         $detectedBrowser = strtolower($deviceInfo->browserName);
 
-        return in_array($detectedBrowser, $configuredBrowsers, true);
+        return \in_array($detectedBrowser, $configuredBrowsers, true);
     }
 }
