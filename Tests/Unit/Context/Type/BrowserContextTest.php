@@ -24,15 +24,86 @@ use Psr\Http\Message\ServerRequestInterface;
 final class BrowserContextTest extends TestCase
 {
     private const CHROME_DESKTOP_UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
+
     private const FIREFOX_DESKTOP_UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0';
+
     private const SAFARI_IPHONE_UA = 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Mobile/15E148 Safari/604.1';
+
     private const EDGE_DESKTOP_UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0';
+
     private const OPERA_DESKTOP_UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 OPR/106.0.0.0';
+
     private const GOOGLEBOT_UA = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)';
 
     protected function tearDown(): void
     {
         unset($GLOBALS['TYPO3_REQUEST']);
+    }
+
+    /**
+     * @return iterable<string, array{string, string, bool}>
+     */
+    public static function browserMatchDataProvider(): iterable
+    {
+        // Chrome scenarios
+        yield 'Chrome matches Chrome' => [
+            self::CHROME_DESKTOP_UA,
+            'Chrome',
+            true,
+        ];
+        yield 'Chrome matches Chrome in list' => [
+            self::CHROME_DESKTOP_UA,
+            'Firefox, Chrome, Safari',
+            true,
+        ];
+        yield 'Chrome does not match Firefox' => [
+            self::CHROME_DESKTOP_UA,
+            'Firefox',
+            false,
+        ];
+
+        // Firefox scenarios
+        yield 'Firefox matches Firefox' => [
+            self::FIREFOX_DESKTOP_UA,
+            'Firefox',
+            true,
+        ];
+        yield 'Firefox matches Firefox in list' => [
+            self::FIREFOX_DESKTOP_UA,
+            'Chrome, Firefox, Safari',
+            true,
+        ];
+        yield 'Firefox does not match Chrome' => [
+            self::FIREFOX_DESKTOP_UA,
+            'Chrome',
+            false,
+        ];
+
+        // Safari scenarios (Mobile Safari)
+        yield 'Mobile Safari matches Safari' => [
+            self::SAFARI_IPHONE_UA,
+            'Safari, Mobile Safari',
+            true,
+        ];
+
+        // Edge scenarios
+        yield 'Edge matches Edge' => [
+            self::EDGE_DESKTOP_UA,
+            'Microsoft Edge',
+            true,
+        ];
+        yield 'Edge matches Edge in list' => [
+            self::EDGE_DESKTOP_UA,
+            'Chrome, Microsoft Edge, Firefox',
+            true,
+        ];
+
+        // Opera scenarios
+        yield 'Opera matches Opera' => [
+            self::OPERA_DESKTOP_UA,
+            'Opera',
+            true,
+        ];
     }
 
     #[Test]
@@ -215,72 +286,6 @@ final class BrowserContextTest extends TestCase
         self::assertSame($expectedMatch, $context->match());
     }
 
-    /**
-     * @return iterable<string, array{string, string, bool}>
-     */
-    public static function browserMatchDataProvider(): iterable
-    {
-        // Chrome scenarios
-        yield 'Chrome matches Chrome' => [
-            self::CHROME_DESKTOP_UA,
-            'Chrome',
-            true,
-        ];
-        yield 'Chrome matches Chrome in list' => [
-            self::CHROME_DESKTOP_UA,
-            'Firefox, Chrome, Safari',
-            true,
-        ];
-        yield 'Chrome does not match Firefox' => [
-            self::CHROME_DESKTOP_UA,
-            'Firefox',
-            false,
-        ];
-
-        // Firefox scenarios
-        yield 'Firefox matches Firefox' => [
-            self::FIREFOX_DESKTOP_UA,
-            'Firefox',
-            true,
-        ];
-        yield 'Firefox matches Firefox in list' => [
-            self::FIREFOX_DESKTOP_UA,
-            'Chrome, Firefox, Safari',
-            true,
-        ];
-        yield 'Firefox does not match Chrome' => [
-            self::FIREFOX_DESKTOP_UA,
-            'Chrome',
-            false,
-        ];
-
-        // Safari scenarios (Mobile Safari)
-        yield 'Mobile Safari matches Safari' => [
-            self::SAFARI_IPHONE_UA,
-            'Safari, Mobile Safari',
-            true,
-        ];
-
-        // Edge scenarios
-        yield 'Edge matches Edge' => [
-            self::EDGE_DESKTOP_UA,
-            'Microsoft Edge',
-            true,
-        ];
-        yield 'Edge matches Edge in list' => [
-            self::EDGE_DESKTOP_UA,
-            'Chrome, Microsoft Edge, Firefox',
-            true,
-        ];
-
-        // Opera scenarios
-        yield 'Opera matches Opera' => [
-            self::OPERA_DESKTOP_UA,
-            'Opera',
-            true,
-        ];
-    }
-
     #[Test]
     public function matchIgnoresEmptyEntriesInBrowserList(): void
     {
@@ -329,6 +334,7 @@ final class BrowserContextTest extends TestCase
             $invert,
         ) extends BrowserContext {
             private string $testBrowsers;
+
             private bool $testInvert;
 
             public function __construct(

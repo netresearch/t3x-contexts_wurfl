@@ -20,6 +20,18 @@ use PHPUnit\Framework\TestCase;
 #[CoversClass(DeviceInfo::class)]
 final class DeviceInfoTest extends TestCase
 {
+    /**
+     * @return iterable<string, array{bool, bool, bool, bool, bool}>
+     */
+    public static function deviceTypeDataProvider(): iterable
+    {
+        yield 'mobile phone' => [true, false, false, false, true];
+        yield 'tablet' => [true, true, false, false, false];
+        yield 'desktop' => [false, false, true, false, false];
+        yield 'bot' => [false, false, false, true, false];
+        yield 'mobile bot' => [true, false, false, true, true];
+    }
+
     #[Test]
     public function constructorSetsAllProperties(): void
     {
@@ -105,7 +117,7 @@ final class DeviceInfoTest extends TestCase
         bool $isTablet,
         bool $isDesktop,
         bool $isBot,
-        bool $expectedIsPhone
+        bool $expectedIsPhone,
     ): void {
         $deviceInfo = new DeviceInfo(
             isMobile: $isMobile,
@@ -115,18 +127,6 @@ final class DeviceInfoTest extends TestCase
         );
 
         self::assertSame($expectedIsPhone, $deviceInfo->isPhone());
-    }
-
-    /**
-     * @return iterable<string, array{bool, bool, bool, bool, bool}>
-     */
-    public static function deviceTypeDataProvider(): iterable
-    {
-        yield 'mobile phone' => [true, false, false, false, true];
-        yield 'tablet' => [true, true, false, false, false];
-        yield 'desktop' => [false, false, true, false, false];
-        yield 'bot' => [false, false, false, true, false];
-        yield 'mobile bot' => [true, false, false, true, true];
     }
 
     #[Test]

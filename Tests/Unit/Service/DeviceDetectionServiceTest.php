@@ -24,10 +24,84 @@ use Psr\Http\Message\ServerRequestInterface;
 final class DeviceDetectionServiceTest extends TestCase
 {
     private const CHROME_DESKTOP_UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
+
     private const IPHONE_UA = 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Mobile/15E148 Safari/604.1';
+
     private const IPAD_UA = 'Mozilla/5.0 (iPad; CPU OS 17_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Mobile/15E148 Safari/604.1';
+
     private const GOOGLEBOT_UA = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)';
+
     private const ANDROID_UA = 'Mozilla/5.0 (Linux; Android 14; SM-S928B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36';
+
+    /**
+     * @return iterable<string, array{string, bool, bool, bool, bool}>
+     */
+    public static function userAgentDataProvider(): iterable
+    {
+        yield 'Chrome on Windows' => [
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            false, // isMobile
+            false, // isTablet
+            true,  // isDesktop
+            false, // isBot
+        ];
+
+        yield 'Safari on macOS' => [
+            'Mozilla/5.0 (Macintosh; Intel Mac OS X 14_2) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15',
+            false, // isMobile
+            false, // isTablet
+            true,  // isDesktop
+            false, // isBot
+        ];
+
+        yield 'Firefox on Linux' => [
+            'Mozilla/5.0 (X11; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0',
+            false, // isMobile
+            false, // isTablet
+            true,  // isDesktop
+            false, // isBot
+        ];
+
+        yield 'Chrome on Android phone' => [
+            'Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36',
+            true,  // isMobile
+            false, // isTablet
+            false, // isDesktop
+            false, // isBot
+        ];
+
+        yield 'Safari on iPhone' => [
+            'Mozilla/5.0 (iPhone; CPU iPhone OS 17_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Mobile/15E148 Safari/604.1',
+            true,  // isMobile
+            false, // isTablet
+            false, // isDesktop
+            false, // isBot
+        ];
+
+        yield 'Safari on iPad' => [
+            'Mozilla/5.0 (iPad; CPU OS 17_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Mobile/15E148 Safari/604.1',
+            true,  // isMobile
+            true,  // isTablet
+            false, // isDesktop
+            false, // isBot
+        ];
+
+        yield 'Googlebot' => [
+            'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+            false, // isMobile
+            false, // isTablet
+            false, // isDesktop
+            true,  // isBot
+        ];
+
+        yield 'Bingbot' => [
+            'Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)',
+            false, // isMobile
+            false, // isTablet
+            false, // isDesktop
+            true,  // isBot
+        ];
+    }
 
     #[Test]
     public function detectFromUserAgentReturnsDeviceInfoForDesktop(): void
@@ -232,7 +306,7 @@ final class DeviceDetectionServiceTest extends TestCase
         bool $expectedIsMobile,
         bool $expectedIsTablet,
         bool $expectedIsDesktop,
-        bool $expectedIsBot
+        bool $expectedIsBot,
     ): void {
         $deviceDetector = new DeviceDetector();
         $service = new DeviceDetectionService($deviceDetector);
@@ -244,76 +318,6 @@ final class DeviceDetectionServiceTest extends TestCase
         self::assertSame($expectedIsTablet, $result->isTablet, 'isTablet mismatch');
         self::assertSame($expectedIsDesktop, $result->isDesktop, 'isDesktop mismatch');
         self::assertSame($expectedIsBot, $result->isBot, 'isBot mismatch');
-    }
-
-    /**
-     * @return iterable<string, array{string, bool, bool, bool, bool}>
-     */
-    public static function userAgentDataProvider(): iterable
-    {
-        yield 'Chrome on Windows' => [
-            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-            false, // isMobile
-            false, // isTablet
-            true,  // isDesktop
-            false, // isBot
-        ];
-
-        yield 'Safari on macOS' => [
-            'Mozilla/5.0 (Macintosh; Intel Mac OS X 14_2) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15',
-            false, // isMobile
-            false, // isTablet
-            true,  // isDesktop
-            false, // isBot
-        ];
-
-        yield 'Firefox on Linux' => [
-            'Mozilla/5.0 (X11; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0',
-            false, // isMobile
-            false, // isTablet
-            true,  // isDesktop
-            false, // isBot
-        ];
-
-        yield 'Chrome on Android phone' => [
-            'Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36',
-            true,  // isMobile
-            false, // isTablet
-            false, // isDesktop
-            false, // isBot
-        ];
-
-        yield 'Safari on iPhone' => [
-            'Mozilla/5.0 (iPhone; CPU iPhone OS 17_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Mobile/15E148 Safari/604.1',
-            true,  // isMobile
-            false, // isTablet
-            false, // isDesktop
-            false, // isBot
-        ];
-
-        yield 'Safari on iPad' => [
-            'Mozilla/5.0 (iPad; CPU OS 17_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Mobile/15E148 Safari/604.1',
-            true,  // isMobile
-            true,  // isTablet
-            false, // isDesktop
-            false, // isBot
-        ];
-
-        yield 'Googlebot' => [
-            'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
-            false, // isMobile
-            false, // isTablet
-            false, // isDesktop
-            true,  // isBot
-        ];
-
-        yield 'Bingbot' => [
-            'Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)',
-            false, // isMobile
-            false, // isTablet
-            false, // isDesktop
-            true,  // isBot
-        ];
     }
 
     #[Test]

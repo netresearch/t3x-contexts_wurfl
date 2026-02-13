@@ -37,8 +37,7 @@ final class DeviceDetectionService
 
     public function __construct(
         private readonly DeviceDetector $deviceDetector,
-    ) {
-    }
+    ) {}
 
     /**
      * Detect device information from the current TYPO3 request.
@@ -116,8 +115,8 @@ final class DeviceDetectionService
         $os = $this->deviceDetector->getOs();
 
         // Normalize client and os to arrays (DeviceDetector returns string on failure)
-        $clientArray = is_array($client) ? $client : null;
-        $osArray = is_array($os) ? $os : null;
+        $clientArray = \is_array($client) ? $client : null;
+        $osArray = \is_array($os) ? $os : null;
 
         return new DeviceInfo(
             isMobile: $this->deviceDetector->isMobile(),
@@ -147,7 +146,7 @@ final class DeviceDetectionService
 
         $value = $data[$key];
 
-        if (!is_string($value) || $value === '') {
+        if (!\is_string($value) || $value === '') {
             return null;
         }
 

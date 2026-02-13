@@ -31,7 +31,7 @@ final class LayerTest
             ->classes(Selector::inNamespace('Netresearch\ContextsDevice\Context\Type'))
             ->shouldExtend()
             ->classes(
-                Selector::classname('Netresearch\Contexts\Context\AbstractContext')
+                Selector::classname('Netresearch\Contexts\Context\AbstractContext'),
             )
             ->because('All context types should extend AbstractContext from the contexts extension');
     }

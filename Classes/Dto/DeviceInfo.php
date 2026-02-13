@@ -72,8 +72,7 @@ final readonly class DeviceInfo
          * Device model name (e.g., "iPhone 15", "Galaxy S24", "Pixel 8").
          */
         public ?string $deviceModel = null,
-    ) {
-    }
+    ) {}
 
     /**
      * Check if the device is a phone (mobile but not tablet).
