@@ -11,8 +11,8 @@ permissions:
 jobs:
   auto-merge:
     runs-on: ubuntu-latest
-    # Only run for bot accounts
-    if: github.actor == 'dependabot[bot]' || github.actor == 'renovate[bot]'
+    # Only run for bot accounts (use PR author, not actor which changes on reruns)
+    if: github.event.pull_request.user.login == 'dependabot[bot]' || github.event.pull_request.user.login == 'renovate[bot]'
     steps:
       - name: Harden Runner
         uses: step-security/harden-runner@5ef0c079ce82195b2a36a210272d6b661572d83e # v2.14.2
@@ -29,5 +29,14 @@ jobs:
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        # --auto waits for required status checks before merging
-        run: gh pr merge --auto --rebase "$PR_URL"
+        run: |
+          # Detect allowed merge strategy
+          # Prefer squash (works with signed commit requirements, clean for single-commit PRs)
+          # then merge (also works with signed commits), then rebase (cannot be auto-signed)
+          STRATEGY=$(gh api "repos/${{ github.repository }}" --jq '
+            if .allow_squash_merge then "--squash"
+            elif .allow_merge_commit then "--merge"
+            elif .allow_rebase_merge then "--rebase"
+            else "--squash" end')
+          echo "Using merge strategy: $STRATEGY"
+          gh pr merge --auto $STRATEGY "$PR_URL"
