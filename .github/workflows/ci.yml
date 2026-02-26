@@ -16,4 +16,8 @@ jobs:
       functional-test-db: mysql
       db-image: 'mysql:8.4'
       run-rector: false
+      cgl-command: 'composer lint'
+      phpstan-command: 'composer analyze'
+      unit-test-command: 'composer test:unit -- --no-coverage'
+      functional-test-command: 'composer test:functional -- --no-coverage'
       remove-dev-deps: '[{"dep":"saschaegerer/phpstan-typo3","only-for":"^13"}]'
