@@ -113,12 +113,12 @@ Full documentation is available at [docs.typo3.org](https://docs.typo3.org/) (co
 composer install
 
 # Run tests
-composer test:unit
-composer test:functional
+composer ci:test:php:unit
+composer ci:test:php:functional
 
 # Code quality
-composer lint
-composer analyze
+composer ci:test:php:cgl
+composer ci:test:php:phpstan
 ```
 
 ## License
