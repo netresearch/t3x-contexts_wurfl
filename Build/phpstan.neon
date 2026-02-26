@@ -2,7 +2,8 @@ includes:
     - ../.Build/vendor/phpstan/phpstan-strict-rules/rules.neon
     - ../.Build/vendor/phpstan/phpstan-deprecation-rules/rules.neon
     - ../.Build/vendor/phpstan/phpstan-phpunit/extension.neon
-    - ../.Build/vendor/saschaegerer/phpstan-typo3/extension.neon
+    # saschaegerer/phpstan-typo3 auto-registers via PHPStan extension installer
+    # (removed from TYPO3 12 CI matrix via remove-dev-deps)
     - phpat.neon
 
 parameters:
