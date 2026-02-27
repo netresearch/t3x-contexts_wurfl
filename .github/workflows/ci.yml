@@ -19,3 +19,6 @@ jobs:
       db-image: 'mysql:8.4'
       run-rector: false
       remove-dev-deps: '[{"dep":"saschaegerer/phpstan-typo3","only-for":"^13"}]'
+      upload-coverage: true
+    secrets:
+      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
