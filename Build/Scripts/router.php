@@ -28,15 +28,18 @@
 
 declare(strict_types=1);
 
-$webRoot = realpath(__DIR__ . '/../../.Build/Web');
-$path    = parse_url((string) ($_SERVER['REQUEST_URI'] ?? ''), PHP_URL_PATH);
+$webRoot   = realpath(__DIR__ . '/../../.Build/Web');
+$indexFile = __DIR__ . '/../../.Build/Web/index.php';
+$path      = parse_url((string) ($_SERVER['REQUEST_URI'] ?? ''), PHP_URL_PATH);
 
 // Serve a file directly only if the resolved path is a real file *inside*
 // the web root. realpath() resolves `.`, `..`, and symlinks before we
 // compare, so a request like `/../../etc/passwd` cannot escape the
-// allowed root no matter how it's encoded.
+// allowed root no matter how it's encoded. rawurldecode() unescapes
+// percent-encoded characters (e.g. `my%20file.css` → `my file.css`)
+// so the filesystem lookup matches the actual on-disk name.
 if (is_string($path) && $webRoot !== false) {
-    $candidate = realpath($webRoot . $path);
+    $candidate = realpath($webRoot . rawurldecode($path));
 
     if ($candidate !== false
         && is_file($candidate)
@@ -48,5 +51,5 @@ if (is_string($path) && $webRoot !== false) {
 
 // Route everything else through TYPO3 index.php
 $_SERVER['SCRIPT_NAME']     = '/index.php';
-$_SERVER['SCRIPT_FILENAME'] = __DIR__ . '/../../.Build/Web/index.php';
-require __DIR__ . '/../../.Build/Web/index.php';
+$_SERVER['SCRIPT_FILENAME'] = $indexFile;
+require $indexFile;
