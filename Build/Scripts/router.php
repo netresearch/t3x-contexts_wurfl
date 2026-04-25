@@ -27,7 +27,8 @@ declare(strict_types=1);
 $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $file = __DIR__ . '/../../.Build/Web' . $path;
 
-// Serve static files directly
+// Serve static files directly.
+// nosemgrep: php.lang.security.injection.tainted-filename.tainted-filename -- dev-only PHP built-in server router for local E2E tests; never deployed. Tracked in #30 for proper realpath()-based hardening.
 if (is_file($file)) {
     return false;
 }
