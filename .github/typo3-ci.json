@@ -1,0 +1,14 @@
+{
+  "php-versions": [
+    "8.3",
+    "8.4",
+    "8.5"
+  ],
+  "typo3-versions": [
+    "^12.4",
+    "^13.4"
+  ],
+  "archive-prefix": "contexts-wurfl",
+  "package-name": "netresearch/contexts-wurfl",
+  "extension-key": "contexts_wurfl"
+}
