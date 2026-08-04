@@ -338,9 +338,9 @@ final class BrowserContextTest extends TestCase
             $browsers,
             $invert,
         ) extends BrowserContext {
-            private string $testBrowsers;
+            private readonly string $testBrowsers;
 
-            private bool $testInvert;
+            private readonly bool $testInvert;
 
             public function __construct(
                 DeviceDetectionService $service,

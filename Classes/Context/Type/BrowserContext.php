@@ -83,7 +83,7 @@ class BrowserContext extends AbstractContext
         // Get device info
         $deviceInfo = $this->getDeviceInfo();
 
-        if ($deviceInfo === null) {
+        if (!$deviceInfo instanceof DeviceInfo) {
             return $this->storeInSession($this->invert(false));
         }
 
@@ -98,7 +98,7 @@ class BrowserContext extends AbstractContext
      */
     protected function getDeviceDetectionService(): DeviceDetectionService
     {
-        if ($this->deviceDetectionService === null) {
+        if (!$this->deviceDetectionService instanceof DeviceDetectionService) {
             $this->deviceDetectionService = GeneralUtility::makeInstance(DeviceDetectionService::class);
         }
 
@@ -120,7 +120,7 @@ class BrowserContext extends AbstractContext
     {
         $request = $this->getRequest();
 
-        if ($request === null) {
+        if (!$request instanceof ServerRequestInterface) {
             return null;
         }
 
@@ -141,8 +141,8 @@ class BrowserContext extends AbstractContext
         }
 
         $browsers = explode(',', $browsersConfig);
-        $browsers = array_map('trim', $browsers);
-        $browsers = array_map('strtolower', $browsers);
+        $browsers = array_map(trim(...), $browsers);
+        $browsers = array_map(strtolower(...), $browsers);
         $browsers = array_filter($browsers, static fn(string $browser): bool => $browser !== '');
 
         return array_values($browsers);

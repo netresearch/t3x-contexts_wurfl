@@ -16,6 +16,7 @@ declare(strict_types=1);
 
 namespace Netresearch\ContextsDevice\Tests\Architecture;
 
+use Netresearch\Contexts\Context\AbstractContext;
 use PHPat\Selector\Selector;
 use PHPat\Test\Builder\Rule;
 use PHPat\Test\PHPat;
@@ -36,7 +37,7 @@ final class LayerTest
             ->classes(Selector::inNamespace('Netresearch\ContextsDevice\Context\Type'))
             ->shouldExtend()
             ->classes(
-                Selector::classname('Netresearch\Contexts\Context\AbstractContext'),
+                Selector::classname(AbstractContext::class),
             )
             ->because('All context types should extend AbstractContext from the contexts extension');
     }

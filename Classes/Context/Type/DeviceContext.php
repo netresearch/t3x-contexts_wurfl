@@ -86,7 +86,7 @@ class DeviceContext extends AbstractContext
         // Get device info
         $deviceInfo = $this->getDeviceInfo();
 
-        if ($deviceInfo === null) {
+        if (!$deviceInfo instanceof DeviceInfo) {
             return $this->storeInSession($this->invert(false));
         }
 
@@ -108,7 +108,7 @@ class DeviceContext extends AbstractContext
      */
     protected function getDeviceDetectionService(): DeviceDetectionService
     {
-        if ($this->deviceDetectionService === null) {
+        if (!$this->deviceDetectionService instanceof DeviceDetectionService) {
             $this->deviceDetectionService = GeneralUtility::makeInstance(DeviceDetectionService::class);
         }
 
@@ -130,7 +130,7 @@ class DeviceContext extends AbstractContext
     {
         $request = $this->getRequest();
 
-        if ($request === null) {
+        if (!$request instanceof ServerRequestInterface) {
             return null;
         }
 
