@@ -15,3 +15,11 @@ services:
   # No configuration needed - uses user-agent from request
   DeviceDetector\DeviceDetector:
     shared: false
+
+  # Must be public: context types are built by netresearch/contexts
+  # Factory::createFromDb() via GeneralUtility::makeInstance() with only the
+  # database row, so they resolve this service from the container themselves.
+  # Without public visibility the container lookup misses, makeInstance falls
+  # back to plain instantiation and dies on the required DeviceDetector.
+  Netresearch\ContextsDevice\Service\DeviceDetectionService:
+    public: true
