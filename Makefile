@@ -1,4 +1,4 @@
-.PHONY: help cgl cgl-fix phpstan test test-unit test-functional
+.PHONY: help cgl cgl-fix phpstan rector rector-fix test test-unit test-functional
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
@@ -11,6 +11,12 @@ cgl-fix: ## Fix code style
 
 phpstan: ## Run PHPStan static analysis
 	composer ci:test:php:phpstan
+
+rector: ## Check Rector rules (dry-run)
+	composer ci:test:php:rector
+
+rector-fix: ## Apply Rector rules
+	composer ci:rector
 
 test: test-unit test-functional ## Run all tests
 

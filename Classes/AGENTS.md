@@ -9,7 +9,8 @@ PHP source code for the Contexts Device Detection extension.
 ```
 Classes/
 ├── Context/           # Device detection context types
-│   └── Type/          # DeviceContext implementation
+│   ├── Type/          # DeviceContext implementation
+│   └── DeviceDetectionAwareTrait.php  # Request/device-info resolution shared by all context types
 ├── Dto/               # Data Transfer Objects
 └── Service/           # Device detection services
 ```

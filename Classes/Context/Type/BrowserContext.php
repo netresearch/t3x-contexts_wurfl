@@ -17,10 +17,9 @@ declare(strict_types=1);
 namespace Netresearch\ContextsDevice\Context\Type;
 
 use Netresearch\Contexts\Context\AbstractContext;
+use Netresearch\ContextsDevice\Context\DeviceDetectionAwareTrait;
 use Netresearch\ContextsDevice\Dto\DeviceInfo;
 use Netresearch\ContextsDevice\Service\DeviceDetectionService;
-use Psr\Http\Message\ServerRequestInterface;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**
  * Context type that matches based on browser name.
@@ -44,7 +43,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
  */
 class BrowserContext extends AbstractContext
 {
-    protected ?DeviceDetectionService $deviceDetectionService = null;
+    use DeviceDetectionAwareTrait;
 
     /**
      * @param array<string, mixed> $arRow Database context row
@@ -83,7 +82,7 @@ class BrowserContext extends AbstractContext
         // Get device info
         $deviceInfo = $this->getDeviceInfo();
 
-        if ($deviceInfo === null) {
+        if (!$deviceInfo instanceof DeviceInfo) {
             return $this->storeInSession($this->invert(false));
         }
 
@@ -91,40 +90,6 @@ class BrowserContext extends AbstractContext
         $bMatch = $this->matchesBrowser($deviceInfo, $configuredBrowsers);
 
         return $this->storeInSession($this->invert($bMatch));
-    }
-
-    /**
-     * Get the device detection service, with lazy initialization fallback.
-     */
-    protected function getDeviceDetectionService(): DeviceDetectionService
-    {
-        if ($this->deviceDetectionService === null) {
-            $this->deviceDetectionService = GeneralUtility::makeInstance(DeviceDetectionService::class);
-        }
-
-        return $this->deviceDetectionService;
-    }
-
-    /**
-     * Get the current HTTP request.
-     */
-    protected function getRequest(): ?ServerRequestInterface
-    {
-        return $GLOBALS['TYPO3_REQUEST'] ?? null;
-    }
-
-    /**
-     * Get device information from the current request.
-     */
-    protected function getDeviceInfo(): ?DeviceInfo
-    {
-        $request = $this->getRequest();
-
-        if ($request === null) {
-            return null;
-        }
-
-        return $this->getDeviceDetectionService()->detectFromRequest($request);
     }
 
     /**
@@ -141,8 +106,8 @@ class BrowserContext extends AbstractContext
         }
 
         $browsers = explode(',', $browsersConfig);
-        $browsers = array_map('trim', $browsers);
-        $browsers = array_map('strtolower', $browsers);
+        $browsers = array_map(trim(...), $browsers);
+        $browsers = array_map(strtolower(...), $browsers);
         $browsers = array_filter($browsers, static fn(string $browser): bool => $browser !== '');
 
         return array_values($browsers);

@@ -266,8 +266,8 @@ final class DeviceContextTest extends TestCase
 
         $context = $this->createTestableDeviceContext(
             service: $service,
-            isDesktop: true,  // Won't match
             isTablet: true,   // Will match
+            isDesktop: true,  // Won't match
         );
 
         self::assertTrue($context->match());
@@ -449,17 +449,17 @@ final class DeviceContextTest extends TestCase
             $isBot,
             $invert,
         ) extends DeviceContext {
-            private bool $testIsMobile;
+            private readonly bool $testIsMobile;
 
-            private bool $testIsPhone;
+            private readonly bool $testIsPhone;
 
-            private bool $testIsTablet;
+            private readonly bool $testIsTablet;
 
-            private bool $testIsDesktop;
+            private readonly bool $testIsDesktop;
 
-            private bool $testIsBot;
+            private readonly bool $testIsBot;
 
-            private bool $testInvert;
+            private readonly bool $testInvert;
 
             public function __construct(
                 DeviceDetectionService $service,

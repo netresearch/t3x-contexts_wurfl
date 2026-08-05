@@ -25,6 +25,6 @@ jobs:
       upload-coverage: true
       functional-test-db: 'mysql'
       db-image: 'mysql:8.4'
-      remove-dev-deps: '[{"dep":"saschaegerer/phpstan-typo3","only-for":"^13"}]'
+      remove-dev-deps: '[{"dep":"saschaegerer/phpstan-typo3","only-for":"^13"},{"dep":"netresearch/typo3-ci-workflows","only-for":"^13.4|^14.3"}]'
     secrets:
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
