@@ -51,7 +51,7 @@ https://v13.contexts-wurfl.ddev.site/typo3/
 | Workflow | Trigger | Purpose |
 |----------|---------|---------|
 | `ci.yml` | push/PR/merge_group/weekly | Unit+functional matrix (PHP 8.3–8.5 × TYPO3 ^12.4/^13.4) via `netresearch/typo3-ci-workflows` |
-| `checks.yml` | push/PR/merge_group/weekly | Security/quality: CodeQL, gitleaks, zizmor, fuzz, license check, Scorecard, dependency review, PR quality gate |
+| `checks.yml` | push/PR/merge_group/weekly | Security/quality: CodeQL, betterleaks, zizmor, fuzz, license check, Scorecard, dependency review, PR quality gate |
 | `harness-verify.yml` | push/PR | Agent-harness consistency (`Build/Scripts/verify-harness.sh`) |
 | `release.yml` | tag `v*` | Release to TER/Packagist/docs via `release-typo3-extension.yml` |
 | `republish.yml` | manual | Re-run publish targets (ter/docs/packagist) for an existing tag |
