@@ -62,7 +62,7 @@ This extension follows the organisation-wide Netresearch policies:
 
 Checks that run on every pull request in this repository:
 
-- `.github/workflows/checks.yml`: Composer Audit (fails on any advisory for an installed package that is not listed under `config.audit.ignore` in `composer.json`) and Opengrep SAST (fails on findings of severity WARNING or higher), both through `security.yml` of `netresearch/typo3-ci-workflows`; Dependency Review (fails on added dependencies with a vulnerability of severity high or higher); PHP license check (`license-check.yml`, fails on an SSPL or BSL licensed Composer dependency); CodeQL; Betterleaks secret scanning; zizmor for the workflow files.
+- `.github/workflows/checks.yml`: Composer Audit (fails on any advisory for an installed package that is not listed under `config.audit.ignore` in `composer.json`) and Opengrep SAST (fails on findings of severity WARNING or higher), both through `security.yml` of `netresearch/typo3-ci-workflows`; Dependency Review (fails on added dependencies with a vulnerability of severity high or higher); PHP license check (`license-check.yml`, fails on an SSPL or BSL licensed Composer dependency); CodeQL, which here analyses the workflow files only, as it has no PHP analyser; Betterleaks secret scanning; zizmor for the workflow files.
 - `.github/workflows/ci.yml`: PHP lint, code style (PHP-CS-Fixer), PHPStan level 10 (`Build/phpstan.neon`, which also evaluates the PHPat architecture rules in `Tests/Architecture/LayerTest.php`), Rector, unit tests, and functional tests against MySQL 8.4, for PHP 8.3 to 8.5 and TYPO3 12.4 and 13.4.
 - `.github/workflows/harness-verify.yml`: `Build/Scripts/verify-harness.sh` checks that `AGENTS.md` and `docs/` match the repository.
 
