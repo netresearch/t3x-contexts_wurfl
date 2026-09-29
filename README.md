@@ -123,6 +123,10 @@ composer ci:test:php:cgl
 composer ci:test:php:phpstan
 ```
 
+## Security
+
+What the extension does with request data, where its detection data comes from, and what users can and cannot expect in terms of security is in [docs/SECURITY-ASSURANCE.md](docs/SECURITY-ASSURANCE.md). Report vulnerabilities as described in [SECURITY.md](SECURITY.md).
+
 ## License
 
 This extension is licensed under the [GNU Affero General Public License v3.0](LICENSE).

@@ -68,6 +68,12 @@ Checks that run on every pull request in this repository:
 
 The one recorded exception is the ignore entry for `PKSA-y2cr-5h3j-g3ys` in `composer.json`, a `firebase/php-jwt` advisory reached through `typo3/cms-core`.
 
+## Security
+
+Report vulnerabilities privately as described in [SECURITY.md](SECURITY.md), not in a public issue.
+
+What users can expect from the extension in terms of security — the data it processes, its threat model, trust boundaries and the controls that implement them — is in [docs/SECURITY-ASSURANCE.md](docs/SECURITY-ASSURANCE.md). A change that adds or removes a control updates that document.
+
 ## License
 
 By contributing, you agree that your contributions will be licensed under the AGPL-3.0-or-later license.
