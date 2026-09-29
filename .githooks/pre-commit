@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# SPDX-FileCopyrightText: Netresearch DTT GmbH
 # Pre-commit hook: keep AGENTS.md/docs consistent with the repo state.
 # Registered via composer post-install-cmd (git config core.hooksPath .githooks).
 # Exit 2 from verify-harness.sh means warnings only and must not block the commit.

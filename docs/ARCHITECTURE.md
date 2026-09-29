@@ -1,3 +1,5 @@
+<!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
+<!-- SPDX-FileCopyrightText: Netresearch DTT GmbH -->
 # Architecture
 
 Agent-facing component map for `netresearch/contexts-wurfl`. Facts here are verified against the source files listed; when code and this document disagree, the code wins — fix this file in the same PR.
