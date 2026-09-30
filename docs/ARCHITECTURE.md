@@ -1,3 +1,5 @@
+<!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
+<!-- SPDX-FileCopyrightText: Netresearch DTT GmbH -->
 # Architecture
 
 Agent-facing component map for `netresearch/contexts-wurfl`. Facts here are verified against the source files listed; when code and this document disagree, the code wins — fix this file in the same PR.
@@ -21,7 +23,7 @@ The extension adds two context types to the [netresearch/contexts](https://githu
 
 ## Dependency Rules
 
-Enforced by PHPat in `Tests/Architecture/LayerTest.php` (runs with the unit test suite):
+Enforced by PHPat in `Tests/Architecture/LayerTest.php`, which PHPStan evaluates as an extension (`Build/phpat.neon`, included by `Build/phpstan.neon`); the PHPUnit unit suite does not run it:
 
 1. Classes in `Netresearch\ContextsDevice\Context\Type` must extend `Netresearch\Contexts\Context\AbstractContext`.
 2. Classes in `Netresearch\ContextsDevice\Dto` must be readonly.

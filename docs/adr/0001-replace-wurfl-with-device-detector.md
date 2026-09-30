@@ -1,3 +1,5 @@
+<!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
+<!-- SPDX-FileCopyrightText: Netresearch DTT GmbH -->
 # ADR-0001: Replace WURFL with Matomo DeviceDetector
 
 ## Status
@@ -27,7 +29,7 @@ As part of modernizing this extension for TYPO3 12.4 LTS and 13.4 LTS, we need t
 |---------|---------|-------------------|------------------|-----------|
 | WURFL Microcloud | Commercial | Cloud API | Frequent | Scientia Mobile |
 | WURFL InFuze | Commercial | Local file | Frequent | Scientia Mobile |
-| Matomo DeviceDetector | MIT/LGPL | None (regex) | Very frequent | Matomo community |
+| Matomo DeviceDetector | LGPL-3.0-or-later | None (regex) | Very frequent | Matomo community |
 | Mobile Detect | MIT | None (regex) | Infrequent | Small |
 | Browscap | MIT | INI file | Moderate | PHP community |
 
@@ -45,7 +47,7 @@ We will replace WURFL with **Matomo DeviceDetector** (`matomo/device-detector` ^
 
 4. **No database required**: Uses bundled YAML regex files, eliminating the need for MySQL database infrastructure and import CLI commands.
 
-5. **MIT licensed**: Fully open source with no licensing concerns or commercial dependencies.
+5. **Open-source licensed**: LGPL-3.0-or-later, library and bundled regex data alike, with no commercial dependencies. The LGPL permits use from this AGPL-3.0-or-later extension.
 
 6. **Modern PHP support**: Actively supports PHP 8.2+ with type declarations and modern patterns.
 
@@ -56,7 +58,7 @@ We will replace WURFL with **Matomo DeviceDetector** (`matomo/device-detector` ^
 - **Simpler deployment**: No database setup, import commands, or scheduled updates required
 - **Better device coverage**: More frequently updated device database
 - **Reduced complexity**: Pure PHP library with no external dependencies
-- **Clear licensing**: MIT license removes any commercial concerns
+- **Clear licensing**: no commercial license is needed; LGPL-3.0-or-later is a weak-copyleft license with its own obligations
 - **Bot detection**: Built-in bot/crawler detection included
 
 ### Negative — CAPABILITY LOSS WARNING
@@ -177,3 +179,4 @@ typo3 contexts:wurfl:import
 ## Changelog
 
 - **2026-01-28**: Initial decision documented
+- **2026-09-30**: Corrected the license of Matomo DeviceDetector from MIT to LGPL-3.0-or-later, as stated by the package's `composer.json` and `LICENSE` (6.5.0) and on Packagist for every 6.x release; the header of each file under `regexes/` names LGPL v3 or later as well. The LGPL is a weak-copyleft license, not the permissive license requirement 2 above asked for.

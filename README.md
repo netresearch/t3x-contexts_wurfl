@@ -1,3 +1,5 @@
+<!-- SPDX-License-Identifier: AGPL-3.0-or-later -->
+<!-- SPDX-FileCopyrightText: Netresearch DTT GmbH -->
 # TYPO3 Contexts: Device Detection
 
 [![TYPO3 12](https://img.shields.io/badge/TYPO3-12-green.svg)](https://get.typo3.org/version/12)
@@ -120,6 +122,10 @@ composer ci:test:php:functional
 composer ci:test:php:cgl
 composer ci:test:php:phpstan
 ```
+
+## Security
+
+What the extension does with request data, where its detection data comes from, and what users can and cannot expect in terms of security is in [docs/SECURITY-ASSURANCE.md](docs/SECURITY-ASSURANCE.md). Report vulnerabilities as described in [SECURITY.md](SECURITY.md).
 
 ## License
 
