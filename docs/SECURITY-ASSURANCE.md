@@ -20,7 +20,7 @@ Despite its extension key, the extension no longer uses WURFL. Version 2.0.0 rep
 
 ## Request data processed
 
-- **One header.** `DeviceDetectionService::detectFromRequest()` reads only `User-Agent` from the PSR-7 request (`Classes/Service/DeviceDetectionService.php`, line 67). The request comes from `$GLOBALS['TYPO3_REQUEST']` (`Classes/Context/DeviceDetectionAwareTrait.php`, line 56). No other header, cookie, query parameter or IP address is read. User-Agent Client Hints are not passed to the library: `DeviceDetector` is built by the container without arguments (`Configuration/Services.yaml`, lines 16-17) and the service calls `setUserAgent()` but never `setClientHints()`.
+- **One header.** `DeviceDetectionService::detectFromRequest()` reads only `User-Agent` from the PSR-7 request (`Classes/Service/DeviceDetectionService.php`, line 67). The request comes from `$GLOBALS['TYPO3_REQUEST']` (`Classes/Context/DeviceDetectionAwareTrait.php`, line 56). No other header, cookie, query parameter or IP address is read. User-Agent Client Hints are not passed to the library: `DeviceDetector` is built by the container without arguments (`Configuration/Services.yaml`, lines 18-19) and the service calls `setUserAgent()` but never `setClientHints()`.
 - **No storage, no logging, no transmission.** `Classes/` contains no database query, file write, logger, network call or output of the header. The parsed result is a `final readonly` value object (`Classes/Dto/DeviceInfo.php`) that stays in memory.
 - **In-memory cache.** The service keeps parsed results in an array keyed by the User-Agent string for the lifetime of the service object (`DeviceDetectionService.php`, lines 41 and 86-99). The object lives in the TYPO3 dependency-injection container of the running PHP process; nothing is written to a TYPO3 cache backend.
 - **Session.** When a context record has "use session" enabled, the base extension stores the match result — a boolean, not the User-Agent — in the frontend user session under `contexts-<uid>-<tstamp>` (`AbstractContext::storeInSession()` in `netresearch/contexts`).
@@ -55,7 +55,7 @@ Attackers considered: a visitor who spoofs the User-Agent to receive another var
 
 ## Secure design principles applied
 
-- **Least privilege:** the extension reads one request header and has no database table, file access, network access or backend module. Services are private by default (`Configuration/Services.yaml`, line 5); only `DeviceDetectionService` is public, because context types built by the base extension resolve it from the container (lines 19-25).
+- **Least privilege:** the extension reads one request header and has no database table, file access, network access or backend module. Services are private by default (`Configuration/Services.yaml`, line 7); only `DeviceDetectionService` is public, because context types built by the base extension resolve it from the container (lines 21-27).
 - **Fail-safe defaults:** an unconfigured context, a missing request and an empty User-Agent all yield "no match"; bot matching is off unless selected.
 - **Economy of mechanism:** all parsing goes through one service (`DeviceDetectionService`) and one trait (`DeviceDetectionAwareTrait`); both context types reuse them.
 - **Immutability:** detection results travel as a `final readonly` DTO. PHPat rules in `Tests/Architecture/LayerTest.php`, evaluated by PHPStan, require DTOs to be readonly and services to be final.
