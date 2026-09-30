@@ -58,7 +58,7 @@ We will replace WURFL with **Matomo DeviceDetector** (`matomo/device-detector` ^
 - **Simpler deployment**: No database setup, import commands, or scheduled updates required
 - **Better device coverage**: More frequently updated device database
 - **Reduced complexity**: Pure PHP library with no external dependencies
-- **Clear licensing**: the LGPL-3.0-or-later license removes any commercial concerns
+- **Clear licensing**: no commercial license is needed; LGPL-3.0-or-later is a weak-copyleft license with its own obligations
 - **Bot detection**: Built-in bot/crawler detection included
 
 ### Negative — CAPABILITY LOSS WARNING
