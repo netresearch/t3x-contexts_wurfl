@@ -44,7 +44,7 @@ Users cannot expect:
 
 | Boundary | Untrusted input | Control |
 |----------|-----------------|---------|
-| Visitor → frontend request | `User-Agent` header | Read once per request (`DeviceDetectionService.php`, line 67), passed as data to the library, never output or persisted by the extension |
+| Visitor → frontend request | `User-Agent` header | Read each time an evaluated context reaches `DeviceDetectionService::detectFromRequest()` (`DeviceDetectionService.php`, line 67); the parsed result is cached per `User-Agent` value (lines 80-102). Passed as data to the library, never output or persisted by the extension |
 | Backend editor → context record | FlexForm values (`field_is_*` check boxes, `field_browsers` text) | TYPO3 backend authentication and record permissions of the base extension's `tx_contexts_contexts` table; check boxes are compared with `'1'` (`DeviceContext.php`, line 110), the browser list is compared literally (`BrowserContext.php`, lines 100-131) |
 | Package registry → installation | `matomo/device-detector` code and regex data, `netresearch/contexts` | Composer Audit, Dependency Review and the PHP license check on every pull request (`.github/workflows/checks.yml`); Renovate updates |
 | Extension → base extension | Match result | Returned as a boolean; the base extension decides visibility and session storage |
