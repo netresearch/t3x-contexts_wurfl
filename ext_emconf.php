@@ -7,7 +7,7 @@
 
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Contexts: Device Detection',
-    'description' => 'Device detection context types (device type, OS, browser) for the contexts extension. Uses Matomo DeviceDetector for user-agent parsing - by Netresearch.',
+    'description' => 'Device detection context types (device type, OS, browser) for the contexts extension, using Matomo DeviceDetector for user-agent parsing.',
     'category' => 'misc',
     'author' => 'Netresearch DTT GmbH',
     'author_email' => '',
