@@ -85,7 +85,7 @@ Build/                  # phpunit/phpstan/rector configs, Scripts/
 
 ## Dependencies
 
-- `netresearch/contexts` `^3.1.1 || ^4.0` — base contexts extension (`AbstractContext`)
+- `netresearch/contexts` `^4.0` (4.x from TER, `ext_emconf.php`) — base contexts extension (`AbstractContext`)
 - `matomo/device-detector` `^6.0` — user agent parsing (regex-based, no database)
 
 ## Key Concepts

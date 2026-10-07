@@ -7,8 +7,12 @@
 | Version | Supported          |
 |---------|--------------------|
 | 2.x     | :white_check_mark: |
-| 1.x     | :x:                |
 | 0.x     | :x:                |
+
+2.x is not released yet. 2.0.0 will be the first release for TYPO3 12.4 and
+13.4; until it is published, security fixes go to the `main` branch only. The
+released 0.x versions (up to 0.4.4) run on TYPO3 6.2 or older and receive no
+fixes. There is no 1.x line.
 
 ## Reporting a Vulnerability
 

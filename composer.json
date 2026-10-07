@@ -18,7 +18,7 @@
     "require": {
         "php": "^8.2",
         "matomo/device-detector": "^6.0",
-        "netresearch/contexts": "^3.1.1 || ^4.0 || dev-main",
+        "netresearch/contexts": "^4.0",
         "typo3/cms-backend": "^12.4 || ^13.4",
         "typo3/cms-core": "^12.4 || ^13.4",
         "typo3/cms-extbase": "^12.4 || ^13.4",
@@ -64,12 +64,7 @@
         },
         "bin-dir": ".Build/bin",
         "sort-packages": true,
-        "vendor-dir": ".Build/vendor",
-        "audit": {
-            "ignore": {
-                "PKSA-y2cr-5h3j-g3ys": "Upstream firebase/php-jwt issue via typo3/cms-core, no fix available yet"
-            }
-        }
+        "vendor-dir": ".Build/vendor"
     },
     "extra": {
         "typo3/cms": {

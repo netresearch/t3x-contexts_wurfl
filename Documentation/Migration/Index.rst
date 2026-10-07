@@ -9,7 +9,7 @@
 Migration from Legacy WURFL
 ==========================
 
-This guide helps you migrate from the legacy WURFL-based version (1.x) of the
+This guide helps you migrate from the legacy WURFL-based version (0.x) of the
 contexts_wurfl extension to the new DeviceDetector-based version (2.x).
 
 .. _migration-overview:
@@ -20,7 +20,7 @@ Overview of changes
 The 2.0 release is a complete rewrite with significant changes:
 
 .. csv-table:: Version comparison
-   :header: "Aspect", "1.x (Legacy WURFL)", "2.x (DeviceDetector)"
+   :header: "Aspect", "0.x (Legacy WURFL)", "2.x (DeviceDetector)"
    :widths: 25, 35, 40
 
    "Detection library", "WURFL DB-API (TeraWurfl)", "Matomo DeviceDetector"

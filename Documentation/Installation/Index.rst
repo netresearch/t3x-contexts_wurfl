@@ -19,7 +19,7 @@ Requirements
    :widths: 20, 30, 30
 
    "2.x", "12.4 LTS, 13.4 LTS", "8.2 - 8.5"
-   "1.x (legacy)", "4.5 - 6.2", "5.3 - 5.6"
+   "0.x (legacy)", "4.5 - 6.2", "5.3 - 5.6"
 
 The recommended way to install this extension is via Composer.
 
@@ -91,7 +91,7 @@ To test device detection is working:
 Upgrading from legacy WURFL
 ===========================
 
-If you're upgrading from the legacy WURFL-based version (1.x), see the
+If you're upgrading from the legacy WURFL-based version (0.x), see the
 :ref:`Migration Guide <migration>` for detailed instructions.
 
 Key points:

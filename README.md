@@ -72,7 +72,7 @@ Version 2.0 is a complete rewrite using Matomo DeviceDetector instead of the leg
 
 ### Key Changes
 
-| Aspect | Legacy (1.x) | New (2.x) |
+| Aspect | Legacy (0.x) | New (2.x) |
 |--------|-------------|-----------|
 | Detection library | WURFL DB-API | Matomo DeviceDetector |
 | Database required | Yes | No |
