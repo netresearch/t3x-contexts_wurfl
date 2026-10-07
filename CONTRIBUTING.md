@@ -66,7 +66,7 @@ Checks that run on every pull request in this repository:
 - `.github/workflows/ci.yml`: PHP lint, code style (PHP-CS-Fixer), PHPStan level 10 (`Build/phpstan.neon`, which also evaluates the PHPat architecture rules in `Tests/Architecture/LayerTest.php`), Rector, unit tests, and functional tests against MySQL 8.4, for PHP 8.3 to 8.5 and TYPO3 12.4 and 13.4.
 - `.github/workflows/harness-verify.yml`: `Build/Scripts/verify-harness.sh` checks that `AGENTS.md` and `docs/` match the repository.
 
-The one recorded exception is the ignore entry for `PKSA-y2cr-5h3j-g3ys` in `composer.json`, a `firebase/php-jwt` advisory reached through `typo3/cms-core`.
+`composer.json` lists no ignored advisories.
 
 ## Security
 
