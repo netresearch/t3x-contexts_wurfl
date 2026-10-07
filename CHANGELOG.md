@@ -4,7 +4,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [2.0.0] - 2026-01-28
+## [2.0.0] - Unreleased
 
 ### Added
 - TYPO3 v12 LTS and v13 LTS support
@@ -55,6 +55,6 @@ All notable changes to this project will be documented in this file.
 - Updated contexts dependency to ^4.0
 - Updated all dev dependencies to latest versions supporting PHP 8.2+
 
-## [1.x] - Legacy (WURFL)
+## [0.x] - Legacy (WURFL)
 
-See GitHub releases for version 1.x changelog (WURFL-based implementation).
+The WURFL-based implementation was released as 0.x, up to v0.4.4; see the tags at https://github.com/netresearch/t3x-contexts_wurfl/tags.
