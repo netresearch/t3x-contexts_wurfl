@@ -51,16 +51,6 @@ return $createConfig(
             ],
         ],
         'ordered_interfaces' => true,
-        'no_extra_blank_lines' => [
-            'tokens' => [
-                'curly_brace_block',
-                'extra',
-                'parenthesis_brace_block',
-                'square_brace_block',
-                'throw',
-                'use',
-            ],
-        ],
 
         'explicit_string_variable'               => true,
         'multiline_comment_opening_closing'      => true,
