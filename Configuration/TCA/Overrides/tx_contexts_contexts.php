@@ -18,7 +18,7 @@ use Netresearch\Contexts\Api\Configuration;
 use Netresearch\ContextsDevice\Context\Type\BrowserContext;
 use Netresearch\ContextsDevice\Context\Type\DeviceContext;
 
-defined('TYPO3') || die('Access denied.');
+defined('TYPO3') || exit('Access denied.');
 
 /**
  * Register device detection context types with the base contexts extension.
@@ -27,7 +27,6 @@ defined('TYPO3') || die('Access denied.');
  * - Device: Match visitors based on their device type (mobile, tablet, desktop, bot)
  * - Browser: Match visitors based on their browser type (Chrome, Firefox, Safari, etc.)
  */
-
 Configuration::registerContextType(
     'device',
     'LLL:EXT:contexts_wurfl/Resources/Private/Language/locallang.xlf:context.device.title',

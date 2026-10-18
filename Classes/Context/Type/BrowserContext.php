@@ -21,6 +21,8 @@ use Netresearch\ContextsDevice\Context\DeviceDetectionAwareTrait;
 use Netresearch\ContextsDevice\Dto\DeviceInfo;
 use Netresearch\ContextsDevice\Service\DeviceDetectionService;
 
+use function in_array;
+
 /**
  * Context type that matches based on browser name.
  *
@@ -39,7 +41,8 @@ use Netresearch\ContextsDevice\Service\DeviceDetectionService;
  * - Mobile Safari, Chrome Mobile, Firefox Mobile, Samsung Browser
  *
  * @author Netresearch DTT GmbH
- * @link https://www.netresearch.de
+ *
+ * @see https://www.netresearch.de
  */
 class BrowserContext extends AbstractContext
 {
@@ -61,6 +64,7 @@ class BrowserContext extends AbstractContext
      * Matches if the detected browser is in the configured list of browsers.
      *
      * @param array<int|string, mixed> $arDependencies Array of dependent context objects
+     *
      * @return bool True if the visitor's browser matches any configured browser
      */
     public function match(array $arDependencies = []): bool
@@ -108,7 +112,7 @@ class BrowserContext extends AbstractContext
         $browsers = explode(',', $browsersConfig);
         $browsers = array_map(trim(...), $browsers);
         $browsers = array_map(strtolower(...), $browsers);
-        $browsers = array_filter($browsers, static fn(string $browser): bool => $browser !== '');
+        $browsers = array_filter($browsers, static fn (string $browser): bool => $browser !== '');
 
         return array_values($browsers);
     }
@@ -116,7 +120,7 @@ class BrowserContext extends AbstractContext
     /**
      * Check if the detected browser matches any configured browser.
      *
-     * @param DeviceInfo $deviceInfo The device information
+     * @param DeviceInfo         $deviceInfo         The device information
      * @param array<int, string> $configuredBrowsers List of browser names to match (lowercase)
      */
     private function matchesBrowser(DeviceInfo $deviceInfo, array $configuredBrowsers): bool
@@ -128,6 +132,6 @@ class BrowserContext extends AbstractContext
 
         $detectedBrowser = strtolower($deviceInfo->browserName);
 
-        return \in_array($detectedBrowser, $configuredBrowsers, true);
+        return in_array($detectedBrowser, $configuredBrowsers, true);
     }
 }

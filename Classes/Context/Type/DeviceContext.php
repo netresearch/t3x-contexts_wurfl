@@ -38,7 +38,8 @@ use Netresearch\ContextsDevice\Service\DeviceDetectionService;
  * The context matches if ANY of the selected device types matches the current device.
  *
  * @author Netresearch DTT GmbH
- * @link https://www.netresearch.de
+ *
+ * @see https://www.netresearch.de
  */
 class DeviceContext extends AbstractContext
 {
@@ -60,6 +61,7 @@ class DeviceContext extends AbstractContext
      * Matches if ANY of the configured device types matches the detected device.
      *
      * @param array<int|string, mixed> $arDependencies Array of dependent context objects
+     *
      * @return bool True if the visitor's device type matches any configured type
      */
     public function match(array $arDependencies = []): bool
@@ -71,11 +73,11 @@ class DeviceContext extends AbstractContext
         }
 
         // Get configured device types
-        $matchMobile = $this->isConfigured('field_is_mobile');
-        $matchPhone = $this->isConfigured('field_is_phone');
-        $matchTablet = $this->isConfigured('field_is_tablet');
+        $matchMobile  = $this->isConfigured('field_is_mobile');
+        $matchPhone   = $this->isConfigured('field_is_phone');
+        $matchTablet  = $this->isConfigured('field_is_tablet');
         $matchDesktop = $this->isConfigured('field_is_desktop');
-        $matchBot = $this->isConfigured('field_is_bot');
+        $matchBot     = $this->isConfigured('field_is_bot');
 
         // If nothing is configured, context doesn't match
         if (!$matchMobile && !$matchPhone && !$matchTablet && !$matchDesktop && !$matchBot) {
