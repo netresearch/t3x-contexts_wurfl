@@ -61,9 +61,6 @@ return $createConfig(
                 'use',
             ],
         ],
-        // Restores the class/function/const group order that the shared
-        // 2.0.1 entry drops; goes away with netresearch/typo3-ci-workflows#304.
-        'ordered_imports' => ['imports_order' => ['class', 'function', 'const'], 'sort_algorithm' => 'alpha'],
 
         'explicit_string_variable'               => true,
         'multiline_comment_opening_closing'      => true,
