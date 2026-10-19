@@ -20,6 +20,9 @@ use DeviceDetector\DeviceDetector;
 use Netresearch\ContextsDevice\Dto\DeviceInfo;
 use Psr\Http\Message\ServerRequestInterface;
 
+use function is_array;
+use function is_string;
+
 /**
  * Service for device detection using Matomo DeviceDetector.
  *
@@ -75,6 +78,7 @@ final class DeviceDetectionService
      * Results are cached for performance optimization.
      *
      * @param string $userAgent The User-Agent string to analyze
+     *
      * @return DeviceInfo|null Device information or null if user agent is empty
      */
     public function detectFromUserAgent(string $userAgent): ?DeviceInfo
@@ -117,11 +121,11 @@ final class DeviceDetectionService
     private function createDeviceInfo(): DeviceInfo
     {
         $client = $this->deviceDetector->getClient();
-        $os = $this->deviceDetector->getOs();
+        $os     = $this->deviceDetector->getOs();
 
         // Normalize client and os to arrays (DeviceDetector returns string on failure)
-        $clientArray = \is_array($client) ? $client : null;
-        $osArray = \is_array($os) ? $os : null;
+        $clientArray = is_array($client) ? $client : null;
+        $osArray     = is_array($os) ? $os : null;
 
         return new DeviceInfo(
             isMobile: $this->deviceDetector->isMobile(),
@@ -141,7 +145,7 @@ final class DeviceDetectionService
      * Extract a string value from an array, returning null if not found or empty.
      *
      * @param array<array-key, mixed>|null $data The data array
-     * @param string $key The key to extract
+     * @param string                       $key  The key to extract
      */
     private function extractString(?array $data, string $key): ?string
     {
@@ -151,7 +155,7 @@ final class DeviceDetectionService
 
         $value = $data[$key];
 
-        if (!\is_string($value) || $value === '') {
+        if (!is_string($value) || $value === '') {
             return null;
         }
 

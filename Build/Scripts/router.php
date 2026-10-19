@@ -6,7 +6,7 @@
  */
 
 /**
- * Router script for PHP built-in server to handle TYPO3 rewrites
+ * Router script for PHP built-in server to handle TYPO3 rewrites.
  *
  * This router simulates Apache/Nginx URL rewriting for TYPO3 clean URLs during E2E testing
  * with the PHP built-in server.
@@ -22,8 +22,6 @@
  * Even though this script is dev-only and never deployed, the realpath()
  * containment check makes the file-serving branch immune to traversal
  * payloads (`/../../etc/passwd`, double-encoded `%2e%2e`, symlinks, etc.).
- *
- * @package Netresearch\ContextsWurfl
  */
 
 declare(strict_types=1);

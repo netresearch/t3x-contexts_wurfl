@@ -1,8 +1,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # SPDX-FileCopyrightText: Netresearch DTT GmbH
-includes:
-    - ../.Build/vendor/phpat/phpat/extension.neon
-
+# phpat's extension.neon is registered by phpstan/extension-installer, or
+# included by phpstan-shared.php where the installer is not installed.
 services:
     -
         class: Netresearch\ContextsDevice\Tests\Architecture\LayerTest

@@ -349,9 +349,9 @@ final class BrowserContextTest extends TestCase
             ) {
                 // Skip parent constructor to avoid TYPO3 dependencies
                 $this->deviceDetectionService = $service;
-                $this->testBrowsers = $browsers;
-                $this->testInvert = $invert;
-                $this->use_session = false;
+                $this->testBrowsers           = $browsers;
+                $this->testInvert             = $invert;
+                $this->use_session            = false;
             }
 
             protected function getConfValue(
@@ -363,7 +363,7 @@ final class BrowserContextTest extends TestCase
             ): string {
                 return match ($fieldName) {
                     'field_browsers' => $this->testBrowsers,
-                    default => $default,
+                    default          => $default,
                 };
             }
 

@@ -53,8 +53,8 @@ final class BrowserContextTest extends FunctionalTestCase
         unset($GLOBALS['TYPO3_REQUEST']);
 
         $this->originalServer = [
-            'HTTP_HOST' => $_SERVER['HTTP_HOST'] ?? null,
-            'REMOTE_ADDR' => $_SERVER['REMOTE_ADDR'] ?? null,
+            'HTTP_HOST'       => $_SERVER['HTTP_HOST'] ?? null,
+            'REMOTE_ADDR'     => $_SERVER['REMOTE_ADDR'] ?? null,
             'HTTP_USER_AGENT' => $_SERVER['HTTP_USER_AGENT'] ?? null,
         ];
 
@@ -80,8 +80,8 @@ final class BrowserContextTest extends FunctionalTestCase
     #[Test]
     public function browserContextCanBeLoadedFromDatabase(): void
     {
-        $_SERVER['HTTP_HOST'] = 'localhost';
-        $_SERVER['REMOTE_ADDR'] = '127.0.0.1';
+        $_SERVER['HTTP_HOST']       = 'localhost';
+        $_SERVER['REMOTE_ADDR']     = '127.0.0.1';
         $_SERVER['HTTP_USER_AGENT'] = 'Test Agent';
 
         $request = new ServerRequest('http://localhost/', 'GET');
@@ -102,8 +102,8 @@ final class BrowserContextTest extends FunctionalTestCase
     #[Test]
     public function browserContextCanBeFoundByAlias(): void
     {
-        $_SERVER['HTTP_HOST'] = 'localhost';
-        $_SERVER['REMOTE_ADDR'] = '127.0.0.1';
+        $_SERVER['HTTP_HOST']       = 'localhost';
+        $_SERVER['REMOTE_ADDR']     = '127.0.0.1';
         $_SERVER['HTTP_USER_AGENT'] = 'Test Agent';
 
         $request = new ServerRequest('http://localhost/', 'GET');
@@ -122,8 +122,8 @@ final class BrowserContextTest extends FunctionalTestCase
     #[Test]
     public function contextTypeIsBrowser(): void
     {
-        $_SERVER['HTTP_HOST'] = 'localhost';
-        $_SERVER['REMOTE_ADDR'] = '127.0.0.1';
+        $_SERVER['HTTP_HOST']       = 'localhost';
+        $_SERVER['REMOTE_ADDR']     = '127.0.0.1';
         $_SERVER['HTTP_USER_AGENT'] = 'Test Agent';
 
         $request = new ServerRequest('http://localhost/', 'GET');

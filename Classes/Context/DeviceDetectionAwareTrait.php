@@ -30,7 +30,8 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
  * a context from a database row without going through the container.
  *
  * @author Netresearch DTT GmbH
- * @link https://www.netresearch.de
+ *
+ * @see https://www.netresearch.de
  */
 trait DeviceDetectionAwareTrait
 {

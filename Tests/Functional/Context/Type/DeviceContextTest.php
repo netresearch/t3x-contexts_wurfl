@@ -53,8 +53,8 @@ final class DeviceContextTest extends FunctionalTestCase
         unset($GLOBALS['TYPO3_REQUEST']);
 
         $this->originalServer = [
-            'HTTP_HOST' => $_SERVER['HTTP_HOST'] ?? null,
-            'REMOTE_ADDR' => $_SERVER['REMOTE_ADDR'] ?? null,
+            'HTTP_HOST'       => $_SERVER['HTTP_HOST'] ?? null,
+            'REMOTE_ADDR'     => $_SERVER['REMOTE_ADDR'] ?? null,
             'HTTP_USER_AGENT' => $_SERVER['HTTP_USER_AGENT'] ?? null,
         ];
 
@@ -80,8 +80,8 @@ final class DeviceContextTest extends FunctionalTestCase
     #[Test]
     public function deviceContextCanBeLoadedFromDatabase(): void
     {
-        $_SERVER['HTTP_HOST'] = 'localhost';
-        $_SERVER['REMOTE_ADDR'] = '127.0.0.1';
+        $_SERVER['HTTP_HOST']       = 'localhost';
+        $_SERVER['REMOTE_ADDR']     = '127.0.0.1';
         $_SERVER['HTTP_USER_AGENT'] = 'Test Agent';
 
         $request = new ServerRequest('http://localhost/', 'GET');
@@ -102,8 +102,8 @@ final class DeviceContextTest extends FunctionalTestCase
     #[Test]
     public function deviceContextCanBeFoundByAlias(): void
     {
-        $_SERVER['HTTP_HOST'] = 'localhost';
-        $_SERVER['REMOTE_ADDR'] = '127.0.0.1';
+        $_SERVER['HTTP_HOST']       = 'localhost';
+        $_SERVER['REMOTE_ADDR']     = '127.0.0.1';
         $_SERVER['HTTP_USER_AGENT'] = 'Test Agent';
 
         $request = new ServerRequest('http://localhost/', 'GET');
@@ -122,8 +122,8 @@ final class DeviceContextTest extends FunctionalTestCase
     #[Test]
     public function multipleDeviceContextsCanBeLoaded(): void
     {
-        $_SERVER['HTTP_HOST'] = 'localhost';
-        $_SERVER['REMOTE_ADDR'] = '127.0.0.1';
+        $_SERVER['HTTP_HOST']       = 'localhost';
+        $_SERVER['REMOTE_ADDR']     = '127.0.0.1';
         $_SERVER['HTTP_USER_AGENT'] = 'Test Agent';
 
         $request = new ServerRequest('http://localhost/', 'GET');
@@ -133,9 +133,9 @@ final class DeviceContextTest extends FunctionalTestCase
             ->setRequest($request)
             ->initAll();
 
-        $mobile = Container::get()->find('mobile_device');
+        $mobile  = Container::get()->find('mobile_device');
         $desktop = Container::get()->find('desktop_device');
-        $tablet = Container::get()->find('tablet_device');
+        $tablet  = Container::get()->find('tablet_device');
 
         self::assertNotNull($mobile, 'Mobile device context should exist');
         self::assertNotNull($desktop, 'Desktop device context should exist');
@@ -149,8 +149,8 @@ final class DeviceContextTest extends FunctionalTestCase
     #[Test]
     public function disabledContextIsNotLoaded(): void
     {
-        $_SERVER['HTTP_HOST'] = 'localhost';
-        $_SERVER['REMOTE_ADDR'] = '127.0.0.1';
+        $_SERVER['HTTP_HOST']       = 'localhost';
+        $_SERVER['REMOTE_ADDR']     = '127.0.0.1';
         $_SERVER['HTTP_USER_AGENT'] = 'Test Agent';
 
         $request = new ServerRequest('http://localhost/', 'GET');
@@ -168,8 +168,8 @@ final class DeviceContextTest extends FunctionalTestCase
     #[Test]
     public function contextTypeIsDevice(): void
     {
-        $_SERVER['HTTP_HOST'] = 'localhost';
-        $_SERVER['REMOTE_ADDR'] = '127.0.0.1';
+        $_SERVER['HTTP_HOST']       = 'localhost';
+        $_SERVER['REMOTE_ADDR']     = '127.0.0.1';
         $_SERVER['HTTP_USER_AGENT'] = 'Test Agent';
 
         $request = new ServerRequest('http://localhost/', 'GET');

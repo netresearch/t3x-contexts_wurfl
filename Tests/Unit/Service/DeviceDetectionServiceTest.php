@@ -112,7 +112,7 @@ final class DeviceDetectionServiceTest extends TestCase
     public function detectFromUserAgentReturnsDeviceInfoForDesktop(): void
     {
         $deviceDetector = new DeviceDetector();
-        $service = new DeviceDetectionService($deviceDetector);
+        $service        = new DeviceDetectionService($deviceDetector);
 
         $result = $service->detectFromUserAgent(self::CHROME_DESKTOP_UA);
 
@@ -130,7 +130,7 @@ final class DeviceDetectionServiceTest extends TestCase
     public function detectFromUserAgentReturnsDeviceInfoForMobilePhone(): void
     {
         $deviceDetector = new DeviceDetector();
-        $service = new DeviceDetectionService($deviceDetector);
+        $service        = new DeviceDetectionService($deviceDetector);
 
         $result = $service->detectFromUserAgent(self::IPHONE_UA);
 
@@ -149,7 +149,7 @@ final class DeviceDetectionServiceTest extends TestCase
     public function detectFromUserAgentReturnsDeviceInfoForTablet(): void
     {
         $deviceDetector = new DeviceDetector();
-        $service = new DeviceDetectionService($deviceDetector);
+        $service        = new DeviceDetectionService($deviceDetector);
 
         $result = $service->detectFromUserAgent(self::IPAD_UA);
 
@@ -168,7 +168,7 @@ final class DeviceDetectionServiceTest extends TestCase
     public function detectFromUserAgentReturnsDeviceInfoForBot(): void
     {
         $deviceDetector = new DeviceDetector();
-        $service = new DeviceDetectionService($deviceDetector);
+        $service        = new DeviceDetectionService($deviceDetector);
 
         $result = $service->detectFromUserAgent(self::GOOGLEBOT_UA);
 
@@ -181,7 +181,7 @@ final class DeviceDetectionServiceTest extends TestCase
     public function detectFromUserAgentReturnsDeviceInfoForAndroid(): void
     {
         $deviceDetector = new DeviceDetector();
-        $service = new DeviceDetectionService($deviceDetector);
+        $service        = new DeviceDetectionService($deviceDetector);
 
         $result = $service->detectFromUserAgent(self::ANDROID_UA);
 
@@ -197,7 +197,7 @@ final class DeviceDetectionServiceTest extends TestCase
     public function detectFromUserAgentReturnsNullForEmptyUserAgent(): void
     {
         $deviceDetector = new DeviceDetector();
-        $service = new DeviceDetectionService($deviceDetector);
+        $service        = new DeviceDetectionService($deviceDetector);
 
         $result = $service->detectFromUserAgent('');
 
@@ -208,7 +208,7 @@ final class DeviceDetectionServiceTest extends TestCase
     public function detectFromRequestExtractsUserAgentFromRequest(): void
     {
         $deviceDetector = new DeviceDetector();
-        $service = new DeviceDetectionService($deviceDetector);
+        $service        = new DeviceDetectionService($deviceDetector);
 
         $request = $this->createMock(ServerRequestInterface::class);
         $request->method('getHeaderLine')
@@ -226,7 +226,7 @@ final class DeviceDetectionServiceTest extends TestCase
     public function detectFromRequestReturnsNullWhenNoUserAgentHeader(): void
     {
         $deviceDetector = new DeviceDetector();
-        $service = new DeviceDetectionService($deviceDetector);
+        $service        = new DeviceDetectionService($deviceDetector);
 
         $request = $this->createMock(ServerRequestInterface::class);
         $request->method('getHeaderLine')
@@ -250,7 +250,7 @@ final class DeviceDetectionServiceTest extends TestCase
 
         try {
             $deviceDetector = new DeviceDetector();
-            $service = new DeviceDetectionService($deviceDetector);
+            $service        = new DeviceDetectionService($deviceDetector);
 
             $result = $service->detectForCurrentRequest();
 
@@ -267,7 +267,7 @@ final class DeviceDetectionServiceTest extends TestCase
         unset($GLOBALS['TYPO3_REQUEST']);
 
         $deviceDetector = new DeviceDetector();
-        $service = new DeviceDetectionService($deviceDetector);
+        $service        = new DeviceDetectionService($deviceDetector);
 
         $result = $service->detectForCurrentRequest();
 
@@ -278,7 +278,7 @@ final class DeviceDetectionServiceTest extends TestCase
     public function detectFromUserAgentCachesResultsForSameUserAgent(): void
     {
         $deviceDetector = new DeviceDetector();
-        $service = new DeviceDetectionService($deviceDetector);
+        $service        = new DeviceDetectionService($deviceDetector);
 
         // Call twice with same UA
         $result1 = $service->detectFromUserAgent(self::CHROME_DESKTOP_UA);
@@ -292,7 +292,7 @@ final class DeviceDetectionServiceTest extends TestCase
     public function detectFromUserAgentReturnsDifferentInstancesForDifferentUserAgents(): void
     {
         $deviceDetector = new DeviceDetector();
-        $service = new DeviceDetectionService($deviceDetector);
+        $service        = new DeviceDetectionService($deviceDetector);
 
         $result1 = $service->detectFromUserAgent(self::CHROME_DESKTOP_UA);
         $result2 = $service->detectFromUserAgent(self::IPHONE_UA);
@@ -314,7 +314,7 @@ final class DeviceDetectionServiceTest extends TestCase
         bool $expectedIsBot,
     ): void {
         $deviceDetector = new DeviceDetector();
-        $service = new DeviceDetectionService($deviceDetector);
+        $service        = new DeviceDetectionService($deviceDetector);
 
         $result = $service->detectFromUserAgent($userAgent);
 
@@ -329,7 +329,7 @@ final class DeviceDetectionServiceTest extends TestCase
     public function clearCacheRemovesCachedResults(): void
     {
         $deviceDetector = new DeviceDetector();
-        $service = new DeviceDetectionService($deviceDetector);
+        $service        = new DeviceDetectionService($deviceDetector);
 
         // First call - should cache the result
         $result1 = $service->detectFromUserAgent(self::CHROME_DESKTOP_UA);
@@ -354,7 +354,7 @@ final class DeviceDetectionServiceTest extends TestCase
     public function detectFromUserAgentExtractsBrowserVersion(): void
     {
         $deviceDetector = new DeviceDetector();
-        $service = new DeviceDetectionService($deviceDetector);
+        $service        = new DeviceDetectionService($deviceDetector);
 
         $result = $service->detectFromUserAgent(self::CHROME_DESKTOP_UA);
 
@@ -367,7 +367,7 @@ final class DeviceDetectionServiceTest extends TestCase
     public function detectFromUserAgentExtractsOsVersion(): void
     {
         $deviceDetector = new DeviceDetector();
-        $service = new DeviceDetectionService($deviceDetector);
+        $service        = new DeviceDetectionService($deviceDetector);
 
         $result = $service->detectFromUserAgent(self::IPHONE_UA);
 
@@ -381,7 +381,7 @@ final class DeviceDetectionServiceTest extends TestCase
     public function detectFromUserAgentExtractsDeviceModel(): void
     {
         $deviceDetector = new DeviceDetector();
-        $service = new DeviceDetectionService($deviceDetector);
+        $service        = new DeviceDetectionService($deviceDetector);
 
         $result = $service->detectFromUserAgent(self::ANDROID_UA);
 

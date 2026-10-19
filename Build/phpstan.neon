@@ -1,28 +1,21 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 # SPDX-FileCopyrightText: Netresearch DTT GmbH
+# The shared config of netresearch/typo3-ci-workflows sets level 10,
+# treatPhpDocTypesAsCertain, the strictness flags and the excludePaths;
+# phpstan/extension-installer registers the strict, deprecation, PHPUnit,
+# phpat, TYPO3 and ergebnis rules. phpstan-shared.php includes it only where
+# the package is installed, see the comment there.
 includes:
-    - ../.Build/vendor/phpstan/phpstan-strict-rules/rules.neon
-    - ../.Build/vendor/phpstan/phpstan-deprecation-rules/rules.neon
-    - ../.Build/vendor/phpstan/phpstan-phpunit/extension.neon
-    # saschaegerer/phpstan-typo3 auto-registers via PHPStan extension installer
-    # (removed from TYPO3 12 CI matrix via remove-dev-deps)
+    - phpstan-shared.php
     - phpat.neon
 
 parameters:
-    # Level 10: Strictest type checking
-    level: 10
-
     paths:
         - ../Classes/
         - ../Configuration/
         - ../Tests/
         - ../ext_localconf.php
 
-    excludePaths:
-        - ../.Build/*
-
-    # TYPO3-specific configuration (PHPStan 2.x compatible)
-    treatPhpDocTypesAsCertain: false
     reportUnmatchedIgnoredErrors: false
 
     # Temporary ignores for TYPO3 v12/v13 compatibility

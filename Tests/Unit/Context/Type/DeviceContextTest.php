@@ -472,13 +472,13 @@ final class DeviceContextTest extends TestCase
             ) {
                 // Skip parent constructor to avoid TYPO3 dependencies
                 $this->deviceDetectionService = $service;
-                $this->testIsMobile = $isMobile;
-                $this->testIsPhone = $isPhone;
-                $this->testIsTablet = $isTablet;
-                $this->testIsDesktop = $isDesktop;
-                $this->testIsBot = $isBot;
-                $this->testInvert = $invert;
-                $this->use_session = false;
+                $this->testIsMobile           = $isMobile;
+                $this->testIsPhone            = $isPhone;
+                $this->testIsTablet           = $isTablet;
+                $this->testIsDesktop          = $isDesktop;
+                $this->testIsBot              = $isBot;
+                $this->testInvert             = $invert;
+                $this->use_session            = false;
             }
 
             protected function getConfValue(
@@ -489,12 +489,12 @@ final class DeviceContextTest extends TestCase
                 string $value = 'vDEF',
             ): string {
                 return match ($fieldName) {
-                    'field_is_mobile' => $this->testIsMobile ? '1' : '0',
-                    'field_is_phone' => $this->testIsPhone ? '1' : '0',
-                    'field_is_tablet' => $this->testIsTablet ? '1' : '0',
+                    'field_is_mobile'  => $this->testIsMobile ? '1' : '0',
+                    'field_is_phone'   => $this->testIsPhone ? '1' : '0',
+                    'field_is_tablet'  => $this->testIsTablet ? '1' : '0',
                     'field_is_desktop' => $this->testIsDesktop ? '1' : '0',
-                    'field_is_bot' => $this->testIsBot ? '1' : '0',
-                    default => $default,
+                    'field_is_bot'     => $this->testIsBot ? '1' : '0',
+                    default            => $default,
                 };
             }
 

@@ -12,17 +12,14 @@ use Rector\Config\RectorConfig;
 $configure = require_once __DIR__ . '/../.Build/vendor/netresearch/typo3-ci-workflows/config/rector/rector.php';
 
 return static function (RectorConfig $rectorConfig) use ($configure): void {
-    // Shared org base config: code-quality sets, rule skips, importNames,
-    // and the package's ergebnis-free phpstan-rector.neon.
-    $configure($rectorConfig, __DIR__ . '/..');
-
-    // paths() REPLACES the shared list, so restate it and add Tests/ — the
-    // test suite is analysed by PHPStan and CGL here too.
-    $rectorConfig->paths([
-        __DIR__ . '/../Classes',
-        __DIR__ . '/../Configuration',
-        __DIR__ . '/../Resources',
-        __DIR__ . '/../Tests',
-        __DIR__ . '/../ext_localconf.php',
+    // Shared org base config: paths (Classes/, Configuration/, Resources/,
+    // Tests/, ext_*.php), code-quality sets, rule skips, the package's
+    // ergebnis-free phpstan-rector.neon, and the PHP and TYPO3 level sets for
+    // the lowest supported versions (composer.json: php ^8.2,
+    // typo3/cms-core ^12.4 || ^13.4).
+    $configure($rectorConfig, __DIR__ . '/..', [
+        'tests' => true,
+        'php'   => '8.2',
+        'typo3' => 12,
     ]);
 };
