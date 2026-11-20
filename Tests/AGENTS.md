@@ -65,7 +65,7 @@ $_SERVER['HTTP_USER_AGENT'] = 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac 
 
 - typo3/testing-framework docs: https://github.com/TYPO3/testing-framework
 - PHPat selectors/rules: https://github.com/carlosas/phpat
-- CI matrix definition: `.github/workflows/ci.yml` (PHP 8.3–8.6 × TYPO3 ^12.4/^13.4)
+- CI matrix definition: `.github/workflows/ci.yml` (PHP 8.3–8.6 × TYPO3 ^12.4/^13.4; PHP 8.5 and 8.6 only with ^13.4)
 - Open a GitHub issue: https://github.com/netresearch/t3x-contexts_wurfl/issues
 
 ## House Rules
