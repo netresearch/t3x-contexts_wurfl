@@ -78,7 +78,7 @@ Version 2.0 is a complete rewrite using Matomo DeviceDetector instead of the leg
 | Database required | Yes | No |
 | Data updates | Manual import | Composer update |
 | TYPO3 support | 4.5 - 6.2 | 12.4, 13.4 |
-| PHP support | 5.3 - 5.6 | 8.2 - 8.5 |
+| PHP support | 5.3 - 5.6 | 8.2 - 8.6 |
 
 ### Breaking Changes
 

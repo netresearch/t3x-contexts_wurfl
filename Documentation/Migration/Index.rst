@@ -27,7 +27,7 @@ The 2.0 release is a complete rewrite with significant changes:
    "Database required", "Yes (MySQL tables)", "No"
    "Data updates", "Manual import command", "Composer update"
    "TYPO3 support", "4.5 - 6.2", "12.4 LTS, 13.4 LTS"
-   "PHP support", "5.3 - 5.6", "8.2 - 8.5"
+   "PHP support", "5.3 - 5.6", "8.2 - 8.6"
    "License", "WURFL (restrictive)", "MIT (permissive)"
    "Namespace", "Tx_ContextsWurfl_*", "Netresearch\\ContextsDevice\\*"
 
