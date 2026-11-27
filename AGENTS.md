@@ -30,6 +30,7 @@ composer ci:test:php:phpstan     # PHPStan (Build/phpstan.neon)
 composer ci:test:php:cgl         # PHP-CS-Fixer check (dry-run)
 composer ci:test:php:rector      # Rector check (dry-run, Build/rector.php)
 composer ci:cgl                  # Fix code style
+composer ci:test:changelog       # Check the changelog.d/ fragments (changelog.d/README.md)
 composer ci:rector               # Apply Rector rules
 composer test:coverage           # Coverage report (needs Xdebug)
 composer test:mutation           # Infection mutation testing

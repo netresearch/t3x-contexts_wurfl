@@ -28,7 +28,7 @@
         "a9f/typo3-fractor": "^1.0.0",
         "friendsofphp/php-cs-fixer": "^3.92",
         "infection/infection": "*",
-        "netresearch/typo3-ci-workflows": "^2.0.3",
+        "netresearch/typo3-ci-workflows": "^2.3.1",
         "phpat/phpat": "^0.12",
         "phpstan/phpstan": "^2.1",
         "phpstan/phpstan-deprecation-rules": "^2.0",
@@ -77,12 +77,17 @@
         ],
         "ci:cgl": ".Build/bin/php-cs-fixer fix",
         "ci:rector": ".Build/bin/rector process --config Build/rector.php",
-        "ci:test:php:cgl": ".Build/bin/php-cs-fixer fix --dry-run --diff",
+        "ci:test:php:cgl": [
+            "@ci:test:changelog",
+            ".Build/bin/php-cs-fixer fix --dry-run --diff"
+        ],
         "ci:test:php:functional": ".Build/bin/phpunit -c Build/phpunit/FunctionalTests.xml",
         "ci:test:php:phpstan": ".Build/bin/phpstan analyse -c Build/phpstan.neon",
         "ci:test:php:rector": ".Build/bin/rector process --config Build/rector.php --dry-run",
         "ci:test:php:unit": ".Build/bin/phpunit -c Build/phpunit/UnitTests.xml",
         "test:coverage": "XDEBUG_MODE=coverage .Build/bin/phpunit -c Build/phpunit/UnitTests.xml --coverage-html .Build/coverage",
-        "test:mutation": ".Build/bin/infection --threads=4 --show-mutations"
+        "test:mutation": ".Build/bin/infection --threads=4 --show-mutations",
+        "changelog:collect": "changelog-fragments collect",
+        "ci:test:changelog": "changelog-fragments check @no_additional_args"
     }
 }
